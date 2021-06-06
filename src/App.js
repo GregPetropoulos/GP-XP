@@ -5,8 +5,7 @@ import Home from "./pages/Home";
 // import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
 import Header from "./components/Header";
-// import Hamburger from "./components/Hamburger";
-
+import './App.css';
 
 function App () {
     return (

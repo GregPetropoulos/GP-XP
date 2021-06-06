@@ -1,30 +1,46 @@
 import React from "react";
 import Hero from "../components/Hero";
-import Container from "../components/Container";
+import SectionContainer from "../components/SectionContainer";
 import Row from "../components/Row";
+import Col from "../components/Col";
 import Section from "../components/Section";
-
 
 function Home() {
   return (
-       <Container>
-         <Section>
-           <display>
+    <div>
+      <Hero>
+        <display>
           Hi my name is Greg Petropoulos and I create engaging websites and web
           applications to run across platforms and devices.
-          </display>
-      </Section>
+        </display>
+      </Hero>
 
-        <Section>Projects</Section>
-        <Row></Row>
+      <SectionContainer>
+        <Section>
+          <Row>
+            <Col size="md-12">
+              <h1>Projects</h1>
+            </Col>
+          </Row>
+        </Section>
 
-        <Section>About</Section>
-        <Row></Row>
+        <Section>
+          <Row>
+            <Col size="md-12">
+              <h1>About</h1>
+            </Col>
+          </Row>
+        </Section>
 
-        <Section>Contact</Section>
-        <Row></Row>
-      </Container> 
-    
+        <Section>
+          <Row>
+            <Col size="md-12">
+              <h1>Contact</h1>
+            </Col>
+          </Row>
+        </Section>
+      </SectionContainer>
+    </div>
   );
 }
 

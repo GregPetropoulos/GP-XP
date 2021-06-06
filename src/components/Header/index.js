@@ -3,13 +3,12 @@ import styled from "styled-components";
 import { Motion, spring } from "react-motion";
 import "./style.css";
 
-const Drawer =
-  styled.div`
-position: absolute;
-height:100%;
-background: black;
-width: 100vw;
-left: ${(props) => props.left}vh;
+const Drawer = styled.div`
+  position: absolute;
+  height: 100%;
+  background: black;
+  width: 100vw;
+  left: ${(props) => props.left}vh;
 `;
 
 const Link = styled.div`
@@ -23,7 +22,7 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      toggleState: 0,
+      toggleState: 0
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -37,16 +36,20 @@ class Header extends Component {
   render() {
     return (
       <div id="parent">
-        <div id="nav-bar" className='navbar navbar-expand-lg'>
-        <div className='logo justify-content-between'>G/P
-          <div className="container" ref="container" onClick={this.handleClick}>
-            <div className="bar1" />
-            <div className="bar2" />
-            <div className="bar3" />
-            <div className="bar4" />
+        <div id="nav-bar" className="navbar navbar-expand-lg">
+          <div className="logo justify-content-between">
+            G/P
+            <div
+              className="container"
+              ref="container"
+              onClick={this.handleClick}
+            >
+              <div className="bar1" />
+              <div className="bar2" />
+              <div className="bar3" />
+              <div className="bar4" />
             </div>
-            </div>
-  
+          </div>
         </div>
 
         <Motion
@@ -59,7 +62,7 @@ class Header extends Component {
             }),
           }}
         >
-          {(style) => (
+          {style => (
             <Drawer left={style.left}>
               <Link>Home</Link>
               <Link>Projects</Link>
