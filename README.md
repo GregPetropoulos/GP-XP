@@ -2,6 +2,16 @@
 Full Stack Web Developer Portfolio in React
 Example portfolio
 <!-- https://prashantsani.com/ -->
+Bootstrap in react library
+https://react-bootstrap.github.io/layout/grid/
+
+dev dependencies for contact form
+https://www.emailjs.com/
+https://www.npmjs.com/package/react-toastify
+https://react-hook-form.com/
+https://medium.com/weekly-webtips/simple-react-contact-form-without-back-end-9fa06eff52d9
+https://reactjs.org/docs/forms.html
+
 
 # Getting Started with Create React App
 

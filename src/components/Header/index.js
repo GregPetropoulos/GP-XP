@@ -6,7 +6,7 @@ import "./style.css";
 const Drawer = styled.div`
   position: absolute;
   height: 100%;
-  background: black;
+  background: rgb(0,68,129);
   width: 100vw;
   left: ${(props) => props.left}vh;
 `;
@@ -38,10 +38,10 @@ class Header extends Component {
       <div id="parent">
         <div id="nav-bar" className="navbar navbar-expand-lg">
           <div className="logo justify-content-between">
-            G/P
+          &lt;G/P&gt;
             <div
-              className="container"
-              ref="container"
+              className="container-button"
+              ref="container-button"
               onClick={this.handleClick}
             >
               <div className="bar1" />
