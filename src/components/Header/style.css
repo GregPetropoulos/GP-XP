@@ -2,13 +2,20 @@
 
 
 #parent {
-  background-color: rgb(225, 223, 223);
-  height: auto;
+  /* background-color: rgb(225, 223, 223); */
+  background-color: black;
+  height: 100vh;
 }
-.container-button {
+.menu {
   display: inline-block;
   cursor: pointer;
 }
+/* .items > Link {
+  cursor: pointer;
+  padding: 1em 1em 1em 3em;
+  color: white;
+  font-weight: bold;
+} */
 .logo {
   font-size: 60px;
   color: rgb(0,68,129);
@@ -40,6 +47,7 @@
 }
 
 #nav-bar {
-  /* background: black; */
+  background: black;
   padding: 0.2em;
+  margin-right: 3em;
 }

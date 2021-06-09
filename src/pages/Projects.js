@@ -1,18 +1,29 @@
-// import React from "react";
-// import ContactForm from "../components/ContactForm";
+import React from "react";
+import ProjectList from "../components/ProjectList";
+import Footer from "../components/Footer";
 
 
-// function Contact() {
-//   return (
-//     <>
-//       <ContactForm>
-//          <h1>
-//           Hi my name is Greg Petropoulos and I create engaging websites and web
-//           applications to run across platforms and devices.
-//         </h1>
-//       </ContactForm>
-//     </>
-//   );
-// }
+function Projects() {
+  return (
+    <>
+      <ProjectList
+        img=""
+        title="Hello Projects1"
+        description="Project 1 description"
+      />
+      <ProjectList
+        img=""
+        title="Hello Projects2"
+        description="Project 2 description"
+      />
+       <ProjectList
+        img=""
+        title="Hello Projects2"
+        description="Project 2 description"
+      />
+      <Footer/>
+    </>
+  );
+}
 
-// export default ContactForm;
+export default Projects;

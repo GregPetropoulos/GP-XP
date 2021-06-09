@@ -1,0 +1,9 @@
+.box {
+    transition: transform 450ms;
+}
+
+.box:hover {
+    transform:scale(1.08);
+}
+
+/* may need object fit conatin for images */

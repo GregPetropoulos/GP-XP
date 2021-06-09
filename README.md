@@ -12,6 +12,8 @@ https://react-hook-form.com/
 https://medium.com/weekly-webtips/simple-react-contact-form-without-back-end-9fa06eff52d9
 https://reactjs.org/docs/forms.html
 
+example hamburger
+https://blog.logrocket.com/5-react-motion-use-cases-with-examples-78fc07104d58/
 
 # Getting Started with Create React App
 

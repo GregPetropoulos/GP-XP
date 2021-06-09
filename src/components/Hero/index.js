@@ -10,8 +10,8 @@ function Hero(props) {
   return (
     <Container fluid>
     <Row>
-      <Col md >
-        <div className="hero text-center" style={{ color: "whitesmoke" }}>
+      <Col md= {12}>
+        <div className="hero text-center d-flex align-items-center justify-content-center" style={{ color: "whitesmoke", height:'100vh', align:'center' }}>
         {props.children}
         </div>
       </Col>
