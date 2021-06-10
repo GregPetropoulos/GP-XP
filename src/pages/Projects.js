@@ -7,7 +7,8 @@ import Row from 'react-bootstrap/Row'
 import Container from 'react-bootstrap/Container'
 
 import GolfImages from '../images/golf.jpg'
-
+import EmployeeImage from "../images/employee-directory.jpg"
+import FitImage from "../images/fit-image.jpg"
 
 
 function Projects() {
@@ -31,33 +32,33 @@ function Projects() {
       </ProjectList>
 
       <ProjectList
-        img=""
+        img={EmployeeImage}
         title="Employee Directory"
         description="I created an employee directory with React and as per industry standard, I broke up the application's UI into components, managed component state and props, and respond to user events. 
         Employee data was acquired by the randomuser.me API"
       >
-        <Link to="deployed=https://gregpetropoulos.github.io/Employee-Directory/">
+        <a href="deployed=https://gregpetropoulos.github.io/Employee-Directory/" target='_blank' rel="noreferrer">
           Deployed
-        </Link>
+        </a>
         {/* <br></br> */}<Row></Row>
-        <Link to="https://github.com/GregPetropoulos/Employee-Directory">
+        <a href="https://github.com/GregPetropoulos/Employee-Directory" target='_blank' rel="noreferrer">
           Github
-        </Link>
+        </a>
       </ProjectList>
 
       <ProjectList
-        img=""
+        img={FitImage}
         title="Workout Tracker"
         description="I created a workout tracker and (NoSQL) Mongo database with a Mongoose schema and handle routes with Express.
          Use the MVC paradigm and connect the back end to the front end."
       >
-        <Link to="https://fittracker210518.herokuapp.com/?id=60a6abb46ed3680015489964">
+        <a href="https://fittracker210518.herokuapp.com/?id=60a6abb46ed3680015489964" target='_blank' rel="noreferrer">
           Deployed
-        </Link>
+        </a>
         {/* <br></br> */}<Row></Row>
-        <Link to="https://github.com/GregPetropoulos/Workout-Tracker">
+        <a href="https://github.com/GregPetropoulos/Workout-Tracker" target='_blank' rel="noreferrer">
           Github
-        </Link>
+        </a>
       </ProjectList>
       </Container>
   );
