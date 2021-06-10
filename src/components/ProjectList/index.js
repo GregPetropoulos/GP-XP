@@ -13,7 +13,7 @@ const ProjectList = ({ img, title, description, children }) => {
         <Col className="box-container">
           <Row>
             <Col sm={12} className="box">
-              <h2>{title}</h2>
+              <h2 className="project-title">{title}</h2>
             <Col sm={12}>
               <img src={img} alt="" />
             </Col>

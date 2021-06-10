@@ -1,0 +1,16 @@
+.hero-container {
+background-color:black;
+color:whitesmoke;
+font: size 1.2em;
+}
+
+
+img {
+    border-radius:50%;
+}
+/* .hero {
+color: "whitesmoke"; 
+ height:'100vh';
+align-items:'center';
+
+} */

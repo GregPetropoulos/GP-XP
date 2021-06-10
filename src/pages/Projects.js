@@ -1,11 +1,10 @@
 import React from "react";
 import ProjectList from "../components/ProjectList";
 // import Footer from "../components/Footer";
-import { Link } from "react-router-dom";
-// import Image from "react-bootstrap/Image";
 import Row from 'react-bootstrap/Row'
 import Container from 'react-bootstrap/Container'
 
+// PROJECT IMAGES
 import GolfImages from '../images/golf.jpg'
 import EmployeeImage from "../images/employee-directory.jpg"
 import FitImage from "../images/fit-image.jpg"
@@ -60,6 +59,9 @@ function Projects() {
           Github
         </a>
       </ProjectList>
+      <Row>
+        <p>&lt;/projects&gt;</p>
+      </Row>
       </Container>
   );
 }

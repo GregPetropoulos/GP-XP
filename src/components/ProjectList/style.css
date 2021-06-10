@@ -1,6 +1,6 @@
 .project-container {
   color: rgb(0, 68, 129);
-  font-size: 1.2rem;
+  font-size: rem;
   background-color: black;
 }
 .box-container {
@@ -14,10 +14,10 @@
 .box-container:hover {
     transform: scale(1.08);
   }
-h2 {
+.project-title {
   margin-top: 30px;
   margin-bottom: 30px;
-  font-size: 72px;
+  font-size: 1.6em;
   background: -webkit-linear-gradient(#B7F8DB, #50A7C2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

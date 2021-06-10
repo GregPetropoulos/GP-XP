@@ -1,20 +1,23 @@
 import React from "react";
+import Row from 'react-bootstrap/Row'
+import Container from 'react-bootstrap/Container'
 import Hero from "../components/Hero";
 // import Footer from "../components/Footer";
+import ProfileImage from '../images/profile-image.jpeg'
 
 function Home() {
   return (
-    <>
-      <h1>&lt;home&gt;</h1>
-
-      <Hero>
-        <h1>
-          Hi my name is Greg Petropoulos and I create engaging websites and web
-          applications to run across platforms and devices.
-        </h1>
-      </Hero>
-      <h1>&lt;/home&gt;</h1>
-    </>
+    <Container>
+      <Row>
+        <p>&lt;home&gt;</p>
+      </Row>
+      <Hero
+      img={ProfileImage}
+      />
+      <Row>
+        <p>&lt;/home&gt;</p>
+      </Row>
+    </Container>
   );
 }
 
