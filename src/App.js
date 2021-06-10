@@ -9,7 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
 // import Header from "./components/Header";
-import "./App.css";
+
 
 function App() {
   return (

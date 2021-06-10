@@ -1,9 +1,31 @@
+.project-container {
+    color:rgb(0,68,129);   
+    font-size:1.2rem;
+    background-color: black;
+}
+.box-container {
+    border: .23rem solid rgb(0, 224, 139);
+    margin: 30px;
+    width: auto;   
+} 
+
 .box {
+color:rgb(0, 224, 139);
+width: auto;
+} 
+
+img {
+    object-fit: contain;
+    width: 50%;
+}
+/* .col {
+    border-radius: 20 20px;
+
     transition: transform 450ms;
 }
 
-.box:hover {
+.col:hover {
     transform:scale(1.08);
-}
+} */
 
-/* may need object fit conatin for images */
+/* may need object fit con for images */
