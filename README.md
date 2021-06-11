@@ -15,6 +15,9 @@ https://reactjs.org/docs/forms.html
 example hamburger
 https://blog.logrocket.com/5-react-motion-use-cases-with-examples-78fc07104d58/
 
+barcode website to read barcode in contact page
+https://barcodescanr.com/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

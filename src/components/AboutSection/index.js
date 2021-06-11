@@ -51,7 +51,7 @@ const AboutSection = () => {
             Over the last year I have created several web applications with the
             key methods in mind for rich user experiences.
           </p>
-          <button>
+          <button className='project-button'>
             <Link to="/projects">See project link</Link>
           </button>
         </Col>
@@ -79,7 +79,7 @@ const AboutSection = () => {
         Outside of web development I enjoy spending time with my family, working
         out, and exploring old treasure maps.
       </p>
-      <button>
+      <button className='resume buttton'>
       <Link>Resume</Link>
       </button>
 

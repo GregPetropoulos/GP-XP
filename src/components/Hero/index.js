@@ -8,7 +8,7 @@ import "./style.css";
 function Hero({img}) {
   return (
     <Container className= 'hero-container'>
-      <a href ='https://github.com/GregPetropoulos' target='_blank' rel="noreferrer"><img src={img} alt="" /></a>
+      <a href ='https://github.com/GregPetropoulos' target='_blank' rel="noreferrer"><img className ='profile-image' src={img} alt="" /></a>
     <Row>
       <Col className= "hero" md= {12}>
       <h2> Hi my name is Greg Petropoulos and I create engaging websites and web

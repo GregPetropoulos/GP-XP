@@ -4,7 +4,7 @@
   background-color: black;
 }
 .box-container {
-  border: 0.23rem solid rgb(88, 236, 19);
+  border: 0.23rem solid rgb(148,240,0);
   margin: 30px;
   width: auto;
   transition: transform 450ms;

@@ -1,0 +1,44 @@
+
+.contact-form-container {
+    background-color: black;
+    /* color: whitesmoke; */
+    color: #8805BC;
+}
+textarea.form-control,input.form-control{
+    background-color: black;
+    border-color:#000 #000 #8805BC #000;    
+}
+
+/* .form-container {
+    background-color: black;
+    color: whitesmoke;
+} */
+.icon-row {
+    color:red;
+/* display: flex; */
+/* justify-content: space-around; */
+/* size:2.8em; */
+
+}
+.icon-col {
+    color:red;
+    display: flex;
+justify-content: space-around;
+}
+
+.contact-footer{
+    font-family: 'Libre Barcode 39 Extended', cursive;
+    color: whitesmoke;
+}
+.intro-contact{
+    font-family: 'Trykker', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    color: whitesmoke;
+
+}
+.email-prompt {
+    font-family: 'Trykker', serif;
+    color: whitesmoke;
+    
+}

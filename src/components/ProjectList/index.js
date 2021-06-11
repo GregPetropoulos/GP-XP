@@ -14,9 +14,9 @@ const ProjectList = ({ img, title, description, children }) => {
           <Row>
             <Col sm={12} className="box">
               <h2 className="project-title">{title}</h2>
-            <Col sm={12}>
-              <img src={img} alt="" />
-            </Col>
+              <Col sm={12}>
+                <img src={img} alt="" />
+              </Col>
               <p>{description}</p>
               {children}
             </Col>

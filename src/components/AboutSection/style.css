@@ -5,7 +5,7 @@
     
 }
 
-button {
+button.project-button.resume-button {
 color:green;
 background-color:red;
 margin: 6px;

@@ -1,286 +1,80 @@
-// import { useForm } from 'react-hook-form';
 // import Col from "react-bootstrap/Col";
-// import Row from "react-bootstrap/Row";
-// import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import "./style.css";
+import Container from "react-bootstrap/Container";
 import React from 'react';
+import Form from 'react-bootstrap/Form'
+// FONT AWESOME
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import {
+  faGithub,
+  faLinkedin,
+  faYoutube,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 
-// import emailjs from 'emailjs-com';
-// import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.min.css';
 
-// import React, { Component } from "react";
+const ContactForm = () => {
+  return(
+    <>
+    <Container className='contact-form-container'>
+    <Row>
+    <p className='intro-contact'>Feel free to send an email to <a href='mailto gregpetropoulos.com' style={{color:"#8805BC"}}>contact@gregpetropoulos.com</a>
+    </p>
+    </Row>
 
-// const ContactForm = (props) => {
-//     const { register, errors, handleSubmit,reset }= useForm();
+    <Row>
+    <p className='email-prompt'>Or just a send a quick message below! :</p>
+    </Row>
 
-//     const toastifySuccess = () => {
-//       toast('Form sent!', {
-//         position: 'bottom-right',
-//         autoClose: 5000,
-//         hideProgressBar: true,
-//         closeOnClick: true,
-//         pauseOnHover: true,
-//         draggable: false,
-//         className: 'submit-feedback success',
-//         toastId: 'notifyToast'
-//       });
-//     };
+    <Row>
+   
+    <Col md={12} className='form-container'>
+    <Form>
+     <Form.Group controlId="nameForm.ControlInput1" >
+    <Form.Label>NAME</Form.Label>
+    <Form.Control type="name" placeholder="name"  />
+  </Form.Group >
+  
+  <Form.Group controlId="emailForm.ControlInput2">
+    <Form.Label>EMAIL</Form.Label>
+    <Form.Control type="email" placeholder="name@example.com" />
+  </Form.Group>
+  
+  
+  <Form.Group  controlId="messageForm.ControlTextarea1">
+    <Form.Label>MESSAGE</Form.Label>
+    <Form.Control as="textarea" rows={8}/>
+  </Form.Group>
+  <button className= 'form-submit button'>Submit</button>
 
-//     const onSubmit = async (data) => {
-//       // Send form email
-//       try {
-//      const templateParams= {
-//        name: data.name,
-//        email: data.email,
-//        subject: data.subject,
-//        message: data.message
-//         // console.log('Name:',data.name);
-//         // console.log('Email:',data.email);
-//         // console.log('Subject:',data.subject);
-//         // console.log('Message:',data.message);
-//      };
-//      await emailjs.send(
-//       process.env.REACT_APP_SERVICE_ID,
-//       process.env.REACT_APP_TEMPLATE_ID,
-//       templateParams,
-//       process.env.REACT_APP_USER_ID
-//      );
-//      reset();
-//      toastifySuccess();
-//       } catch(e) {
-//         console.log(e);
-//       }
-//   };
-
-//   return (
-//     <div className='ContactForm'>
-//       <Container md>
-//         <Row>
-//           <Col md={12} className ='text-center'>
-//             <div className='contactForm'>
-//               <form id='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate>
-//                 {/* Row 1 of form name and email */}
-//                 <Row className='row formRow'>
-//                   <Col md ={6}>
-//                     <input
-//                       type='text'
-//                       name='name'
-//                       {...register('name', {
-//                           required: {value: true, message: 'Please enter your name'},
-//                           maxLength: {
-//                               value: 30,
-//                               message: 'Please 30 characters or less'
-//                           }
-//                       })}
-//                       className='form-control formInput'
-//                       placeholder='Name'
-//                     ></input>
-//                     {errors.name && <span className='errorMessage'>{errors.name.message}</span>}
-//                   </Col>
-//                   <Col md={6}>
-//                     <input
-//                       type='email'
-//                       name='email'
-//                       {...register('email', {
-//                           required: true,
-//                           pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-//                         })}
-//                       className='form-control formInput'
-//                       placeholder='Email address'
-//                     ></input>
-//                     {errors.email && (<span className ='errorMessage'>Please enter a valid email</span>
-//                     )}
-//                  </Col>
-//                  </Row>
-
-//                 {/* Row 2 of form subject message */}
-//                 <Row className='row formRow'>
-//                   <Col md={12}>
-//                     <input
-//                       type='text'
-//                       name='subject'
-//                       {...register('subject', {
-//                           required: {value:true, message: 'Please enter subject'},
-//                           maxLength: {
-//                               value: 75,
-//                               message: 'Subject cannot exceed 75 characters'
-//                           }
-//                           })}
-//                       className='form-control formInput'
-//                       placeholder='Subject'
-//                     ></input>
-//                     {errors.subject && (
-//                         <span className='errorMessage'>{errors.subject.message}</span>
-//                     )}
-//                   </Col>
-//                 </Row>
-
-//                 {/* Row 3 of form */}
-//                 <Row className='row formRow'>
-//                   <Col md={12} className='col'>
-//                     <textarea
-//                       rows={3}
-//                       name='message'
-//                       {...register ('message', {
-//                           required: true
-//                       })}
-//                       className='form-control formInput'
-//                       placeholder='Message'
-//                     ></textarea>
-//                     {errors.message && <span className='error message'>Please enter a message</span>}
-//                   </Col>
-//                 </Row>
-//                 <button className='submit-btn' type='submit'>
-//                   Submit
-//                 </button>
-//               </form>
-//             </div>
-//             <ToastContainer/>
-//           </Col>
-//         </Row>
-//       </Container>
-//     </div>
-//   );
-// };
-function ContactForm (){
-  return <h1>contact check if works</h1>
+</Form>
+<Row className ='icon-row'>
+<Col className= 'icon-col'>
+<a href='https://github.com/GregPetropoulos' target='_blank' rel="noreferrer">
+<FontAwesomeIcon icon={faGithub} size='2x'/>
+</a>
+<a href='linkedin.com/in/greg-petropoulos-b186b954' target='_blank' rel="noreferrer">
+<FontAwesomeIcon icon={faLinkedin} size='2x'/>
+</a>
+<a href='https://www.youtube.com/channel/UC59RJzqORuQTPjePJVml-pw' target='_blank' rel="noreferrer">
+<FontAwesomeIcon icon={faYoutube} size='2x'/>
+</a>
+<a href='https://twitter.com/GregoriosPetro1' target='_blank' rel="noreferrer">
+<FontAwesomeIcon icon={faTwitter} size='2x'/>
+</a>
+    </Col>
+    </Row>
+</Col>
+</Row>
+<footer className='contact-footer text-center' >
+gregpetropoulos@yahoo.com
+</footer>
+</Container>
+</>
+  )
 }
+    
  export default ContactForm;
-
-// EXAMPLE BELOW--------
-// import { useForm } from 'react-hook-form';
-// import emailjs from 'emailjs-com';
-// import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.min.css';
-
-// const ContactForm = () => {
-//   const { register, errors, handleSubmit, reset } = useForm();
-
-//   const toastifySuccess = () => {
-//     toast('Form sent!', {
-//       position: 'bottom-right',
-//       autoClose: 5000,
-//       hideProgressBar: true,
-//       closeOnClick: true,
-//       pauseOnHover: true,
-//       draggable: false,
-//       className: 'submit-feedback success',
-//       toastId: 'notifyToast'
-//     });
-//   };
-
-//   const onSubmit = async (data) => {
-//     // Send form email
-//     try {
-//       const templateParams = {
-//         name: data.name,
-//         email: data.email,
-//         subject: data.subject,
-//         message: data.message
-//       };
-
-//       await emailjs.send(
-//         process.env.REACT_APP_SERVICE_ID,
-//         process.env.REACT_APP_TEMPLATE_ID,
-//         templateParams,
-//         process.env.REACT_APP_USER_ID
-//       );
-
-//       reset();
-//       toastifySuccess();
-//     } catch (e) {
-//       console.log(e);
-//     }
-//   };
-
-//   return (
-//     <div className='ContactForm'>
-//       <div className='container'>
-//         <div className='row'>
-//           <div className='col-12 text-center'>
-//             <div className='contactForm'>
-//               <form id='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate>
-//                 {/* Row 1 of form */}
-//                 <div className='row formRow'>
-//                   <div className='col-6'>
-//                     <input
-//                       type='text'
-//                       name='name'
-//                       ref={register({
-//                         required: { value: true, message: 'Please enter your name' },
-//                         maxLength: {
-//                           value: 30,
-//                           message: 'Please use 30 characters or less'
-//                         }
-//                       })}
-//                       className='form-control formInput'
-//                       placeholder='Name'
-//                     ></input>
-//                     {errors.name && <span className='errorMessage'>{errors.name.message}</span>}
-//                   </div>
-//                   <div className='col-6'>
-//                     <input
-//                       type='email'
-//                       name='email'
-//                       ref={register({
-//                         required: true,
-//                         pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-//                       })}
-//                       className='form-control formInput'
-//                       placeholder='Email address'
-//                     ></input>
-//                     {errors.email && (
-//                       <span className='errorMessage'>Please enter a valid email address</span>
-//                     )}
-//                   </div>
-//                 </div>
-//                 {/* Row 2 of form */}
-//                 <div className='row formRow'>
-//                   <div className='col'>
-//                     <input
-//                       type='text'
-//                       name='subject'
-//                       ref={register({
-//                         required: { value: true, message: 'Please enter a subject' },
-//                         maxLength: {
-//                           value: 75,
-//                           message: 'Subject cannot exceed 75 characters'
-//                         }
-//                       })}
-//                       className='form-control formInput'
-//                       placeholder='Subject'
-//                     ></input>
-//                     {errors.subject && (
-//                       <span className='errorMessage'>{errors.subject.message}</span>
-//                     )}
-//                   </div>
-//                 </div>
-//                 {/* Row 3 of form */}
-//                 <div className='row formRow'>
-//                   <div className='col'>
-//                     <textarea
-//                       rows={3}
-//                       name='message'
-//                       ref={register({
-//                         required: true
-//                       })}
-//                       className='form-control formInput'
-//                       placeholder='Message'
-//                     ></textarea>
-//                     {errors.message && <span className='errorMessage'>Please enter a message</span>}
-//                   </div>
-//                 </div>
-//                 <button className='submit-btn' type='submit'>
-//                   Submit
-//                 </button>
-//               </form>
-//             </div>
-//             <ToastContainer />
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ContactForm;

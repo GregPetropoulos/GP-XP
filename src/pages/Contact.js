@@ -1,16 +1,20 @@
 import React from "react";
-
+import Row from 'react-bootstrap/Row'
+import Container from 'react-bootstrap/Container'
 import ContactForm from "../components/ContactForm";
-console.log('hello check')
 
 function Contact() {
-  console.log('contact function check')
 
   return (
-  <>
-    <h1>&lt;Contact&gt;</h1>
+  <Container>
+    <Row>
+    <p>&lt;contact&gt;</p>
+    </Row>
     <ContactForm/>
-  </>
+    <Row>
+    <p>&lt;/contact&gt;</p>
+    </Row>
+    </Container>
   ); 
 }
 
