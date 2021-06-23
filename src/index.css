@@ -6,6 +6,9 @@
 
   div {
     /* background-color: aquamarine; */
-    /* background-color: black; */
+    background-color: black;
   
+  }
+  p{
+    color:whitesmoke;
   }

@@ -23,9 +23,9 @@ function Projects() {
         stats keeping while playing hole by hole"
       >
         {/* <Image src="../../images/golf.jpg" fluid /> */}
-        <a href="https://bit.ly/Golfersplus-deployed" target='_blank' rel="noreferrer" >Deployed</a>
+        <a href="https://bit.ly/Golfersplus-deployed" target='_blank' rel="noreferrer" className='project-links'>Deployed</a>
         {/* <br></br> */}<Row></Row>
-        <a href="https://github.com/GregPetropoulos/Golf-Assistant-App" target='_blank' rel="noreferrer" >
+        <a href="https://github.com/GregPetropoulos/Golf-Assistant-App" target='_blank' rel="noreferrer" className='project-links' >
           Github
         </a>
       </ProjectList>
@@ -36,11 +36,11 @@ function Projects() {
         description="I created an employee directory with React and as per industry standard, I broke up the application's UI into components, managed component state and props, and respond to user events. 
         Employee data was acquired by the randomuser.me API"
       >
-        <a href="deployed=https://gregpetropoulos.github.io/Employee-Directory/" target='_blank' rel="noreferrer">
+        <a href='https://gregpetropoulos.github.io/Employee-Directory/' target='_blank' rel="noreferrer" className='project-links'>
           Deployed
         </a>
         {/* <br></br> */}<Row></Row>
-        <a href="https://github.com/GregPetropoulos/Employee-Directory" target='_blank' rel="noreferrer">
+        <a href="https://github.com/GregPetropoulos/Employee-Directory" target='_blank' rel="noreferrer"className='project-links'>
           Github
         </a>
       </ProjectList>
@@ -51,11 +51,11 @@ function Projects() {
         description="I created a workout tracker and (NoSQL) Mongo database with a Mongoose schema and handle routes with Express.
          Use the MVC paradigm and connect the back end to the front end."
       >
-        <a href="https://fittracker210518.herokuapp.com/?id=60a6abb46ed3680015489964" target='_blank' rel="noreferrer">
+        <a href="https://fittracker210518.herokuapp.com/?id=60a6abb46ed3680015489964" target='_blank' rel="noreferrer" className='project-links'>
           Deployed
         </a>
         {/* <br></br> */}<Row></Row>
-        <a href="https://github.com/GregPetropoulos/Workout-Tracker" target='_blank' rel="noreferrer">
+        <a href="https://github.com/GregPetropoulos/Workout-Tracker" target='_blank' rel="noreferrer"className='project-links'>
           Github
         </a>
       </ProjectList>

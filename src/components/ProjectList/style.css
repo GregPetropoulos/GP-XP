@@ -4,7 +4,8 @@
   background-color: black;
 }
 .box-container {
-  border: 0.23rem solid rgb(148,240,0);
+  border: 0.26rem solid #d6b850;
+  border-width: thin;
   margin: 30px;
   width: auto;
   transition: transform 450ms;
@@ -22,8 +23,22 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.project-links {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 1.2em;
+  color: #08a7ce;
+}
+
+.project-links:hover{
+background-color:black;
+text-decoration: none;
+}
+/* a:hover {
+  background-color: yellow;
+} */
 .box {
-  color: rgb(88, 236, 19);
+  color: #2d9687;;
 }
 
 

@@ -23,7 +23,7 @@ const ProjectList = ({ img, title, description, children }) => {
           </Row>
         </Col>
       </Row>
-      <Row className="buffer-row">somespace</Row>
+      <Row className="buffer-row"></Row>
     </Container>
   );
 };

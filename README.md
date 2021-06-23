@@ -1,4 +1,18 @@
 # Greg-Portfolio
+Theme colors
+yellow
+#d6b850
+
+blue
+#08a7ce
+
+red
+#7f3331
+
+almost black
+#0e2124
+
+
 Full Stack Web Developer Portfolio in React
 Example portfolio
 <!-- https://prashantsani.com/ -->
