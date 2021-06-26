@@ -9,13 +9,13 @@ function Home() {
   return (
     <Container>
       <Row>
-        <p>&lt;home&gt;</p>
+        <p style={{fontFamily:'monospace',fontSize:'1.6rem'}}>&lt;home&gt;</p>
       </Row>
       <Hero
       img={ProfileImage}
       />
       <Row>
-        <p>&lt;/home&gt;</p>
+        <p style={{fontFamily:'monospace',fontSize:'1.6rem'}}>&lt;/home&gt;</p>
       </Row>
     </Container>
   );

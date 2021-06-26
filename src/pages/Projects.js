@@ -14,7 +14,7 @@ function Projects() {
   return (
     <Container>
        <Row>
-        <p>&lt;projects&gt;</p>
+        <p style={{fontFamily:'monospace',fontSize:'1.6rem'}}>&lt;projects&gt;</p>
       </Row>
       <ProjectList
         img={GolfImages}
@@ -60,7 +60,7 @@ function Projects() {
         </a>
       </ProjectList>
       <Row>
-        <p>&lt;/projects&gt;</p>
+        <p style={{fontFamily:'monospace',fontSize:'1.6rem'}}>&lt;/projects&gt;</p>
       </Row>
       </Container>
   );

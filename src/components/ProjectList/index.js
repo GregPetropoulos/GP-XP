@@ -6,12 +6,14 @@ import "./style.css";
 // import Image from "react-bootstrap/Image";
 // import { Link } from "react-router-dom";
 
+// ADD ONS CAROUSEL AND BOX REVEALER
+
 const ProjectList = ({ img, title, description, children }) => {
   return (
-    <Container className="project-container">
+    <Container lg={12} md={true} sm={true} className="project-container col-10">
       <Row>
         <Col className="box-container">
-          <Row>
+          <Row >
             <Col sm={12} className="box">
               <h2 className="project-title">{title}</h2>
               <Col sm={12}>
