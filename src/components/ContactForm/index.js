@@ -19,11 +19,16 @@ import {
 const ContactForm = () => {
   return (
     <>
-      <Container className="contact-form-container">
+      <Container lg ={12} md={6} sm={12} className="contact-form-container">
         <Row>
           <p className="intro-contact">
             Feel free to send an email to{" "}
-            <a href= 'mailto: gregpetropoulos@yahoo.com' target="_blank" rel="noopener noreferrer" style={{ color: "#08a7ce" }}>
+            <a
+              href="mailto: gregpetropoulos@yahoo.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#08a7ce" }}
+            >
               contact@gregpetropoulos.com
             </a>
           </p>
@@ -36,7 +41,7 @@ const ContactForm = () => {
         </Row>
 
         <Row>
-          <Col md={8} className="form-container">
+          <Col className="form-container">
             <Form>
               <Form.Group controlId="nameForm.ControlInput1">
                 <Form.Label>NAME</Form.Label>
@@ -52,16 +57,16 @@ const ContactForm = () => {
                 <Form.Label>MESSAGE</Form.Label>
                 <Form.Control as="textarea" rows={8} />
               </Form.Group>
-
               <button
+                type="submit"
                 className="btn"
                 style={{ color: "whitesmoke", backgroundColor: "#08a7ce" }}
               >
                 Submit
               </button>
             </Form>
-            <Row className="icon-row">
-              <Col className="icon-col">
+            <Row xs={12} className="icon-row">
+              <Col  className="icon-col">
                 <a
                   href="https://github.com/GregPetropoulos"
                   target="_blank"
@@ -92,12 +97,15 @@ const ContactForm = () => {
                 </a>
               </Col>
             </Row>
-          </Col>
-  
-        </Row>
-          <Row>
-            <Col md={8} sm={4} className="contact-footer d-flex justify-content-center text-center text-wrap">
-          gregpetropoulos@yahoo.com
+            <Row>
+              <Col
+                // md={4}
+                // sm={1}
+                className="contact-footer d-flex justify-content-center text-center text-wrap"
+              >
+                gregpetropoulos@yahoo.com
+              </Col>
+            </Row>
           </Col>
         </Row>
         {/* <Row>
