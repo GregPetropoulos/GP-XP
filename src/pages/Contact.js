@@ -8,11 +8,11 @@ function Contact() {
   return (
   <Container>
     <Row>
-    <p style={{fontFamily:'monospace',fontSize:'1.6rem'}}>&lt;contact&gt;</p>
+    <p style={{fontFamily:'monospace',fontSize:'1.4rem'}}>&lt;contact&gt;</p>
     </Row>
     <ContactForm/>
     <Row>
-    <p style={{fontFamily:'monospace',fontSize:'1.6rem'}}>&lt;/contact&gt;</p>
+    <p style={{fontFamily:'monospace',fontSize:'1.4rem'}}>&lt;/contact&gt;</p>
     </Row>
     </Container>
   ); 

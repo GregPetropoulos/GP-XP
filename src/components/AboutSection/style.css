@@ -1,7 +1,7 @@
 .about-container {
     /* color:#2d9687;    */
     /* font-size:1.2rem; */
-    background-color: black;
+    /* background-color: black; */
      /* font-family: 'open sans', san serif;
      font-weight:300;
      font-style: italic;
@@ -10,24 +10,27 @@
 } 
 .about-1p, .about-2p {
     font-family: 'open sans', san serif;
-    color:#2d9687; 
+    color: #08a7ce;
     font-style: italic;
     line-height: 2.3rem;
     font-size: 1.3rem; 
 }
 .about-3p{
     font-family: 'open sans', san serif;
-    color:#e9b171;
+    color:#d6b850;
     /* color:#2d9687  */
     /* font-style: italic; */
-    line-height: 2.3rem;
+    /* line-height: 1.5rem; */
     font-size: 1.7rem;
 
 }
 .about-item-bullets{
     color:#e9b171
 }
-
+.about-4p {
+    color:#7f3331;
+    font-size: 1.2rem;
+}
 button.project-button.resume-button {
 color:green;
 background-color:red;

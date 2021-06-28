@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col'
 import "./style.css";
 
 
-function Hero({img}) {
+function HomeSection({img}) {
   return (
     <Container className= 'hero-container'>
       <a href ='https://github.com/GregPetropoulos' target='_blank' rel="noreferrer"><img className ='profile-image' src={img} alt="" /></a>
@@ -19,5 +19,5 @@ function Hero({img}) {
   );
 }
 
-export default Hero;
+export default HomeSection;
 

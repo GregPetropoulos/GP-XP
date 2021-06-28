@@ -9,12 +9,12 @@ import GolfImages from '../images/golf.jpg'
 import EmployeeImage from "../images/employee-directory.jpg"
 import FitImage from "../images/fit-image.jpg"
 
-
+// NEED TO ADD <a> TO IMAGE AND PROJECT TITLE FOR FUNCTIONALITY
 function Projects() {
   return (
     <Container>
        <Row>
-        <p style={{fontFamily:'monospace',fontSize:'1.6rem'}}>&lt;projects&gt;</p>
+        <p style={{fontFamily:'monospace',fontSize:'1.4rem'}}>&lt;projects&gt;</p>
       </Row>
       <ProjectList
         img={GolfImages}
@@ -60,7 +60,7 @@ function Projects() {
         </a>
       </ProjectList>
       <Row>
-        <p style={{fontFamily:'monospace',fontSize:'1.6rem'}}>&lt;/projects&gt;</p>
+        <p style={{fontFamily:'monospace',fontSize:'1.4rem'}}>&lt;/projects&gt;</p>
       </Row>
       </Container>
   );

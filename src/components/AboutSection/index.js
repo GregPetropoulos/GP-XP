@@ -6,25 +6,7 @@ import { Link } from "react-router-dom";
 import "./style.css"
 
 const AboutSection = () => {
-        <Row>
-            <Col md={2} sm={2}></Col>
-            <Col md={5}>
-              <ul className='about-item-bullets'>
-                <li>
-                  <p>Pragmatic design and development of responsive web applications.</p>
-                </li>
-                <li>
-                  <p>
-                  Stylistic and functional UI/UX, use of multiple API’s, and
-                  third party integrations &amp; database.
-                  </p>
-                </li>
-                <li>
-                  <p>Outcome oriented and project management.</p>
-                </li>
-              </ul>
-            </Col>
-          </Row>
+        
   return (
     <Container className='about-container'>
       <Row>
@@ -54,31 +36,12 @@ const AboutSection = () => {
             key methods in mind for rich user experiences.
           </p>
         </Col>
-          {/* <Row>
-            <Col md={2} sm={2}></Col>
-            <Col md={5}>
-              <ul className='about-item-bullets'>
-                <li>
-                  <p>Pragmatic design and development of responsive web applications.</p>
-                </li>
-                <li>
-                  <p>
-                  Stylistic and functional UI/UX, use of multiple API’s, and
-                  third party integrations &amp; database.
-                  </p>
-                </li>
-                <li>
-                  <p>Outcome oriented and project management.</p>
-                </li>
-              </ul>
-            </Col>
-          </Row> */}
        </Row> 
       <p className='about-4p'>
         Outside of web development I enjoy spending time with my family, working
         out, and exploring old treasure maps.
       </p>
-      <button className='resume buttton'>
+      <button className='resume-buttton'>
       <Link to="url">Resume</Link>
       </button>
     </Container>
