@@ -1,7 +1,8 @@
 .about-container {
     /* color:#2d9687;    */
     /* font-size:1.2rem; */
-    /* background-color: black; */
+     background-color: #0e2124; 
+
      /* font-family: 'open sans', san serif;
      font-weight:300;
      font-style: italic;
@@ -24,14 +25,14 @@
     font-size: 1.7rem;
 
 }
-.about-item-bullets{
+/* .about-item-bullets{
     color:#e9b171
-}
+} */
 .about-4p {
-    color:#7f3331;
+    color:#08a7ce;
     font-size: 1.2rem;
 }
-button.project-button.resume-button {
+/* button.project-button.resume-button {
 color:green;
 background-color:red;
 margin: 6px;
@@ -39,4 +40,16 @@ margin: 6px;
 }
 button:hover {
     transform:450ms;
+} */
+.resume-col {
+  background-color:#fff;
+  text-align: center;
+border-radius: 10px 22px;
+margin:20px;
+}
+.resume-col>a {
+    color:black;
+    font-size:1.2rem;
+    font-family: cursive;
+
 }

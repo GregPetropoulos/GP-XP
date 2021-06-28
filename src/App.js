@@ -16,6 +16,7 @@ function App() {
     <Router>
       <>
         {/* <Header/> */}
+
       <Wrapper>
         <div className="home-link">
           <Link to="/home">Home</Link>

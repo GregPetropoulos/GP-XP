@@ -9,11 +9,11 @@ const About = () => {
   return (
     <Container>
     <Row>
-        <p style={{fontFamily:'monospace',fontSize:'1.4rem'}}>&lt;about&gt;</p>
+        <p style={{fontFamily:'monospace',fontSize:'1.4rem',color:'#08a7ce'}}>&lt;about&gt;</p>
       </Row>
     <AboutSection/>
     <Row>
-        <p style={{fontFamily:'monospace',fontSize:'1.4rem'}}>&lt;/about&gt;</p>
+        <p style={{fontFamily:'monospace',fontSize:'1.4rem',color:'#08a7ce'}}>&lt;/about&gt;</p>
       </Row>
     </Container>
   );

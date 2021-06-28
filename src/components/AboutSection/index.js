@@ -41,9 +41,14 @@ const AboutSection = () => {
         Outside of web development I enjoy spending time with my family, working
         out, and exploring old treasure maps.
       </p>
-      <button className='resume-buttton'>
-      <Link to="url">Resume</Link>
-      </button>
+      {/* <button className='resume-button btn btn-lg'>
+      <a href="https://drive.google.com/file/d/1lkxDTr-djCSyYnHw-P0MXyWJ_ADinmcY/view?usp=sharing">Resume</a>
+      </button> */}
+      <Row>
+        <Col md={4} sm={5} xs={5} className='resume-col'>
+        <a href='https://drive.google.com/file/d/1lkxDTr-djCSyYnHw-P0MXyWJ_ADinmcY/view?usp=sharing'>Resume</a>
+        </Col>
+        </Row>
     </Container>
   );
 };
