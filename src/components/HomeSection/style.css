@@ -1,16 +1,33 @@
-.hero-container {
-background-color:black;
-color:whitesmoke;
-font: size 1.2em;
+.home-container {
+/* background-color:black; */
+/* color:whitesmoke; */
+/* height:'100vh'; */
 }
 
 
 .profile-image {
     border-radius:50%;
+    /* margin:.4rem; */
 }
-/* .hero {
-color: "whitesmoke"; 
- height:'100vh';
-align-items:'center';
-
+/* .profile-image-box{
+    display:flex;
+    justify-content:center;
+    margin:2px;
+    align-items: center;
+    width:50%;
+    padding:2px;
 } */
+.profile-box{
+ /* height:'100vh'; */
+    
+    align-items: center;
+
+}
+.text-wrapper {
+     /* display:flex; */
+/* text-align: justify; */
+align-items:flex-start;
+/* margin:0; */
+overflow-wrap: break-word;
+
+}  

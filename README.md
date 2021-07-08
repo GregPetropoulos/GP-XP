@@ -12,10 +12,17 @@ red
 almost black
 #0e2124
 
+## Resources
+https://www.dlford.io/draw-animation-svg-react-hooks/
+for animated drawing effect
+
+https://react-svgr.com/playground/
+set up svg code
 
 Full Stack Web Developer Portfolio in React
 Example portfolio
 <!-- https://prashantsani.com/ -->
+
 Bootstrap in react library
 https://react-bootstrap.github.io/layout/grid/
 
