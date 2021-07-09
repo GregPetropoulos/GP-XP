@@ -1,5 +1,7 @@
 # Greg-Portfolio
-Theme colors
+Theme colors based off a Nike Juniper shoe
+![Color Inspiration](/src/images/nike-juniper.png)
+
 yellow
 #d6b850
 
@@ -13,6 +15,9 @@ almost black
 #0e2124
 
 ## Resources
+
+https://www.npmjs.com/package/typewriter-effect
+
 https://www.dlford.io/draw-animation-svg-react-hooks/
 for animated drawing effect
 

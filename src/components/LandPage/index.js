@@ -5,16 +5,18 @@ import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
 import Typewriter from 'typewriter-effect';
 import styled from 'styled-components';
+import "./style.css";
 
-const styledTypewriter = styled.typewriter`
-  color: red;
-`;
+
+// const styledTypewriter = styled.typewriter`
+//   color: red;
+// `;
 
 const LandPage = ({ children }) => {
   return (
     <Container>
       <Row>
-        <Col>
+        <Col >
           {children}
           <Typewriter
             onInit={(typewriter) => {
