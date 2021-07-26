@@ -2,17 +2,11 @@ import React from 'react';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
-import { Link } from 'react-router-dom';
 import Typewriter from 'typewriter-effect';
-import styled from 'styled-components';
 import "./style.css";
 
+const Land = ({ children }) => {
 
-// const styledTypewriter = styled.typewriter`
-//   color: red;
-// `;
-
-const LandPage = ({ children }) => {
   return (
     <Container>
       <Row>
@@ -21,13 +15,13 @@ const LandPage = ({ children }) => {
           <Typewriter
             onInit={(typewriter) => {
               typewriter
-                .pauseFor(2000)
-                .changeDelay(80)
-                .typeString('Hello, thank you for stopping by')
-                .pauseFor(3000)
-                .deleteAll(50)
-                .typeString(
-                  'Do you enjoy rich website and application user experiences?'
+              .pauseFor(2000)
+              .changeDelay(80)
+              .typeString('Hello, thank you for stopping by')
+              .pauseFor(3000)
+              .deleteAll(50)
+              .typeString(
+                'Do you enjoy rich website and application user experiences?'
                 )
                 .pauseFor(2500)
                 .deleteAll(100)
@@ -41,14 +35,14 @@ const LandPage = ({ children }) => {
                 .deleteChars(15)
                 .typeString('Greg Petropoulos')
                 .pauseFor(3000)
-
+                
                 .start();
-            }}
-          />
+              }}
+              />
         </Col>
       </Row>
     </Container>
   );
 };
 
-export default LandPage;
+export default Land;

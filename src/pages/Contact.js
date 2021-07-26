@@ -1,7 +1,7 @@
 import React from "react";
 import Row from 'react-bootstrap/Row'
 import Container from 'react-bootstrap/Container'
-import ContactForm from "../components/ContactForm";
+import ContactForm from "../components/contact/ContactForm";
 
 function Contact() {
 

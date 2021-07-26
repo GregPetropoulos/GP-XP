@@ -10,7 +10,7 @@ import "./style.css";
 
 const ProjectList = ({ img, title, description, children }) => {
   return (
-    <Container lg={12} md={true} sm={true} className="project-container col-10">
+    <Container lg={12} md={"true"} sm={"true"} className="project-container col-10">
       <Row>
         <Col className="box-container">
           <Row >
