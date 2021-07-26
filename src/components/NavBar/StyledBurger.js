@@ -18,6 +18,7 @@ export const StyledBurger = styled.div`
     justify-content: space-around;
     flex-flow: column nowrap;
     transform: ${({ open }) => open ? 'rotate(180deg)':'rotate(0)'};
+    z-index:11;
   }
   div {
     width: 6rem;

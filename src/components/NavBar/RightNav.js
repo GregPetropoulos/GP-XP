@@ -11,40 +11,38 @@ const RightNav = ({ open, ...props }) => {
   const tabIndex = isHidden ? 0 : -1;
   return (
     <>
-    
-    <Ul open={open} aria-hidden={!isHidden} {...props}>
-      
-      <li>
-        <Link to='/home' tabIndex={tabIndex}>
-          Home
-        </Link>
-      </li>
-      <li>
-        <Link to='/projects' tabIndex={tabIndex}>
-          Projects
-        </Link>
-      </li>
-      <li>
-        <Link to='/about' tabIndex={tabIndex}>
-          About
-        </Link>
-      </li>
-      <li>
-        <Link to='/contact' tabIndex={tabIndex}>
-          Contact
-        </Link>
-      </li>
-      <li>
-        <Link to='/experimental' tabIndex={tabIndex}>
-          Experimental
-        </Link>
-      </li>
-      <li>
-        <Link to='/blog' tabIndex={tabIndex}>
-          Blog
-        </Link>
-      </li>
-    </Ul>
+      <Ul open={open} aria-hidden={!isHidden} {...props}>
+        <li>
+          <Link to='/home' tabIndex={tabIndex}>
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link to='/projects' tabIndex={tabIndex}>
+            Projects
+          </Link>
+        </li>
+        <li>
+          <Link to='/about' tabIndex={tabIndex}>
+            About
+          </Link>
+        </li>
+        <li>
+          <Link to='/contact' tabIndex={tabIndex}>
+            Contact
+          </Link>
+        </li>
+        <li>
+          <Link to='/experimental' tabIndex={tabIndex}>
+            Experimental
+          </Link>
+        </li>
+        <li>
+          <Link to='/blog' tabIndex={tabIndex}>
+            Blog
+          </Link>
+        </li>
+      </Ul>
     </>
   );
 };

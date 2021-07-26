@@ -1,10 +1,15 @@
 import React from 'react'
+import { Row } from 'react-bootstrap'
+import { Col } from 'react-bootstrap'
+
 
 const Blog = () => {
     return (
-        <div>
+        <Row>
+            <Col className='' style={{textAlign:'center',fontSize:'50px'}}>
             Coming Soon
-        </div>
+            </Col>
+        </Row>
     )
 }
 

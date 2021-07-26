@@ -46,7 +46,7 @@ const AboutSection = () => {
       </button> */}
       <Row>
         <Col md={4} sm={5} xs={5} className='resume-col'>
-        <a href='https://drive.google.com/file/d/1lkxDTr-djCSyYnHw-P0MXyWJ_ADinmcY/view?usp=sharing'>Resume</a>
+        <a href='https://drive.google.com/file/d/1FuUjC_w0HsBAZolm9R874VtqrpUHHmUz/view?usp=sharing'>Resume</a>
         </Col>
         </Row>
     </Container>

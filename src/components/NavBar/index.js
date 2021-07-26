@@ -2,6 +2,8 @@ import React, { useState, useRef } from 'react';
 import { useOnClickOutside } from '../hooks/MenuHook';
 import Burger from './Burger';
 import RightNav from './RightNav';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
@@ -16,11 +18,14 @@ const NavBar = () => {
     <>
     <nav>
       <div ref={node}>
-      <RightNav open={open} setOpen={setOpen} onClick={onClick}/>
-    <div className="logo">
+    <Row>
+    <Col className="logo">
+      
       &lt; G/P &gt;
-      </div>
       <Burger open={open} setOpen={setOpen} className='burger'/>
+      </Col>
+    </Row>
+      <RightNav open={open} setOpen={setOpen} onClick={onClick}/>
       </div>
     </nav>
   </>

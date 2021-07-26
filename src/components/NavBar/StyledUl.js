@@ -20,7 +20,6 @@ export const Ul = styled.ul`
    flex-flow: row nowrap;
   font-size:1.8rem;
   text-align: center;
-  margin-top:2%;
 
   li {
     padding: 18px 10px;
@@ -30,7 +29,7 @@ export const Ul = styled.ul`
     background-color: #7f3331;
     position: fixed;
     transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
-    top: 7%;
+    top: 0;
     right: 0;
     height: 100vh;
     width:100vw;
