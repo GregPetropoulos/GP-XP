@@ -30,11 +30,11 @@ export const Ul = styled.ul`
     background-color: #7f3331;
     position: fixed;
     transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
-    top: 10%;
+    top: 7%;
     right: 0;
     height: 100vh;
     width:100vw;
-    z-index: 1; 
+    z-index: 10; 
     
     justify-content:center;
 

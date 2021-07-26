@@ -10,31 +10,36 @@ const Land = ({ children }) => {
   return (
     <Container>
       <Row>
-        <Col >
+        <Col md={12} >
           {children}
           <Typewriter
             onInit={(typewriter) => {
               typewriter
-              .pauseFor(2000)
+              .pauseFor(1500)
               .changeDelay(80)
-              .typeString('Hello, thank you for stopping by')
-              .pauseFor(3000)
-              .deleteAll(50)
+              .typeString('Hi, my name is Greg Petropoulos and I enjoy creating websites and web applications.')
+              .pauseFor(2500)
+              .deleteAll(10)
               .typeString(
-                'Do you enjoy rich website and application user experiences?'
+                'Hang out and get to know me.'
                 )
                 .pauseFor(2500)
-                .deleteAll(100)
-                .typeString("Of course you do that's why you are here")
+                .deleteAll(20)
+                .typeString("I was a geologist, and discovered a dinosaur bone.")
                 .pauseFor(2500)
-                .deleteAll(100)
-                .typeString('I am a Software Engineer')
-                .deleteChars(17)
+                .deleteAll(30)
+                .typeString('I served in the U.S. Marines and learned quite a bit.')
+                .pauseFor(2500)
+                .deleteAll(20)
                 .pauseFor(3000)
-                .typeString('Web Developer')
-                .deleteChars(15)
+                .typeString('Now I am a Web Developer')
+                .pauseFor(3000)
+                .deleteAll(20)
                 .typeString('Greg Petropoulos')
-                .pauseFor(3000)
+                .pauseFor(7000)
+                .deleteAll(20)
+                .typeString('Are you still here? Click around let me know what you think.')
+
                 
                 .start();
               }}

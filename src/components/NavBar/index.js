@@ -15,17 +15,13 @@ const NavBar = () => {
   return (
     <>
     <nav>
+      <div ref={node}>
+      <RightNav open={open} setOpen={setOpen} onClick={onClick}/>
     <div className="logo">
       &lt; G/P &gt;
       </div>
-      <div ref={node}>
-      <RightNav open={open} setOpen={setOpen} onClick={onClick}/>
       <Burger open={open} setOpen={setOpen} className='burger'/>
       </div>
-      {/* <div className="logo">
-      &lt; G/P &gt;
-      </div> */}
-
     </nav>
   </>
   )

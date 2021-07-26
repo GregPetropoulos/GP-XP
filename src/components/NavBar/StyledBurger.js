@@ -20,10 +20,10 @@ export const StyledBurger = styled.div`
     transform: ${({ open }) => open ? 'rotate(180deg)':'rotate(0)'};
   }
   div {
-    width: 2rem;
-    height: 0.25rem;
+    width: 6rem;
+    height: 0.27rem;
     background-color: ${({ open }) => open ? '#7f3331' : '#08a7ce'};
-    border-radius: 10px;
+    border-radius: 40% 25%;
     transform-origin: 1px;
     transition: all .2s linear;
     
@@ -33,10 +33,10 @@ export const StyledBurger = styled.div`
       opacity: ${({ open }) => open ? 0 : 1};
     }
     &:nth-child(2) {
-      transform: ${({ open }) => open ?  ('rotate(130deg) translateX(-19px) translateY(-14px)'):'rotate(0)'};
+      transform: ${({ open }) => open ?  ('rotate(115deg) translateX(-74px) translateY(-14px)'):'rotate(0)'};
     }
     &:nth-child(3) {
-      transform: ${({ open }) => open ? ('rotate(-130deg) translate(-6px)'): 'rotate(0)'};
+      transform: ${({ open }) => open ? ('rotate(-115deg) translate(-12px)'): 'rotate(0)'};
     }
     
   }

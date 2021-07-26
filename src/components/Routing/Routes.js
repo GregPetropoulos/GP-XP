@@ -4,6 +4,8 @@ import Home from '../../pages/Home';
 import Projects from '../../pages/Projects';
 import About from '../../pages/About';
 import Contact from '../../pages/Contact';
+import Blog from '../../pages/Blog';
+
 
 const Routes = props => {
     return (
@@ -13,6 +15,8 @@ const Routes = props => {
                 <Route exact path='/projects' component={Projects}/>
                 <Route exact path='/about' component={About}/>
                 <Route exact path='/contact' component={Contact}/>
+                <Route exact path='/blog' component={Blog}/>
+
             </Switch>
         </section>
     )

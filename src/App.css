@@ -32,7 +32,17 @@
     display: flex;
     /* justify-content:center; */
   }
-  
+  .Typewriter{
+    font-size: 2.9rem;
+  }
+
+ nav{
+   display: flex;
+   justify-content: space-between;
+   /* background-color: yellow; */
+   margin: 5px;
+   align-items: center;
+ }
   div {
     /* background-color: aquamarine; */
     /* background-color: black; */
