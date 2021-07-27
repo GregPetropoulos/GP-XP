@@ -1,6 +1,5 @@
 .project-container {
-  color: rgb(0, 68, 129);
-  font-size: rem;
+  /* color: rgb(0, 68, 129); */
   background-color: #0e2124;
 }
 .box-container {
@@ -36,14 +35,16 @@
 } */
 
 .project-links:hover{
-background-color:black;
+/* background-color:red; */
 text-decoration: none;
+list-style: none;
+
 }
 /* a:hover {
   background-color: yellow;
 } */
 .box {
-  color: #2d9687;;
+  color: #08a7ce;
 }
 
 

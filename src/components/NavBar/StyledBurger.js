@@ -42,7 +42,22 @@ export const StyledBurger = styled.div`
     }
     
   }
-  @media (max-width:650px){
-    display:none;
+  @media (max-width:768px){
+    // width: 5rem;
+    width:0;
+    // height: 4rem;
+    cursor: pointer;
+    position: fixed;
+    margin-top: 10px;
+    // padding:7px;
+    // margin-bottom: 7px;
+    // top: 15px;
+    right: 80px;
+    z-index: 9999;
+    // display: none;
+    display:flex;
+  //  flex-wrap: rowwrap;
+
+    // justify-content: center;
   }
 `;

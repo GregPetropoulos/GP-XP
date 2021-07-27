@@ -169,7 +169,8 @@ function Projects() {
           style={{
             fontFamily: 'monospace',
             fontSize: '1.4rem',
-            color: '#d6b850'
+            color: '#d6b850',
+            margin:'5%'
           }}
         >
           &lt;/projects&gt;

@@ -12,6 +12,7 @@ function Contact() {
     </Row>
     <ContactForm/>
     <Row>
+            
     <p style={{fontFamily:'monospace',fontSize:'1.4rem',color:'#08a7ce'}}>&lt;/contact&gt;</p>
     </Row>
     </Container>

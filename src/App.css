@@ -29,7 +29,7 @@
     color: var(--yellow-color);
     margin-top: 0rem;
     padding-left: 1.8rem;
-    display: flex;
+    /* display: flex; */
     /* justify-content:center; */
   }
   .Typewriter{
@@ -39,10 +39,11 @@
 
  nav{
    display: flex;
-   justify-content: space-between;
+   flex-wrap:wrap;
+   /* justify-content: center;  */
    /* background-color: yellow; */
-   margin: 5px;
-   align-items: center;
+   /* margin: 5px;
+   align-items: center; */
  }
   div {
     /* background-color: aquamarine; */
@@ -55,19 +56,35 @@
   } */
   a {
     color: var(--blue-color);
-   
-  }
+   text-decoration: none;
+  
+}
+  /* a:hover {
+    transform: scale(0.6);
+    transition-duration: 0.5s;
+  } */
+
+  /* Getting rid of scrollbar */
+  body {
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll; 
+}
+
+body::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
 
   /* for the navbar media query */
-  @media(max-width: 654px){
+  @media(max-width: 768px){
     .logo {
-      display:flex;
+      /* display:flex;
       justify-content:center;
-      align-items: flex-start;
+      align-items: flex-start; */
       color: var(--red-color);
-      width:100%;
-      text-align: center;
-      flex-flow: row nowrap;
+      /* width:100%; */
+      /* text-align: center; */
+      /* flex-flow: row nowrap; */
       /* border:5px solid greenyellow; */
 
 

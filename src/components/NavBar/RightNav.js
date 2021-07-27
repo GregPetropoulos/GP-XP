@@ -13,32 +13,32 @@ const RightNav = ({ open, ...props }) => {
     <>
       <Ul open={open} aria-hidden={!isHidden} {...props}>
         <li>
-          <Link to='/home' tabIndex={tabIndex}>
+          <Link to='/home' className= 'menu-links' tabIndex={tabIndex}>
             Home
           </Link>
         </li>
         <li>
-          <Link to='/projects' tabIndex={tabIndex}>
+          <Link to='/projects' className= 'menu-links'  tabIndex={tabIndex}>
             Projects
           </Link>
         </li>
         <li>
-          <Link to='/about' tabIndex={tabIndex}>
+          <Link to='/about' className= 'menu-links' tabIndex={tabIndex}>
             About
           </Link>
         </li>
         <li>
-          <Link to='/contact' tabIndex={tabIndex}>
+          <Link to='/contact' className= 'menu-links' tabIndex={tabIndex}>
             Contact
           </Link>
         </li>
         <li>
-          <Link to='/experimental' tabIndex={tabIndex}>
+          <Link to='/experimental' className= 'menu-links' tabIndex={tabIndex}>
             Experimental
           </Link>
         </li>
         <li>
-          <Link to='/blog' tabIndex={tabIndex}>
+          <Link to='/blog' className= 'menu-links' tabIndex={tabIndex}>
             Blog
           </Link>
         </li>

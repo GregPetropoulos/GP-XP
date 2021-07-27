@@ -16,15 +16,16 @@ import styled from 'styled-components';
 export const Ul = styled.ul`
  list-style: none;
    display: flex;
-   justify-content:space-around;
+   justify-content:space-between;
    flex-flow: row nowrap;
-  font-size:1.8rem;
+  font-size:3rem;
   text-align: center;
 
   li {
     padding: 18px 10px;
   }
   @media (max-width: 2560px) {
+    justify-content:center;
     flex-flow: column nowrap;
     background-color: #0e2124;
     position: fixed;
@@ -35,26 +36,21 @@ export const Ul = styled.ul`
     width:100vw;
     z-index: 10; 
     
-    justify-content:center;
 
     padding-top: 2rem;
     padding-bottom: 2rem;
     transition: transform 0.3s ease-in-out;
-    justify-content:center;
-    list-style: none;
-    text-decoration:none;
     li {
     font-size:2.8rem;
     text-align:center;
+    list-style: none;
+    text-decoration:none;
     }
-    @media (max-width: 650px) {
-       li {
-        display:block;
-        font-size:3rem;
-    position: relative;
-
-      }
+    li>.menu-Links:hover {
+      transform: scale(0.6);
+      transition-duration: 0.5s;
     }
+    @media (max-width:768px){
     
   }
 `;
