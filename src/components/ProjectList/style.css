@@ -1,7 +1,7 @@
 .project-container {
   color: rgb(0, 68, 129);
   font-size: rem;
-  background-color: black;
+  background-color: #0e2124;
 }
 .box-container {
   border: 0.26rem solid #d6b850;
@@ -10,6 +10,7 @@
   width: auto;
   transition: transform 450ms;
   border-radius: 20 20px;
+  padding:10px;
 }
 
 .box-container:hover {
@@ -18,7 +19,7 @@
 .project-title {
   margin-top: 30px;
   margin-bottom: 30px;
-  font-size: 1.6em;
+  font-size: 2.3rem;
   background: -webkit-linear-gradient(#f5f5f1, #ddb421);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -26,7 +27,7 @@
 .project-links {
   margin-top: 30px;
   margin-bottom: 30px;
-  font-size: 1.2em;
+  font-size: 1.4rem;
   color:#d6b850;
 }
 
@@ -48,8 +49,17 @@ text-decoration: none;
 
 img {
   object-fit: contain;
-  width:18%;
+  width:50%;
+  border-radius: 30%;
   /* height:auto; */
+}
+.image-col{
+  margin:4%;
+
+}
+.app-description{
+  font-size: 1.2rem;
+  margin:3%;
 }
 /* .col {
     border-radius: 20 20px;
@@ -62,3 +72,21 @@ img {
 } */
 
 /* may need object fit con for images */
+
+@media (max-width:675px){
+/* .box-container {
+  display: none;
+} */
+.project-title{
+  color:red;
+  }
+  .project-links{
+    display:block;
+  }
+  /* .project-container{
+    display:none;
+  } */
+  
+ 
+  
+}

@@ -3,7 +3,6 @@ import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Typewriter from 'typewriter-effect';
-import "./style.css";
 
 const Land = ({ children }) => {
 
@@ -39,8 +38,8 @@ const Land = ({ children }) => {
                 .pauseFor(7000)
                 .deleteAll(20)
                 .typeString('Are you still here? Click around let me know what you think.')
-
-                
+                .pauseFor(4000)
+                .deleteAll(60)
                 .start();
               }}
               />

@@ -10,16 +10,16 @@ import "./style.css";
 
 const ProjectList = ({ img, title, description, children }) => {
   return (
-    <Container lg={12} md={"true"} sm={"true"} className="project-container col-10">
+    <Container lg={12} md={true} sm={true} className="project-container col-10">
       <Row>
         <Col className="box-container">
           <Row >
             <Col sm={12} className="box">
               <h2 className="project-title">{title}</h2>
-              <Col sm={12}>
+              <Col sm={12} className='image-col'>
                 <img src={img} alt="" />
               </Col>
-              <p>{description}</p>
+              <p className='app-description'>{description}</p>
               {children}
             </Col>
           </Row>

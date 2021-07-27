@@ -1,30 +1,30 @@
-import React from "react";
-import Row from "react-bootstrap/Row";
-import Container from "react-bootstrap/Container";
-import Col from "react-bootstrap/Col";
-import { Link } from "react-router-dom";
-import "./style.css"
+import React from 'react';
+import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container';
+import Col from 'react-bootstrap/Col';
+import { Link } from 'react-router-dom';
+import './style.css';
 
 const AboutSection = () => {
-        
   return (
     <Container className='about-container'>
       <Row>
         <Col md={6}>
           <p className='about-1p'>
-            Hi, I am a Full Stack Web Developer with a background in geologic
-            sciences and I am always eager to learn and collaborate. As a sleuth
-            at heart, I find discovery in many aspects of life rewarding. Web
-            development is exciting and provides an opportunity to create value
-            and utilize my strengths in ground-truthing an expected outcome.
+            I am a Full Stack Web Developer with a background in geologic
+            sciences and I am always eager to learn and collaborate. A sleuth at
+            heart, I find discovery and fulfillment rewarding and web
+            development offers an opportunity to create value and utilize my
+            strengths. My approach is simple: write out the logic with pen &
+            paper, code, test, and refactor.
           </p>
         </Col>
       </Row>
       <Row>
         <Col md={6}>
           <p className='about-2p'>
-            I am well versed in MongoDB, Express, React, Node, M.E.R.N. stack
-            and foundational Javascript, jQuery, HTML5 CSS3.
+            I have created several web applications with the key methods in mind
+            for rich user experiences.
           </p>
         </Col>
       </Row>
@@ -32,12 +32,31 @@ const AboutSection = () => {
       <Row>
         <Col md={6}>
           <p className='about-3p'>
-            Over the last year I have created several web applications with the
-            key methods in mind for rich user experiences.
+            <ul>
+              <li>
+                Pragmatic design and development of responsive web applications
+              </li>
+              <li>
+                Stylistic and functional UI/UX, use of multiple API’s, and third
+                party integrations & database
+              </li>
+              <li>Models, Views, Controllers paradigm</li>
+              <li>Outcome oriented and AGILE project management.</li>
+            </ul>
+            I am proficient in the MERN stack (MongoDB, Express,Node React)
+            JavaScript, HTML, CSS and I am open to learning new technologies.
           </p>
         </Col>
-       </Row> 
+      </Row>
       <p className='about-4p'>
+        Over the last year I have held a fulltime non tech job, raised a family,
+        purchased a home, and dug deep into my bootcamp training.
+        <p>
+          {' '}
+          - "If you create an act, you create a habit. If you create a habit,
+          you create a character. If you create a character, you create a
+          destiny." - Andre Maurois
+        </p>
         Outside of web development I enjoy spending time with my family, working
         out, and exploring old treasure maps.
       </p>
@@ -46,9 +65,15 @@ const AboutSection = () => {
       </button> */}
       <Row>
         <Col md={4} sm={5} xs={5} className='resume-col'>
-        <a href='https://drive.google.com/file/d/1FuUjC_w0HsBAZolm9R874VtqrpUHHmUz/view?usp=sharing'>Resume</a>
+          <a
+            href='https://drive.google.com/file/d/1FuUjC_w0HsBAZolm9R874VtqrpUHHmUz/view?usp=sharing'
+            target='_blank'
+            rel='noreferrer'
+          >
+            Resume
+          </a>
         </Col>
-        </Row>
+      </Row>
     </Container>
   );
 };

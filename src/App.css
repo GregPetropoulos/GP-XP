@@ -33,7 +33,8 @@
     /* justify-content:center; */
   }
   .Typewriter{
-    font-size: 2.9rem;
+    font-size: 2rem;
+    text-align: center;
   }
 
  nav{
