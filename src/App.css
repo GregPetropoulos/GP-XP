@@ -45,18 +45,12 @@
    /* margin: 5px;
    align-items: center; */
  }
-  div {
-    /* background-color: aquamarine; */
-    /* background-color: black; */
-    /* background-color: #0e2124; */
   
-  }
-  /* p {
-    color: var(--blue-color);
-  } */
+ 
   a {
     color: var(--blue-color);
    text-decoration: none;
+   cursor:pointer;
   
 }
   /* a:hover {

@@ -16,7 +16,6 @@ function Home() {
       <HomeSection
       img={ProfileImage}
       />
-      <SVG/>
       <Row>
         <p style={{fontFamily:'monospace',fontSize:'1.4rem',color:'#7f3331'}}>&lt;/home&gt;</p>
       </Row>
