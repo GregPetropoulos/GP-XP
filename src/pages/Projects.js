@@ -38,7 +38,7 @@ function Projects() {
         '
       >
         <a
-          href='https://bit.ly/Deployed-DS'
+          href='https://bit.ly/DEVSQUAD'
           target='_blank'
           rel='noreferrer'
           className='project-links'
