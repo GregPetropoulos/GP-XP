@@ -37,19 +37,16 @@ export const Ul = styled.ul`
     z-index: 10; 
     
 
+    text-decoration:none;
     padding-top: 2rem;
     padding-bottom: 2rem;
     transition: transform 0.3s ease-in-out;
-    li {
+    li>a {
     font-size:2.8rem;
     text-align:center;
     list-style: none;
-    text-decoration:none;
     }
-    li>.menu-Links:hover {
-      transform: scale(0.6);
-      transition-duration: 0.5s;
-    }
+    
     @media (max-width:768px){
     
   }

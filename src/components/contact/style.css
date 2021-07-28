@@ -21,41 +21,4 @@ textarea.form-control,input.form-control{
     background-color: black;
     color: whitesmoke;
 } */
-  .icon-row {
-      margin:20px;
-    /* color:red;
- display: flex; 
- justify-content: space-around; 
- size:2.8em;  */
-} 
-
-.icon-col {
-display: flex;
-justify-content: space-around;
-} 
-
-.contact-footer{
-    font-family: 'Libre Barcode 39 Extended', cursive;
-    /* font-family: 'sans-serif'; */
-
-    color: #08a7ce;
-    font-size: 18px;
-/* display: flex;
-justify-content: center; */
-/* background-color:greenyellow; */
-
-
-
-}
-.intro-contact{
-    font-family: 'Trykker', serif;
-    font-style: italic;
-    font-size: 1.4rem;
-    color: whitesmoke;
-
-}
-.email-prompt {
-    font-family: 'Trykker', serif;
-    color: #08a7ce;
-    
-}
+ 

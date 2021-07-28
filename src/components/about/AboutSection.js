@@ -71,7 +71,7 @@ const AboutSection = () => {
             destiny." - Andre Maurois
           </p>
           {/* <button className='resume-button btn btn-lg'>
-      <a href="https://drive.google.com/file/d/1lkxDTr-djCSyYnHw-P0MXyWJ_ADinmcY/view?usp=sharing">Resume</a>
+       href="https://drive.google.com/file/d/1lkxDTr-djCSyYnHw-P0MXyWJ_ADinmcY/view?usp=sharing">Resume</a>
     </button> */}
           <Row>
             <Col lg={12} className='about-link-col'>
@@ -82,8 +82,8 @@ const AboutSection = () => {
               >
                 Resume
               </a>
-            {/* </Col> */}
-            {/* <Col className='about-link-col'> */}
+              {/* </Col> */}
+              {/* <Col className='about-link-col'> */}
               <a
                 href='https://github.com/GregPetropoulos'
                 target='_blank'

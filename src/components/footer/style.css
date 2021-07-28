@@ -1,0 +1,23 @@
+.icon-row {
+/* display: flex;  
+justify-content: space-between;  */
+/* size:2.8em; */
+}
+.icon-col{
+    display: flex;  
+justify-content: space-between; 
+}
+.icon-col>a:hover{
+  transform: scale(.7);
+  transition-duration: .3s;
+}
+
+.contact-footer{
+  font-family: 'Libre Barcode 39 Extended', cursive;
+  justify-content: center;
+  display:flex;
+  /* color: #08a7ce; */
+  font-size: 1.8rem;
+  margin:2%;
+
+}

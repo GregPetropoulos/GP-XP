@@ -11,13 +11,13 @@ function Home() {
     <Container>
     
       <Row>
-        <p style={{fontFamily:'monospace',fontSize:'1.4rem',color:'#7f3331'}}>&lt;home&gt;</p>
+        <p style={{fontFamily:'monospace',fontSize:'1.4rem'}}>&lt;home&gt;</p>
     </Row>
       <HomeSection
       img={ProfileImage}
       />
       <Row>
-        <p style={{fontFamily:'monospace',fontSize:'1.4rem',color:'#7f3331'}}>&lt;/home&gt;</p>
+        <p style={{fontFamily:'monospace',fontSize:'1.4rem'}}>&lt;/home&gt;</p>
       </Row>
     </Container>
   );
