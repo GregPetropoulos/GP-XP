@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container'
 import HomeSection from "../components/home/HomeSection";
 // import Footer from "../components/Footer";
 import ProfileImage from '../images/profile-image.jpeg'
-import SVG from '../components/SVG';
+// import SVG from '../components/SVG';
 
 function Home() {
   return (

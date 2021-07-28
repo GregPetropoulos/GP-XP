@@ -10,7 +10,7 @@ function HomeSection({ img }) {
     <Container className='home-container'>
       <Row>
         <Col className='home-main-column'>
-        <Col lg={4} className='profile-box'>
+        <Col className='profile-box'>
           {/* <br/> */}
           <a
             href='https://github.com/GregPetropoulos'
