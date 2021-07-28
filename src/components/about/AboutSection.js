@@ -76,7 +76,7 @@ const AboutSection = () => {
           <Row>
             <Col lg={12} className='about-link-col'>
               <a
-                href='https://drive.google.com/file/d/1FuUjC_w0HsBAZolm9R874VtqrpUHHmUz/view?usp=sharing'
+                href='https://drive.google.com/file/d/16UxGZVcdlRurmMJnVbsYpUEsTJ0F4QYA/view?usp=sharing'
                 target='_blank'
                 rel='noreferrer'
               >
