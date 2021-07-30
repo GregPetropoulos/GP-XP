@@ -17,7 +17,7 @@ const  App = () => {
           <Route exact path='/Greg-Portfolio' component={Land}/>
           <Route component ={Routes}/>
           </Switch>
-      <MainFooter/>
+      {/* <MainFooter/> */}
       </Fragment>
     </Router>
   );
