@@ -1,36 +1,67 @@
-
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import "./style.css";
-import Container from "react-bootstrap/Container";
-import React from "react";
-import Form from "react-bootstrap/Form";
-import Footer from '../footer/Footer'
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import './style.css';
+import Container from 'react-bootstrap/Container';
+import React from 'react';
+import Form from 'react-bootstrap/Form';
+import Footer from '../footer/Footer';
 
 const ContactForm = () => {
   return (
     <>
-      <Container lg ={12} md={6} sm={12} className="contact-form-container">
+      <Container className='contact-form-container'>
         <Row>
-          <p className="intro-contact">
-            Feel free to send an email to{" "}
+          <Col lg={12} className='intro-contact'>
+            Feel free to send an email to{' '}
             <a
-              href="mailto: gregpetropoulos@yahoo.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: "#08a7ce" }}
+              href='mailto: gregpetropoulos@yahoo.com'
+              target='_blank'
+              rel='noopener noreferrer'
+              style={{ color: '#08a7ce' }}
             >
               contact@gregpetropoulos.com
             </a>
-          </p>
+            <p>
+              Don't hesitate to call or connect on {' '}
+              <a
+                href='http://bit.ly/Greg--Linkedin'
+                target='_blank'
+                rel='noopener noreferrer'
+                style={{ color: '#d6b850' }}
+              >
+                Linkedin
+              </a>{' '} and take a peak at my{' '}
+              <a
+                href='https://drive.google.com/file/d/16UxGZVcdlRurmMJnVbsYpUEsTJ0F4QYA/view?usp=sharing'
+                target='_blank'
+                rel='noopener noreferrer'
+                style={{ color: '#d6b850' }}
+              >
+                resume
+              </a>{' '}
+              to learn more
+            </p>
+            <p>Cell: 919.717.2680</p>
+            <p>
+              Email:{' '}
+              <a
+                href='mailto: gregpetropoulos@yahoo.com'
+                target='_blank'
+                rel='noopener noreferrer'
+                style={{ color: '#08a7ce' }}
+              >
+                gregpetropoulos@yahoo.com
+              </a>
+            </p>
+          </Col>
         </Row>
 
-        <Row>
+        {/* <Row>
           <p className="email-prompt">
             Or just a send a quick message below! :
           </p>
-        </Row>
-
+        </Row> */}
+        {/* 
         <Row>
           <Col className="form-container">
             <Form>
@@ -55,10 +86,10 @@ const ContactForm = () => {
               >
                 Submit
               </button>
-            </Form>
-            <Footer/>
-            </Col>
-            </Row>
+            </Form> */}
+        <Footer />
+        {/* </Col> */}
+        {/* </Row> */}
       </Container>
     </>
   );

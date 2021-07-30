@@ -1,0 +1,8 @@
+.footer-content {
+    display:flex;
+    justify-content: center;
+    align-items:end;
+    height: 100vh;
+    /* position:fixed; */
+
+}

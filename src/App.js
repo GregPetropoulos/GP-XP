@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/navBar/index';
 import Routes from './components/Routing/Routes'
 import './App.css';
+import MainFooter from './components/mainFooter/MainFooter';
 
 
 const  App = () => {
@@ -16,6 +17,7 @@ const  App = () => {
           <Route exact path='/Greg-Portfolio' component={Land}/>
           <Route component ={Routes}/>
           </Switch>
+      <MainFooter/>
       </Fragment>
     </Router>
   );

@@ -1,6 +1,6 @@
 
 .contact-form-container {
-    background-color: black;
+    /* background-color: black; */
     /* color: whitesmoke; */
     color: #08a7ce;
 }
@@ -9,7 +9,7 @@ textarea.form-control,input.form-control{
     border-color:#000 #000 #08a7ce #000;    
 }
 
-.btn:hover{
+.a:hover{
     transform: scale(.7);
     transition-duration: .3s;
 }
@@ -21,4 +21,9 @@ textarea.form-control,input.form-control{
     background-color: black;
     color: whitesmoke;
 } */
- 
+ Form{
+     margin:35px;
+ }
+ .intro-contact{
+     font-size: 1.3rem;
+ }
