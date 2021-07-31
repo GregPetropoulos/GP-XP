@@ -3,14 +3,19 @@ import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Typewriter from 'typewriter-effect';
+import './style.css';
 
-const Land = ({ children }) => {
+// const Land = ({ children }) => {
+const Land = () => {
+
 
   return (
     <Container>
       <Row>
-        <Col md={12} >
-          {children}
+      <Col></Col>
+
+        <Col lg={10} className='typewriter-column'>
+          {/* {children} */}
           <Typewriter
             onInit={(typewriter) => {
               typewriter
@@ -44,6 +49,8 @@ const Land = ({ children }) => {
               }}
               />
         </Col>
+        <Col></Col>
+
       </Row>
     </Container>
   );

@@ -40,6 +40,7 @@
  nav{
    display: flex;
    flex-wrap:wrap;
+   margin:20px;
    /* justify-content: center;  */
    /* background-color: yellow; */
    /* margin: 5px;

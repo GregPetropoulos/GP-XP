@@ -5,10 +5,11 @@ import './style.css';
 
 const MainFooter = () => {
   return (
-    <Row>
-      <Col className='footer-content'>
+      <Row className='footer-content'>
+      
+      {/* <Col className='footer-content'> */}
         Greg Petropoulos 2021
-      </Col>
+      {/* </Col> */}
     </Row>
   );
 };

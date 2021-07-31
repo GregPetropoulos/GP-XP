@@ -26,4 +26,6 @@ textarea.form-control,input.form-control{
  }
  .intro-contact{
      font-size: 1.3rem;
+     margin:4%;
+     /* margin-bottom:25px; */
  }

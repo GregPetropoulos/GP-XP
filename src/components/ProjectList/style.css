@@ -5,7 +5,7 @@
 .box-container {
   border: 0.26rem solid #d6b850;
   border-width: thin;
-  margin: 30px;
+  margin: 40px;
   width: auto;
   transition: transform 450ms;
   border-radius: 20 20px;

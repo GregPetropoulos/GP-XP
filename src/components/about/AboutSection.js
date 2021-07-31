@@ -7,9 +7,9 @@ import './style.css';
 
 const AboutSection = () => {
   return (
-    <Container className='about-container'>
+    // <Container className='about-container'>
       <Row>
-        <Col lg={10} md={8} className='about-main-column'>
+        <Col lg={12} className='about-main-column'>
           <Row>
             <Col md={12}>
               <p className='about-1p'>
@@ -35,7 +35,7 @@ const AboutSection = () => {
               <Col lg={6} md={6} sm={6}>
                 animation place holder{' '}
               </Col>
-              <Col lg={6} md={6} sm={6}>
+              <Col lg={6} md={6}>
                 <p className='about-3p'>
                   <ul>
                     <li>
@@ -95,7 +95,7 @@ const AboutSection = () => {
           </Row>
         </Col>
       </Row>
-    </Container>
+    // </Container>
   );
 };
 export default AboutSection;

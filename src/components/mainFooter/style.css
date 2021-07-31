@@ -1,8 +1,11 @@
 .footer-content {
     display:flex;
     justify-content: center;
-    align-items:end;
-    height: 100vh;
+    align-items:flex-end;
+    height: auto;
+    margin:4%;
+    padding:20px;
     /* position:fixed; */
+    /* z-index: 999; */
 
 }
