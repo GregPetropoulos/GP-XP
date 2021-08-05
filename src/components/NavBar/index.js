@@ -19,9 +19,9 @@ const NavBar = () => {
       <nav>
         <div className='logo'>&lt; G/P &gt;</div>
 
-        <div ref={node}>
+<div className='spacer-nav'></div>
+        <div className='burger-menu-container' ref={node}>
           <Burger open={open} setOpen={setOpen} className='burger' />
-
           <RightNav open={open} setOpen={setOpen} onClick={onClick} />
         </div>
       </nav>

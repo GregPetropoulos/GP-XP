@@ -11,7 +11,7 @@ const Experimental = () => {
       <h2 style={{color:'#08a7ce'}}>Animation Experiment</h2>
 <Row>
       <Col lg={12}>
-        <p className ='' style={{ border:'5px solid #d6b850', fontSize: '1.3rem', color:'#08a7ce'}}>
+        <p className ='' style={{ border:'5px solid #d6b850', fontSize: '1.3rem', color:'#08a7ce', padding:'2%'}}>
           A simple SVG animation with drawing technique on page load with a quote"Light up the Darkness"
       <SVG/>
         </p>

@@ -1,22 +1,9 @@
 import styled from 'styled-components';
 
-
-// transition: transform 0.3s ease-in-out;
-// width: 100vw;
-
-// // ----
-// list-style: none;
-//   display: flex;
-//   justify-content:space-around;
-//   flex-flow: row nowrap;
-
-// justify-content:space-around;
-
-
 export const Ul = styled.ul`
- list-style: none;
+ list-style-type: none;
    display: flex;
-   justify-content:space-between;
+   justify-content:center;
    flex-flow: row nowrap;
   font-size:3rem;
   text-align: center;
@@ -44,7 +31,6 @@ export const Ul = styled.ul`
     li>a {
     font-size:2.8rem;
     text-align:center;
-    list-style: none;
     }
     
     @media (max-width:768px){

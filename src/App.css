@@ -51,21 +51,49 @@
   a {
     color: var(--blue-color);
    text-decoration: none;
+   list-style-type: none;
    /* cursor:pointer; */
   
 }
-.menu-links{
-  /* color: var(--yellow-color); */
-  text-decoration: none;
+Ul>li>a.menu-links{
+  letter-spacing: 3px;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.8s;
+
 }
-.menu-links:hover {
+
+Ul>li>a.menu-links:hover {
   transform: scale(0.6);
   transition-duration: 0.5s;
+  color: var(--red-color);
+  box-shadow: inset 400px 0 0 0 #d6b850;
+  border-radius: 10px;
+  padding:2%;
+
+
 }
-  /* a:hover {
-    transform: scale(0.6);
-    transition-duration: 0.5s;
-  } */
+
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
+
+.spacer-nav{
+  display:flex;
+  flex:.5;
+}
+.burger-menu-container{
+display:flex;
+justify-content: space-around;
+}
+
 
   /* Getting rid of scrollbar */
   body {
