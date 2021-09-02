@@ -18,8 +18,9 @@ const NavBar = () => {
     <>
       <nav>
         <div className='logo'>&lt; G/P &gt;</div>
+        <div className='logo2'> &#91;&#123;G : P &#125;&#93;</div>
 
-<div className='spacer-nav'></div>
+        <div className='spacer-nav'></div>
         <div className='burger-menu-container' ref={node}>
           <Burger open={open} setOpen={setOpen} className='burger' />
           <RightNav open={open} setOpen={setOpen} onClick={onClick} />

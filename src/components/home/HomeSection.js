@@ -10,27 +10,25 @@ function HomeSection({ img }) {
     <Container className='home-container'>
       <Row>
         <Col className='home-main-column'>
-        <Col className='profile-box'>
-          {/* <br/> */}
-          <a
-            href='https://github.com/GregPetropoulos'
-            target='_blank'
-            rel='noreferrer'
-            className='my-pic-link'
+          <Col className='profile-box'>
+            {/* <br/> */}
+            <a
+              href='https://drive.google.com/file/d/1B3x9OnAi5H1kl9G76PP72OFafSXtoezo/view?usp=sharing'
+              target='_blank'
+              rel='noreferrer'
+              className='my-pic-link'
             >
-            <img className='profile-image' src={img} alt='Greg Petropoulos' />
-          </a>
+              <img className='profile-image' src={img} alt='Greg Petropoulos' />
+            </a>
+          </Col>
+          <Col className=''>
+            <p className='home-description'>
+              Hi my name is Greg Petropoulos and I create engaging websites and
+              web applications to run across platforms and devices.
+            </p>
+          </Col>
+          <Footer></Footer>
         </Col>
-        <Col className=''>
-          <p className='home-description'>
-            Hi my name is Greg Petropoulos and I create engaging websites and
-            web applications to run across platforms and devices.
-          </p>
-        </Col>
-        <Footer>
-
-        </Footer>
-            </Col>
       </Row>
     </Container>
   );

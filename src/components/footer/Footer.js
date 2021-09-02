@@ -5,7 +5,8 @@ import Col from 'react-bootstrap/Col';
 import './style.css';
 // FONT AWESOME
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { fas } from "@fortawesome/free-solid-svg-icons";
+
+import { fas } from '@fortawesome/free-solid-svg-icons';
 import {
   faGithub,
   faLinkedin,
@@ -26,6 +27,7 @@ const Footer = () => {
           >
             <FontAwesomeIcon className='icon' icon={faGithub} size='4x' />
           </a>
+
           <a
             href='https://linkedin.com/in/greg-petropoulos-b186b954'
             target='_blank'
@@ -52,10 +54,9 @@ const Footer = () => {
           </a>
         </Col>
 
-          <Col lg={12} className='contact-footer'>
-            gregpetropoulos@yahoo.com
-          </Col>
-
+        <Col lg={12} className='contact-footer'>
+          gregpetropoulos@yahoo.com
+        </Col>
       </Row>
     </Container>
   );

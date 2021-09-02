@@ -31,8 +31,8 @@ const AboutSection = () => {
                   icon={faReact}
                   size='6x'
                   color='#61DBFB'
-                style={{background:'#000'}}
-                fixedWidth
+                  style={{ background: '#000' }}
+                  fixedWidth
                 />
               </Col>
               <Col className='col-skills-icon'>
@@ -41,7 +41,7 @@ const AboutSection = () => {
                   icon={faNodeJs}
                   size='6x'
                   color='#3c873a'
-                  style={{ background: '#303030'}}
+                  style={{ background: '#303030' }}
                   fixedWidth
                 />
               </Col>
@@ -51,7 +51,7 @@ const AboutSection = () => {
                   icon={faJs}
                   size='6x'
                   color='#f0db4f'
-                  style={{background:'#323330'}}
+                  style={{ background: '#323330' }}
                   fixedWidth
                 />
               </Col>
@@ -74,7 +74,6 @@ const AboutSection = () => {
                   color='#2965f1'
                   style={{ background: '#EBEBEB' }}
                   fixedWidth
-
                 />
               </Col>
             </Row>
@@ -140,23 +139,25 @@ const AboutSection = () => {
        href="https://drive.google.com/file/d/1lkxDTr-djCSyYnHw-P0MXyWJ_ADinmcY/view?usp=sharing">Resume</a>
     </button> */}
         <Row>
-          <Col lg={12} className='about-link-col'>
-            <a
-              href='https://drive.google.com/file/d/1B3x9OnAi5H1kl9G76PP72OFafSXtoezo/view?usp=sharing'
-              target='_blank'
-              rel='noreferrer'
-            >
-              Resume
-            </a>
-            {/* </Col> */}
-            {/* <Col className='about-link-col'> */}
-            <a
-              href='https://github.com/GregPetropoulos'
-              target='_blank'
-              rel='noreferrer'
-            >
-              Github
-            </a>
+          <Col lg={12} className='about-link-col-buttons'>
+            <button className='resume-button'>
+              <a
+                href='https://drive.google.com/file/d/1B3x9OnAi5H1kl9G76PP72OFafSXtoezo/view?usp=sharing'
+                target='_blank'
+                rel='noreferrer'
+              >
+                Resume
+              </a>
+            </button >
+            <button className='github-button'>
+              <a
+                href='https://github.com/GregPetropoulos'
+                target='_blank'
+                rel='noreferrer'
+              >
+                Github
+              </a>
+            </button>
           </Col>
         </Row>
       </Col>

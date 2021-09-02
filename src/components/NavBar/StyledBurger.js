@@ -51,13 +51,24 @@ export const StyledBurger = styled.div`
     margin-top: 10px;
     // padding:7px;
     // margin-bottom: 7px;
-    // top: 15px;
+    top: 15px;
     right: 80px;
     z-index: 9999;
     // display: none;
     display:flex;
   //  flex-wrap: rowwrap;
-
-    // justify-content: center;
+    div{
+    width: 2.8rem;
+    &:nth-child(1) {
+      transform: ${({ open }) => open ?  ('rotate(60deg) translateX(29px) translateY(4px)'):'translateX(0%)'};
+      // opacity: ${({ open }) => open ? 0 : 1};
+    }
+    &:nth-child(2) {
+      transform: ${({ open }) => open ?  ('rotate(-60deg) translateX(-7px) translateY(-9px)'):'rotate(0)'};
+    }
+    &:nth-child(3) {
+      transform: ${({ open }) => open ? ('rotate(0deg) translate(0px)'): 'rotate(0)'};
+    }
+    }
   }
 `;

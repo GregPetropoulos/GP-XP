@@ -11,7 +11,7 @@ const Land = () => {
 
   return (
     <Container>
-      <Row>
+      <Row className = 'typewriter-row'>
       <Col></Col>
 
         <Col lg={10} className='typewriter-column'>
