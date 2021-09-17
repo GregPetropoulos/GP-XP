@@ -1,0 +1,193 @@
+/* Global styles */
+:root {
+  --danger-color: #dc3545;
+  --success-color: #28a745;
+  --yellow-color: #d6b850;
+  --blue-color: #08a7ce;
+  --red-color: #7f3331;
+  --almost--black: #0e2124;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Trykker', serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: whitesmoke;
+  background-color: #0e2124;
+  height: 100vh;
+}
+.logo {
+  font-size: 4rem;
+  color: var(--yellow-color);
+  margin-top: 0rem;
+  padding-left: 1.8rem;
+  /* display: flex; */
+  /* justify-content:center; */
+}
+.logo2 {
+  display: none;
+  margin-top: 0rem;
+  padding-left: 1.8rem;
+  font-size: 3rem;
+}
+.Typewriter {
+  font-size: 2rem;
+  text-align: center;
+}
+.typewriter-column {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.typewriter-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  /* justify-content: center;  */
+  /* background-color: yellow; */
+  /* margin: 5px;
+   align-items: center; */
+}
+
+a {
+  color: var(--blue-color);
+  text-decoration: none;
+  list-style-type: none;
+  /* cursor:pointer; */
+}
+Ul > li > a.menu-links {
+  letter-spacing: 3px;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.8s;
+}
+
+Ul > li > a.menu-links:hover {
+  transform: scale(0.6);
+  transition-duration: 0.5s;
+  color: var(--red-color);
+  box-shadow: inset 400px 0 0 0 #d6b850;
+  border-radius: 10px;
+  padding: 2%;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+.spacer-nav {
+  display: flex;
+  flex: 0.5;
+}
+.burger-menu-container {
+  display: flex;
+  justify-content: space-around;
+}
+.about-link-col-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.resume-button {
+  border-radius: 6px;
+  height: 45px;
+  width: 40%;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  background-color: #d6b850;
+  transition:2000ms, top ease-in-out;
+
+}
+.resume-button:hover {
+  transform: scale(1.2);
+  transition-duration: 1s;
+  box-shadow: inset 400px 0 0 0 #d6b850;
+  border-radius: 10px;
+}
+.github-button {
+  border-radius: 6px;
+  height: 45px;
+  width: 40%;
+  font-size: 1.2rem;
+  font-weight: 900;
+  background-color: #d6b850;
+  transition:2000ms, top ease-in-out;
+}
+.github-button:hover {
+  transform: scale(1.2);
+  transition-duration: 1s;
+  box-shadow: inset 400px 0 0 0 #d6b850;
+  border-radius: 10px;
+}
+
+.about-skills-icon-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  align-items: center;
+}
+
+.skill-icon {
+  margin: 4px;
+  margin-bottom: 15px;
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+
+  border-radius: 50%;
+  /* width: 100%; */
+  height: 100%;
+}
+.col-skills-icon {
+  display: flex;
+  justify-content: center;
+}
+/* Getting rid of scrollbar */
+body {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+/* for the navbar media query */
+@media (max-width: 768px) {
+  .logo {
+    color: var(--red-color);
+    display: none;
+  }
+  .logo2 {
+    color: var(--red-color);
+    display: contents;
+  }
+}
