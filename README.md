@@ -1,7 +1,7 @@
-# Greg XPortfolio
+# Greg's XPortfolio
 
 ## Links
-## [Portfolio](https://gregpetropoulos.github.io/Greg-Portfolio/)
+## [Portfolio](https://gregpetropoulos.dev)
 ## License
 ![GitHub License Badge](https://shields.io/badge/license-MIT-green)
 ## Description
@@ -9,19 +9,19 @@ I created a portfolio to show my latest projects and newly learned technologies.
 
 # Demo
 ## Landing
-![Land](./src/images/landing.png)
+![Land](./client/src/images/landing.png)
 ## Home
-![Home](./src/images/home.png)
+![Home](./client/src/images/home.png)
 ## Nav Menu
-![Menu](./src/images/menu.png)
+![Menu](./client/src/images/menu.png)
 ## About
-![About](./src/images/about.png)
+![About](./client/src/images/about.png)
 ## Projects
-![Projects](./src/images/projects.png)
+![Projects](./client/src/images/projects.png)
 ## Contact
-![Contact](./src/images/contact.png)
+![Contact](./client/src/images/contact.png)
 ## Experimental
-![Experimental](./src/images/experiment.png)
+![Experimental](./client/src/images/experiment.png)
 
 ## Table of Contents 
 * [Links](#links)
@@ -44,12 +44,12 @@ Setting the initial concept to give a clear direction on where to start and how 
 
 
 Wireframe
-![Wireframe](./src/images/wireframe.png)
+![Wireframe](./client/src/images/wireframe.png)
 
 ### UI
 The UI/UX came to by inspiration of my favorite running shoes and the colors Nike used for their Juniper line
 Theme colors based off a Nike Juniper shoe
-![Color Inspiration](/src/images/nike-juniper.png)
+![Color Inspiration](./client/src/images/nike-juniper.png)
 - yellow
 #d6b850
 - blue
@@ -115,4 +115,4 @@ Full Stack Web Developer in React
 
 
 
-### [Greg's Portfolio](https://gregpetropoulos.github.io/Greg-Portfolio/)
+### [Greg's Portfolio](https://gregpetropoulos.dev)
