@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row'
 import Container from 'react-bootstrap/Container'
 import HomeSection from "../components/home/HomeSection";
 // import Footer from "../components/Footer";
-import ProfileImage from '../images/profile-image.jpeg'
+import ProfileImage from '../images/Profile-image.jpeg'
 import Projects from './Projects'
 import About from './About'
 import Contact from './Contact'

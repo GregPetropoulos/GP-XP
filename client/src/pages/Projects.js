@@ -1,5 +1,5 @@
 import React from 'react';
-import ProjectList from '../components/projectList/ProjectList';
+import ProjectList from '../components/ProjectList/ProjectList';
 // import Footer from "../components/Footer";
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
