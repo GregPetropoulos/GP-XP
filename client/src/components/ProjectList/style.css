@@ -12,15 +12,12 @@
   border-radius: 10px;
   padding:10px;
   background-color: #0e2124;
+  cursor:pointer;
 }
 .box-container:hover {
     transform: scale(1.08);
   z-index: 9999;
   }
-  /* .box{
-    width:50%;
-  height:50%;
-  } */
 .project-title {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -40,6 +37,7 @@
 text-decoration: none;
 list-style: none;
 
+
 }
 .box {
   color: #08a7ce;
@@ -50,21 +48,20 @@ list-style: none;
 }
 img {
   object-fit: contain;
-  width:100%;
+  width:50%;
   height:100%;
-  border-radius:78%;
+  border-radius:30px;
 
 }
 .images{
   display: flex;
   justify-content: center;
   align-items: center;
-  width:250px;
-  height:150px;
+
 }
 .app-description{
   font-size: 1.2rem;
-  margin:3%;
+  margin:8px;
   flex-wrap: wrap;
   word-wrap: break-word
 }
@@ -72,14 +69,3 @@ img {
   display:flex;
   justify-content: space-around;
 }
-/* .col {
-    border-radius: 20 20px;
-
-    transition: transform 450ms;
-} */
-
-/* .col:hover {
-    transform:scale(1.08);
-} */
-
-/* may need object fit con for images */

@@ -28,6 +28,14 @@ const ProjectList = ({ img, title, description, children }) => {
     .project-links{
       font-size:.8rem;
     }
+    .img{
+  border-radius:30px;
+
+    }
+    .images{
+      border-radius:30px;
+    
+        }
 }
   `
   return (
@@ -39,10 +47,8 @@ const ProjectList = ({ img, title, description, children }) => {
           <Row >
             <Col  className="box">
               <h2 className="project-title">{title}</h2>
-              <Row>
-                <Col className='images'>
-                <img src={img} alt="" />
-              </Col>
+              <Row className='images'>
+                <img src={img} alt="Linked project images of greg petropoulos project's page" />
                 </Row>
               <Col>
               <p className='app-description'>{description}</p>

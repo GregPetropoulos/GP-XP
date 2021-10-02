@@ -10,6 +10,8 @@ import EmployeeImage from '../images/employee-directory.jpg';
 import FitImage from '../images/fit-image.jpg';
 import BuildAPageImage from '../images/build-a-page.jpg';
 import DevSquadImage from '../images/dev-squad.jpg';
+import ExcavationImage from '../images/excavation.jpg';
+
 
 
 // NEED TO ADD <a> TO IMAGE AND PROJECT TITLE FOR FUNCTIONALITY
@@ -49,6 +51,35 @@ function Projects() {
         <Row></Row>
         <a
           href='https://bit.ly/Greg-DevSquad'
+          target='_blank'
+          rel='noreferrer'
+          className='project-links'
+        >
+          Github
+        </a>
+      </ProjectList>
+
+      <ProjectList
+        img={ExcavationImage}
+        title='GP Excavation'
+        description='I designed and built a full stack MERN Website for a local excavation company to 
+        increase web presence.The back end is built for the deployment to Heroku and 3rd party dependency 
+        EmailJS was utilized for the form API for free quotes and newsletters. 
+        The front end is rich in plain css, animation and mobile responsive. 
+        Future goals include MongoDB set up for customer reviews and lead capture.'
+      >
+        <a
+          href='https://bit.ly/GP-Excavation'
+          target='_blank'
+          rel='noreferrer'
+          className='project-links'
+        >
+          Deployed
+        </a>
+        {/* <br></br> */}
+        <Row></Row>
+        <a
+          href='https://github.com/GregPetropoulos/GP-Excavation'
           target='_blank'
           rel='noreferrer'
           className='project-links'
