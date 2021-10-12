@@ -1,16 +1,36 @@
-import React from 'react'
-import { Row } from 'react-bootstrap'
-import { Col } from 'react-bootstrap'
-
+import React from 'react';
+import { Col, Row, Container } from 'react-bootstrap';
+import BlogList from '../components/blog/BlogList';
 
 const Blog = () => {
-    return (
-        <Row>
-            <Col className='' style={{textAlign:'center',fontSize:'50px'}}>
-            Coming Soon
-            </Col>
-        </Row>
-    )
-}
+  return (
+    <Container>
+      <Row>
+        <p
+          style={{
+            fontFamily: 'monospace',
+            fontSize: '1.4rem',
+            color: '#08a7ce'
+          }}
+        >
+          &lt;blog&gt;
+        </p>
+      </Row>
+      <BlogList />
 
-export default Blog
+      <Row>
+        <p
+          style={{
+            fontFamily: 'monospace',
+            fontSize: '1.4rem',
+            color: '#08a7ce'
+          }}
+        >
+          &lt;/blog&gt;
+        </p>
+      </Row>
+    </Container>
+  );
+};
+
+export default Blog;
