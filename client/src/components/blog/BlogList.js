@@ -10,7 +10,7 @@ function BlogList() {
       });
   }, []);
 
-  console.log('article-check', articles);
+  // console.log('article-check', articles);
 
   return (
     <div className='articles'>

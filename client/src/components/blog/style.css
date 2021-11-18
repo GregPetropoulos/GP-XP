@@ -17,7 +17,7 @@
   background: linear-gradient(
     0deg,
     rgba(14, 33, 36, 1) 0%,
-    rgba(2, 206, 247, 1) 90%
+    rgb(2, 126, 151) 90%
   );
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
@@ -27,7 +27,7 @@
   border-radius: 5px;
 }
 .title {
-  color: black;
+  color: #121212;
 }
 
 .blog-image {

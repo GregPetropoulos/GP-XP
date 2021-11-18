@@ -13,41 +13,38 @@ const Experimental = () => {
             fontFamily: 'monospace',
             fontSize: '1.4rem',
             color: '#08a7ce'
-          }}
-        >
+          }}>
           &lt;experimental&gt;
         </p>
-        <Col lg={12}>
-        <h2 style={{ color: 'whitesmoke', textAlign:'center'}}>Animation Experiment</h2>
-          <p
-            className=''
+        <Col lg={12}  className=''
             style={{
               border: '5px solid #d6b850',
               fontSize: '1.3rem',
               color: '#08a7ce',
               padding: '2%'
-            }}
-          >
+            }}>
+          <h2 style={{ color: 'whitesmoke', textAlign: 'center' }}>
+            Drawing Animation
+          </h2>
+          <p>
             A simple SVG animation with drawing technique on page load with a
             quote"Light up the Darkness"
-            <SVG />
           </p>
+          <SVG />
         </Col>
 
         <Col
           lg={12}
           className=''
-          style={{ textAlign: 'center', fontSize: '50px' }}
-        >
-          More to come
+          style={{ textAlign: 'center', fontSize: '25px' }}>
+          More to come...
         </Col>
         <p
           style={{
             fontFamily: 'monospace',
             fontSize: '1.4rem',
             color: '#08a7ce'
-          }}
-        >
+          }}>
           &lt;/experimental&gt;
         </p>
       </Row>

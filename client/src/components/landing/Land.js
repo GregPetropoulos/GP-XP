@@ -4,35 +4,48 @@ import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Typewriter from 'typewriter-effect';
 import './style.css';
+import MainFooter from '../mainFooter/MainFooter';
+
+
+import Particles from 'react-tsparticles';
+import particlesConfig from '../../config/particlesConfig';
 
 // const Land = ({ children }) => {
 const Land = () => {
-
-
   return (
-    <Container>
-      <Row className = 'typewriter-row'>
-      <Col></Col>
+    <Container
+      className='Landing-Background'
+      style={{ position: 'relative', overflow: 'hidden' }}>
+        <MainFooter/>
+      <div style={{ position: 'absolute' }}>
+        <Particles height='100vh' width='100vw' params={particlesConfig} />
+      </div>
+      <Row className='typewriter-row'>
+        <Col></Col>
 
-        <Col lg={10} className='typewriter-column'>
+        <Col lg={1} className='typewriter-column'>
           {/* {children} */}
           <Typewriter
             onInit={(typewriter) => {
               typewriter
-              .pauseFor(1500)
-              .changeDelay(80)
-              .typeString('Hi, my name is Greg Petropoulos and I enjoy creating websites and web applications.')
-              .pauseFor(2500)
-              .deleteAll(10)
-              .typeString(
-                'Hang out and get to know me.'
+                .pauseFor(1500)
+                .changeDelay(80)
+                .typeString(
+                  'Hi, my name is Greg Petropoulos and I enjoy creating websites and web applications.'
                 )
                 .pauseFor(2500)
+                .deleteAll(10)
+                .typeString('Hang out and get to know me.')
+                .pauseFor(2500)
                 .deleteAll(20)
-                .typeString("I was a geologist, and discovered a dinosaur bone.")
+                .typeString(
+                  'I was a geologist, and discovered a dinosaur bone.'
+                )
                 .pauseFor(2500)
                 .deleteAll(30)
-                .typeString('I served in the U.S. Marines and learned quite a bit.')
+                .typeString(
+                  'I served in the U.S. Marines and learned quite a bit.'
+                )
                 .pauseFor(2500)
                 .deleteAll(20)
                 .pauseFor(3000)
@@ -42,16 +55,19 @@ const Land = () => {
                 .typeString('Greg Petropoulos')
                 .pauseFor(7000)
                 .deleteAll(20)
-                .typeString('Are you still here? Click around let me know what you think.')
+                .typeString(
+                  'Are you still here? Click around let me know what you think.'
+                )
                 .pauseFor(4000)
                 .deleteAll(60)
                 .start();
-              }}
-              />
+            }}
+          />
         </Col>
-        <Col></Col>
-
       </Row>
+        {/* <Col>
+        <MainFooter/>
+        </Col> */}
     </Container>
   );
 };

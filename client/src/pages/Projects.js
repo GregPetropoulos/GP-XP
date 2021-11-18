@@ -15,7 +15,7 @@ import ExcavationImage from '../images/excavation.jpg';
 
 
 // NEED TO ADD <a> TO IMAGE AND PROJECT TITLE FOR FUNCTIONALITY
-function Projects() {
+const Projects = () => {
   return (
     <Container>
       <Row>
@@ -201,7 +201,6 @@ function Projects() {
             fontFamily: 'monospace',
             fontSize: '1.4rem',
             color: '#d6b850',
-            margin:'5%'
           }}
         >
           &lt;/projects&gt;

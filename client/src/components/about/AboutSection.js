@@ -1,8 +1,8 @@
 import React from 'react';
 import Row from 'react-bootstrap/Row';
-import Container from 'react-bootstrap/Container';
+// import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import './style.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -101,7 +101,8 @@ const AboutSection = () => {
               animation place holder{' '}
             </Col>
             <Col lg={6} md={6}>
-              <p className='about-3p'>
+
+              <span className='about-3p'>
                 <ul>
                   <li>
                     Pragmatic design and development of responsive web
@@ -117,7 +118,7 @@ const AboutSection = () => {
                 I am proficient in the MERN stack (MongoDB, Express,Node React)
                 JavaScript, HTML, CSS and I am open to learning new
                 technologies.
-              </p>
+              </span>
             </Col>
           </Row>
         </Row>
@@ -125,7 +126,7 @@ const AboutSection = () => {
           Over the last year I have held a fulltime non tech job, raised a
           family, purchased a home, and dug deep into my bootcamp training and
           look forward to the future.
-          <p></p>
+          <span></span>
           Outside of web development I enjoy spending time with my family,
           working out, and exploring old treasure maps.
         </p>
@@ -144,17 +145,15 @@ const AboutSection = () => {
               <a
                 href='https://drive.google.com/file/d/1RCsljP6tR_IwIvFxWDMSaKq3Ikv7woZO/view?usp=sharing'
                 target='_blank'
-                rel='noreferrer'
-              >
+                rel='noreferrer'>
                 Resume
               </a>
-            </button >
+            </button>
             <button className='github-button'>
               <a
                 href='https://github.com/GregPetropoulos'
                 target='_blank'
-                rel='noreferrer'
-              >
+                rel='noreferrer'>
                 Github
               </a>
             </button>

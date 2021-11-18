@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar/index';
 import Routes from './components/Routing/Routes'
 import './App.css';
-import MainFooter from './components/mainFooter/MainFooter';
+// import MainFooter from './components/mainFooter/MainFooter';
 
 
 const  App = () => {
@@ -17,7 +17,6 @@ const  App = () => {
           <Route exact path='/' component={Land}/>
           <Route component ={Routes}/>
           </Switch>
-      <MainFooter/>
       </Fragment>
     </Router>
   );
