@@ -4,7 +4,7 @@ const app = express();
 
 app.use(express.json());
 
-// for checking server function
+//*for checking server function
 //  app.get('/', (req, res) => res.send('API Running'));
 
 // Serve static assets in production
