@@ -1,16 +1,16 @@
-import React from 'react';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import React, { Fragment } from 'react';
 import './style.css';
 
 const MainFooter = () => {
+  const today = new Date();
+  const currentYear = today.getFullYear();
   return (
-      <Row className='footer-content'>
-      
-      {/* <Col className='footer-content'> */}
-        Greg Petropoulos 2021
-      {/* </Col> */}
-    </Row>
+    <Fragment>
+      <div className='footer-content'>
+        <p>Created by Greg Petropoulos</p>
+        <p>copyright 2021-{currentYear}</p>
+      </div>
+    </Fragment>
   );
 };
 
