@@ -10,17 +10,16 @@ function HomeSection({ img }) {
     <Container className='home-container'>
       <Row>
         <Col className='home-main-column'>
-          <Col className='profile-box'>
+          <Row className='profile-box'>
             {/* <br/> */}
             <a
               href='https://drive.google.com/file/d/1B3x9OnAi5H1kl9G76PP72OFafSXtoezo/view?usp=sharing'
               target='_blank'
               rel='noreferrer'
-              className='my-pic-link'
-            >
+              className='my-pic-link'>
               <img className='profile-image' src={img} alt='Greg Petropoulos' />
             </a>
-          </Col>
+          </Row>
           <Col className=''>
             <p className='home-description'>
               Hi my name is Greg Petropoulos and I create engaging websites and
