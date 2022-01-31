@@ -50,7 +50,7 @@ const ContactForm = () => {
                 Linkedin
               </a>{' '} and take a peak at my{' '}
               <a
-                href='https://drive.google.com/file/d/1RCsljP6tR_IwIvFxWDMSaKq3Ikv7woZO/view?usp=sharing'
+                href='https://drive.google.com/file/d/1GfRu1yjqCOL3v94fZqwkisjBZkW6cC81/view?usp=sharing'
                 target='_blank'
                 rel='noopener noreferrer'
                 style={{ color: '#d6b850' }}

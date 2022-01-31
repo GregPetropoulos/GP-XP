@@ -13,7 +13,7 @@ function HomeSection({ img }) {
           <Row className='profile-box'>
             {/* <br/> */}
             <a
-              href='https://drive.google.com/file/d/1B3x9OnAi5H1kl9G76PP72OFafSXtoezo/view?usp=sharing'
+              href='https://drive.google.com/file/d/1GfRu1yjqCOL3v94fZqwkisjBZkW6cC81/view?usp=sharing'
               target='_blank'
               rel='noreferrer'
               className='my-pic-link'>

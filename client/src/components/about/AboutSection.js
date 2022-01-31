@@ -101,7 +101,6 @@ const AboutSection = () => {
               animation place holder{' '}
             </Col>
             <Col lg={6} md={6}>
-
               <span className='about-3p'>
                 <ul>
                   <li>
@@ -143,7 +142,7 @@ const AboutSection = () => {
           <Col lg={12} className='about-link-col-buttons'>
             <button className='resume-button'>
               <a
-                href='https://drive.google.com/file/d/1RCsljP6tR_IwIvFxWDMSaKq3Ikv7woZO/view?usp=sharing'
+                href='https://drive.google.com/file/d/1GfRu1yjqCOL3v94fZqwkisjBZkW6cC81/view?usp=sharing'
                 target='_blank'
                 rel='noreferrer'>
                 Resume
