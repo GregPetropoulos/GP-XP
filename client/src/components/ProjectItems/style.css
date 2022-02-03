@@ -1,4 +1,4 @@
-.project-container {
+/* .project-container {
   background-color: #0e2124;
   width:50%;
   height:50%;
@@ -68,4 +68,10 @@ img {
 .project-children{
   display:flex;
   justify-content: space-around;
+} */
+
+/* NEW STYLES FOR EACH REPO */
+.project-items {
+  display: 'flex';
+  width:100%;
 }

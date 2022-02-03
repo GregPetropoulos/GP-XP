@@ -1,10 +1,7 @@
-// import React, {useState} from 'react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Ul } from './StyledUl';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
 const RightNav = ({ open, ...props }) => {
   const isHidden = open ? true : false;

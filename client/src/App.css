@@ -1,12 +1,12 @@
-/* Global styles */
+ /** GLOBAL STYLES */
 :root {
   --danger-color: #dc3545;
   --success-color: #28a745;
   --yellow-color: #d6b850;
   --blue-color: #08a7ce;
   --red-color: #7f3331;
-  --almost--black: #0e2124;
-  /* --almost--black: #ffff; */
+  /* --almost--black: #0e2124; */
+  --almost--black: #0000;
 }
 
 * {
@@ -20,8 +20,8 @@ body {
   font-style: italic;
   font-size: 0.9rem;
   color: whitesmoke;
-  background-color: #0e2124;
-  /* background-color: #000; */
+  /* background-color: #0e2124; */
+  background-color: #000;
 
   height: 100vh;
 }
@@ -65,7 +65,7 @@ Ul > li > a.menu-links {
 
 Ul > li > a.menu-links:hover {
   transform: scale(0.6);
-  transition-duration: 0.5s;
+  transition-duration: .08s;
   color: var(--red-color);
   box-shadow: inset 400px 0 0 0 #d6b850;
   border-radius: 10px;
@@ -102,32 +102,34 @@ a:active {
 }
 .resume-button {
   border-radius: 6px;
-  height: 45px;
+  /* height: ; */
   width: 40%;
   font-size: 1.2rem;
   font-weight: bolder;
-  background-color: #d6b850;
-  transition: 2000ms, top ease-in-out;
+  background-color: #464646;
+  transition: 1000ms, top ease-in-out;
 }
 .resume-button:hover {
+
+
   transform: scale(1.2);
-  transition-duration: 1s;
-  box-shadow: inset 400px 0 0 0 #d6b850;
+  transition-duration: .9s;
+  box-shadow: inset 400px 0 0 0 #7f3331;
   border-radius: 10px;
 }
 .github-button {
   border-radius: 6px;
-  height: 45px;
+  /* height: 45px; */
   width: 40%;
   font-size: 1.2rem;
-  font-weight: 900;
-  background-color: #d6b850;
-  transition: 2000ms, top ease-in-out;
+  font-weight: bolder;
+  background-color: #464646;
+  transition: 1000ms, top ease-in-out;
 }
 .github-button:hover {
   transform: scale(1.2);
-  transition-duration: 1s;
-  box-shadow: inset 400px 0 0 0 #d6b850;
+  transition-duration: .9s;
+  box-shadow: inset 400px 0 0 0 #7f3331;
   border-radius: 10px;
 }
 
@@ -175,4 +177,15 @@ body::-webkit-scrollbar {
     color: var(--red-color);
     display: contents;
   }
+}
+.ul-of-repos{
+  display:flex;
+  flex-direction:row;
+  width:100%;
+  text-align: center;
+  /* margin:50px; */
+  justify-content: space-between;
+  overflow: hidden;
+  list-style-type: none;
+
 }

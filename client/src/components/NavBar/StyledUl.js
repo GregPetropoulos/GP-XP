@@ -14,7 +14,7 @@ export const Ul = styled.ul`
   @media (max-width: 2560px) {
     justify-content:center;
     flex-flow: column nowrap;
-    background-color: #0e2124;
+    background-color: #464646;
     position: fixed;
     transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
     top: 0;
@@ -27,7 +27,7 @@ export const Ul = styled.ul`
     text-decoration:none;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.6s ease-in-out;
     li>a {
     font-size:2.8rem;
     text-align:center;
