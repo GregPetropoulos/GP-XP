@@ -4,6 +4,7 @@ import ProjectItems from '../components/ProjectItems/ProjectItems';
 // import Footer from "../components/Footer";
 import Row from 'react-bootstrap/Row';
 // import Container from 'react-bootstrap/Container';
+// import Unsplash, { toJson } from "unsplash-js";
 
 // PROJECT IMAGES
 import GolfImages from '../images/golf.jpg';
@@ -15,51 +16,66 @@ import ExcavationImage from '../images/excavation.jpg';
 import axios from 'axios';
 
 const Projects = () => {
-  // loop threough repo for pined top 5
-  // loop through for random repo
-  // loop through for most recent
-
   //*CONFIGURATIONS AND KEYS
   let githubClientId;
   let githubClientSecret;
-
+  let unsplashAccess;
+  
   if (process.env.NODE_ENV !== 'production') {
     githubClientId = process.env.REACT_APP_GITHUB_CLIENT_ID;
     githubClientSecret = process.env.REACT_APP_GITHUB_CLIENT_SECRET;
+    unsplashAccess=process.env.REACT_APP_MY_ACCESS;
   } else {
     githubClientId = process.env.GITHUB_CLIENT_ID;
     githubClientSecret = process.env.GITHUB_CLIENT_SECRET;
+    unsplashAccess=process.env.MY_ACCESS;
+    
   }
 
   //*STATE
   const [projects, setProjects] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const[randomProject, setRandomProject]= useState(3)
+  const [loading, setLoading] = useState(false);
+  const [randomProject, setRandomProject] = useState(3);
+  const [images, setImages]=useState([])
 
   console.log('projects', projects);
-  console.log('projects', typeof projects);
+
+  // *VARIABLES FOR THE GITHUB API
+  const baseUrl = `https://api.github.com/users/GregPetropoulos`;
+  const repoUrl = `/repos?per_page=100&sort=created:asc&client_id=${githubClientId}&client_secret=${githubClientSecret}`;
+  const allRepoUrl = `${baseUrl}${repoUrl}`;
+
+  // *VARIABLES FOR THE UNSPLASH API
+  const baseUrlUnsplash=`https://api.unsplash.com`
+  const getImage =`/photos/?client_id=${unsplashAccess}`
+  const allUnsplashImages =`${baseUrlUnsplash}${getImage}`
+
+
   //*THE CALL TO GH *GET THE TOP 5
   useEffect(() => {
-    console.log('project axios call here');
+    console.log('useEffect project axios call here');
 
+    // loader while function gets response
+    setLoading(true);
+// calling on the github api
     const getAllRepos = async () => {
-      const res = await axios.get(
-        `https://api.github.com/users/GregPetropoulos/repos?per_page=100&sort=created:asc&client_id=${githubClientId}&client_secret=${githubClientSecret}`
-      );
-      // const baseUrl=`https://api.github.com/repos/GregPetropoulos/`
-      // const repoList=['GP-Excavation','IT-Logger-App']
-      // const res = await axios.get(
-      //   `https://api.github.com/repos/GregPetropoulos/GP-Excavation?client_id=${githubClientId}&client_secret=${githubClientSecret}`
-      // );
-      // const res = await axios.get(
-      //   `${baseUrl}${repoList[i]}?client_id=${githubClientId}&client_secret=${githubClientSecret}`
-      // );
+      const res = await axios.get(allRepoUrl);
       setProjects(res.data);
-      setLoading(false);
       console.log('res.data', res.data);
+      return res;
     };
+    setLoading(false);
     getAllRepos();
-  }, []);
+
+    // calling on the unsplash api
+    const repoUnsplashImages = async () => {
+      const res = await axios.get(allUnsplashImages)
+      setImages(res.data);
+      console.log('res.data', res.data);
+      return res;
+    }
+    repoUnsplashImages()
+  }, [allRepoUrl]);
 
   // *CHANGE THE ID NUMBERS TO MODIFY THE TOP 5 IN THE FUTURE
   const top5 = [
@@ -84,13 +100,17 @@ const Projects = () => {
     if (projects !== null) {
       const randMatch = () =>
         projects.filter((item) => !top5.find((t5) => item.id === t5.id));
-        if (randMatch) {
+      if (randMatch) {
         Math.floor(Math.random() * randMatch.length);
         return randMatch();
       }
     }
   };
-  console.log('isRandom', isRandom());
+
+// * NO TRENDING FUNCTION NEEDED FOR TRENDING CATEGORY SINCE GITHUB API IS RETURNING THE LATEST REPOS
+// console.table(projects)
+console.log('KEY CHECK HERE',process.env.MY_ACCESS);
+
   return (
     <Fragment>
       <Row>
@@ -104,7 +124,7 @@ const Projects = () => {
         </p>
       </Row>
 
-      <Row>
+      <Row title='My Top 5 Repos'>
         <h2>My Top 5 Repos</h2>
         <ul className='ul-of-repos'>
           {myTop5().map((repo) => (
@@ -113,17 +133,21 @@ const Projects = () => {
         </ul>
         <h2>Random Repos</h2>
         <ul className='ul-of-repos'>
-         {isRandom().map((repo) => repo.homepage &&(
-            <ProjectItems repo={repo} key={repo.id} loading={loading} />
-          ))} 
-
+          {isRandom().map(
+            (repo) =>
+              repo.homepage && (
+                <ProjectItems repo={repo} key={repo.id} loading={loading} />
+              )
+          )}
         </ul>
-        <h2>Latest Activity</h2>
+        <h2>Trending</h2>
         <ul className='ul-of-repos'>
-         {projects.map((repo) => repo.homepage &&(
-            <ProjectItems repo={repo} key={repo.id} loading={loading} />
-          ))} 
-          
+          {projects.map(
+            (repo) =>
+              repo.homepage && (
+                <ProjectItems repo={repo} key={repo.id} loading={loading} />
+              )
+          )}
         </ul>
       </Row>
 
