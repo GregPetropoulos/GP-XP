@@ -1,4 +1,4 @@
- /** GLOBAL STYLES */
+/** GLOBAL STYLES */
 :root {
   --danger-color: #dc3545;
   --success-color: #28a745;
@@ -65,7 +65,7 @@ Ul > li > a.menu-links {
 
 Ul > li > a.menu-links:hover {
   transform: scale(0.6);
-  transition-duration: .08s;
+  transition-duration: 0.08s;
   color: var(--red-color);
   box-shadow: inset 400px 0 0 0 #d6b850;
   border-radius: 10px;
@@ -110,10 +110,8 @@ a:active {
   transition: 1000ms, top ease-in-out;
 }
 .resume-button:hover {
-
-
   transform: scale(1.2);
-  transition-duration: .9s;
+  transition-duration: 0.9s;
   box-shadow: inset 400px 0 0 0 #7f3331;
   border-radius: 10px;
 }
@@ -128,7 +126,7 @@ a:active {
 }
 .github-button:hover {
   transform: scale(1.2);
-  transition-duration: .9s;
+  transition-duration: 0.9s;
   box-shadow: inset 400px 0 0 0 #7f3331;
   border-radius: 10px;
 }
@@ -178,14 +176,61 @@ body::-webkit-scrollbar {
     display: contents;
   }
 }
-.ul-of-repos{
-  display:flex;
-  flex-direction:row;
-  width:100%;
+.ul-of-repos {
+  display: flex;
+  /* flex-direction:row; */
+  width: 100%;
   text-align: center;
   /* margin:50px; */
-  justify-content: space-between;
+  /* justify-content: space-between; */
   overflow: hidden;
   list-style-type: none;
+}
 
+/* Netflix--rows for projects */
+.top-5-row,
+.trending-row,
+.random {
+  text-align: center;
+}
+
+.poster-title {
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* width:100%; */
+  /* z-index: 999; */
+}
+/* setup for scrollbar left to right in a row */
+.row-posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+}
+/* tells browser to get hide scroll bar but keep functionality */
+.row-posters::-webkit-scrollbar {
+  display: none;
+}
+
+/* handles the image in the row */
+.row-poster {
+  object-fit: contain;
+  width: 100%;
+  max-height: 250px;
+  margin-right: 10px;
+  transition: transform 450ms;
+}
+.small-row-poster {
+  object-fit: contain;
+  width: 100%;
+  max-height: 100px;
+  margin-right: 10px;
+  transition: transform 450ms;
+}
+/* grow size of image on hover */
+.small-row-poster:hover {
+  transform: scale(1.08);
+}
+.row-poster:hover {
+  transform: scale(1.09);
 }

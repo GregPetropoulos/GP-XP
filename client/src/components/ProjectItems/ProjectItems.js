@@ -6,100 +6,87 @@ import './style.css';
 import styled from 'styled-components';
 import Spinner from '../Spinner/Spinner';
 import PropTypes from 'prop-types';
-import formatDate from '../utils/formatDate'
+import formatDate from '../utils/formatDate';
+
+// import GolfImages from '../images/golf.jpg';
+// import EmployeeImage from '../images/employee-directory.jpg';
+// import FitImage from '../images/fit-image.jpg';
+// import BuildAPageImage from '../images/build-a-page.jpg';
+import DevSquadImage from '../../images/dev-squad.jpg';
+import ExcavationImage from '../../images/excavation.jpg';
+import ContactBookImage from '../../images/contact-book.jpg';
+import GithubFinderImage from '../../images/github-finder.jpg';
+import ITLoggerImage from '../../images/it-logger.jpg';
 // ADD ONS CAROUSEL AND BOX REVEALER
 
-const ProjectItems = ({loading, repo:{name, created_at,topics,description, homepage}}) => {
-  //   const ProjectResponsive = styled.div`
-  //   @media (max-width:585px){
-  //     .app-description{
-  //       display:none;
-  //     }
-  //     .project-children{
-  //       margin:5px;
-  //       padding:10px;
-  //       display:flex;
-  //       justify-content:center
-  //       align-items:center;
-  //     }
-  //     .project-title{
-  //       font-size:1.5rem;
-  //     }
-  //     .project-links{
-  //       font-size:.8rem;
-  //     }
-  //     .img{
-  //   border-radius:30px;
+const ProjectItems = ({ loading,isLarge, imageMatch}) => {
+  // // * IMAGES IN ARRAY FOR EACH OF THE TOP 5 POSTERS
+  // // *Ideally will come from the unsplash api and made as a piece of state merged with the github api
+  // const imagesOf5 = [
+  //   {
+  //     id: 0,
+  //     imageId: 435850053,
+  //     imageRep: ITLoggerImage,
+  //     imageName: 'IT-Logger'
+  //   },
+  //   {
+  //     id: 1,
+  //     imageId: 426586061,
+  //     imageRep: ContactBookImage,
+  //     imageName: 'Contact-Book'
+  //   },
+  //   {
+  //     id: 2,
+  //     imageId: 421770170,
+  //     imageRep: GithubFinderImage,
+  //     imageName: 'Github-Finder'
+  //   },
+  //   {
+  //     id: 3,
+  //     imageId: 391642169,
+  //     imageRep: ExcavationImage,
+  //     imageName: 'GP-Excavation'
+  //   },
+  //   {
+  //     id: 4,
+  //     imageId: 383392571,
+  //     imageRep: DevSquadImage,
+  //     imageName: 'DevSquad'
+  //   }
+  // ];
+ 
 
-  //     }
-  //     .images{
-  //       border-radius:30px;
+  if (loading) return <Spinner />;
+  return (
+    <Fragment>
 
-  //         }
-  // }
-  //   `
+            {/* {
+              <a
+                href={homepage}
+                target='_blank'
+                rel='noreferrer noopener'
+                alt={`Name of the repo ${name}`}>
+                {name}
+              </a>}   */}
 
-  if (loading)return <Spinner />;
-  // const {topics, total,description, homepage,created_at}=repo
-  return(
-<Fragment>
-<li className='project-items'>
+<div className='row-posters'>
+         {imageMatch.map((item) => 
+        <img
+        className={`${isLarge? 'row-poster':'small-row-poster'}`}
+        key={item.id}
+        src={item.imageRep}
+        alt={`Coming soon ${item.imageName}`}
+        /> 
 
-
-<h3>{name}</h3>
-<p> About: {description}</p>
-<a href={homepage}>{name}</a>
-<div>Started on: {formatDate(created_at)}</div>
-{/* <p>Tags: {topics}</p> */}
-{/* <div>{FormatDate(date)}</div> */}
-
-</li>
-
-
-</Fragment>
-  )
-
-
-
-  // ) <div style={{ userStyle }}>
-  //   {repo.name}</div>;
+          )}
+          </div>
+    </Fragment>
+  );
 };
 
-// const userStyle = {
-//   display: 'grid',
-//   gridTemplateColumns: 'repeat(3. 1fr)',
-//   gridGap: '1rem'
-// };
-ProjectItems.propTypes = {
-  // repo: PropTypes.array.isRequired,
-  loading: PropTypes.bool.isRequired
-};
-// <Container className="project-container col-10">
-//  <ProjectResponsive>
-//   <Row>
-//     <Col className="box-container">
-//       <Row >
-//         <Col  className="box">
-//           <h2 className="project-title">{title}</h2>
-//           <Row className='images'>
-//             <img src={img} alt="Linked project images of greg petropoulos project's page" />
-//             </Row>
-//           <Col>
-//           <p className='app-description'>{description}</p>
-//           </Col>
-//           <Row className ='project-children'>
-//             <Col>
-//           {children}
-//             </Col>
-//           </Row>
-//         </Col>
-//       </Row>
-//     </Col>
-//   </Row>
-//   <Row className="buffer-row"></Row>
-// </ProjectResponsive>
-// </Container>
-// );
+// ProjectItems.propTypes = {
+// repo: PropTypes.array.isRequired,
+// loading: PropTypes.bool.isRequired
 // };
 
 export default ProjectItems;

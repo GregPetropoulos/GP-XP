@@ -7,36 +7,77 @@ import Row from 'react-bootstrap/Row';
 // import Unsplash, { toJson } from "unsplash-js";
 
 // PROJECT IMAGES
-import GolfImages from '../images/golf.jpg';
-import EmployeeImage from '../images/employee-directory.jpg';
-import FitImage from '../images/fit-image.jpg';
-import BuildAPageImage from '../images/build-a-page.jpg';
+// import GolfImages from '../images/golf.jpg';
+// import EmployeeImage from '../images/employee-directory.jpg';
+// import FitImage from '../images/fit-image.jpg';
+// import BuildAPageImage from '../images/build-a-page.jpg';
 import DevSquadImage from '../images/dev-squad.jpg';
 import ExcavationImage from '../images/excavation.jpg';
+import ContactBookImage from '../images/contact-book.jpg';
+import GithubFinderImage from '../images/github-finder.jpg';
+import ITLoggerImage from '../images/it-logger.jpg';
 import axios from 'axios';
 
 const Projects = () => {
   //*CONFIGURATIONS AND KEYS
   let githubClientId;
   let githubClientSecret;
-  let unsplashAccess;
-  
+  // let unsplashAccess;
+  // let fakeKey;
+
   if (process.env.NODE_ENV !== 'production') {
     githubClientId = process.env.REACT_APP_GITHUB_CLIENT_ID;
     githubClientSecret = process.env.REACT_APP_GITHUB_CLIENT_SECRET;
-    unsplashAccess=process.env.REACT_APP_MY_ACCESS;
+    // unsplashAccess=process.env.REACT_APP_MY_ACCESS
+    // fakeKey=process.env.REACT_APP_MY_FAKE_ACCESS
   } else {
     githubClientId = process.env.GITHUB_CLIENT_ID;
     githubClientSecret = process.env.GITHUB_CLIENT_SECRET;
-    unsplashAccess=process.env.MY_ACCESS;
-    
+    // unsplashAccess=process.env.MY_ACCESS
   }
 
   //*STATE
-  const [projects, setProjects] = useState([]);
+  // GET the github data
+  //loading state
   const [loading, setLoading] = useState(false);
-  const [randomProject, setRandomProject] = useState(3);
-  const [images, setImages]=useState([])
+  const [projects, setProjects] = useState([]);
+  const [top5Repos, setTop5Repos] = useState([]);
+  const [error, setError] = useState(false);
+
+  // * IMAGES IN ARRAY FOR EACH OF THE TOP 5 POSTERS
+  // *Ideally will come from the unsplash api and made as a piece of state merged with the github api
+  const [images, setImages] = useState([
+    {
+      id: 0,
+      imageId: 435850053,
+      imageRep: ITLoggerImage,
+      imageName: 'IT-Logger'
+    },
+    {
+      id: 1,
+      imageId: 426586061,
+      imageRep: ContactBookImage,
+      imageName: 'Contact-Book'
+    },
+    {
+      id: 2,
+      imageId: 421770170,
+      imageRep: GithubFinderImage,
+      imageName: 'Github-Finder'
+    },
+    {
+      id: 3,
+      imageId: 391642169,
+      imageRep: ExcavationImage,
+      imageName: 'GP-Excavation'
+    },
+    {
+      id: 4,
+      imageId: 383392571,
+      imageRep: DevSquadImage,
+      imageName: 'DevSquad'
+    }
+  ]);
 
   console.log('projects', projects);
 
@@ -46,60 +87,55 @@ const Projects = () => {
   const allRepoUrl = `${baseUrl}${repoUrl}`;
 
   // *VARIABLES FOR THE UNSPLASH API
-  const baseUrlUnsplash=`https://api.unsplash.com`
-  const getImage =`/photos/?client_id=${unsplashAccess}`
-  const allUnsplashImages =`${baseUrlUnsplash}${getImage}`
+  // const baseUrlUnsplash=`https://api.unsplash.com/photos/?client_id=${fakeKey}`
 
+  // console.log('baseUrlUnsplash',baseUrlUnsplash);
 
   //*THE CALL TO GH *GET THE TOP 5
   useEffect(() => {
     console.log('useEffect project axios call here');
-
     // loader while function gets response
-    setLoading(true);
-// calling on the github api
+    // calling on the github api
     const getAllRepos = async () => {
-      const res = await axios.get(allRepoUrl);
-      setProjects(res.data);
-      console.log('res.data', res.data);
-      return res;
+      try {
+        setError(false);
+        setLoading(true);
+        const res = await axios.get(allRepoUrl);
+        const results = res.data;
+        // setProjects(prev=> ({...prev,[results]:results}))
+        setProjects([...results]);
+
+        console.log('res.data', res.data);
+        // console.log('projects.results', projects.results[5]);
+        console.log('projects', projects);
+        // return res;
+      } catch (error) {
+        setError(true);
+      }
+      setLoading(false);
     };
-    setLoading(false);
     getAllRepos();
 
-    // calling on the unsplash api
-    const repoUnsplashImages = async () => {
-      const res = await axios.get(allUnsplashImages)
-      setImages(res.data);
-      console.log('res.data', res.data);
-      return res;
-    }
-    repoUnsplashImages()
-  }, [allRepoUrl]);
+    //* calling on the unsplash api
+    // const repoUnsplashImages = async () => {
+    //   const res = await axios.get(`${baseUrlUnsplash}`)
+    //   setImages(res.data);
+    //   console.log('res.data', res.data);
+    //   console.log('baseUrlUnsplash',baseUrlUnsplash);
+    //   return res;
+    // }
+    // repoUnsplashImages()
+  }, []);
 
-  // *CHANGE THE ID NUMBERS TO MODIFY THE TOP 5 IN THE FUTURE
-  const top5 = [
-    { id: 435850053 },
-    { id: 391642169 },
-    { id: 383392571 },
-    { id: 421770170 },
-    { id: 426586061 }
-  ];
-  // *RETURNS TOP 5
-  const myTop5 = () => {
-    if (projects !== null) {
-      const isMatch = () =>
-        projects.filter((item) => top5.find((t5) => item.id === t5.id));
-      if (isMatch) {
-        return isMatch();
-      }
-    }
-  };
+  // *RETURNS TOP 5 ARRAY AND HARDCODED IMAGES ARRAY
+
+  // console.log("projects.results", projects.results[5]);
+
   // *RETURNS RANDOM
   const isRandom = () => {
     if (projects !== null) {
       const randMatch = () =>
-        projects.filter((item) => !top5.find((t5) => item.id === t5.id));
+        projects.filter((item) => !images.find((t5) => item.id === t5.imageId));
       if (randMatch) {
         Math.floor(Math.random() * randMatch.length);
         return randMatch();
@@ -107,10 +143,32 @@ const Projects = () => {
     }
   };
 
-// * NO TRENDING FUNCTION NEEDED FOR TRENDING CATEGORY SINCE GITHUB API IS RETURNING THE LATEST REPOS
-// console.table(projects)
-console.log('KEY CHECK HERE',process.env.MY_ACCESS);
+  // * NO TRENDING FUNCTION NEEDED FOR TRENDING CATEGORY SINCE GITHUB API IS RETURNING THE LATEST REPOS
+  // console.table(projects)
+  // console.log('KEY CHECK HERE',process.env.MY_ACCESS);
+  // console.log('KEY CHECK HERE',process.env.REACT_APP_MY_FAKE_KEY);
+  // const {imageRep}= top5Repos
 
+  const top5Arr = projects.filter((item) =>
+    images.find((t5) => item.id === t5.imageId)
+  );
+  const imageMatch = images;
+  const combo5And5 = top5Arr.concat(imageMatch);
+  const adder = () => {
+    setTop5Repos(combo5And5);
+  };
+
+  // const comboRepImg = () => {
+  // top5Arr.concat(imageMatch)
+  // setTop5Repos([top5Arr, images])
+  // }
+  // const comboRepImg = projects.filter((item) => top5.find((t5) => item.id === t5.id).map(arr5=> imageMatch.filter(img=> imageMatch.imageId===arr5.id) ))
+  // console.log("comboRepImg", comboRepImg);
+  // console.log('comboRepImg',comboRepImg());
+  console.log('top5Repos', top5Repos);
+  console.log('imagematch', imageMatch);
+  console.log('top5Arr', top5Arr);
+  console.log(loading === true);
   return (
     <Fragment>
       <Row>
@@ -124,244 +182,22 @@ console.log('KEY CHECK HERE',process.env.MY_ACCESS);
         </p>
       </Row>
 
-      <Row title='My Top 5 Repos'>
+      <div className='top-5-row'>
         <h2>My Top 5 Repos</h2>
-        <ul className='ul-of-repos'>
-          {myTop5().map((repo) => (
-            <ProjectItems repo={repo} key={repo.id} loading={loading} />
-          ))}
-        </ul>
-        <h2>Random Repos</h2>
-        <ul className='ul-of-repos'>
-          {isRandom().map(
-            (repo) =>
-              repo.homepage && (
-                <ProjectItems repo={repo} key={repo.id} loading={loading} />
-              )
-          )}
-        </ul>
-        <h2>Trending</h2>
-        <ul className='ul-of-repos'>
-          {projects.map(
-            (repo) =>
-              repo.homepage && (
-                <ProjectItems repo={repo} key={repo.id} loading={loading} />
-              )
-          )}
-        </ul>
-      </Row>
 
-      <Row>
-        <p
-          style={{
-            fontFamily: 'monospace',
-            fontSize: '1.4rem',
-            color: '#d6b850'
-          }}>
-          &lt;/projects&gt;
-        </p>
-      </Row>
+        <ProjectItems isLarge={true} imageMatch={imageMatch} loading={loading} />
+      </div>
+      <div className='trending-row'>
+        <h2>Trending</h2>
+
+        <ProjectItems isLarge={false} imageMatch={imageMatch} loading={loading} />
+      </div>
+      <div className='random'>
+        <h2>Random</h2>
+
+        <ProjectItems isLarge={false} imageMatch={imageMatch} loading={loading} />
+      </div>
     </Fragment>
   );
 };
-
-// const userStyle = {
-//   display: 'grid',
-//   gridTemplateColumns: 'repeat(3. 1fr)',
-//   gridGap: '1rem'
-// };
-// -----------------------––––––––––––––––––––––––––––
-// <Container>
-//   <Row>
-//     <p
-//       style={{
-//         fontFamily: 'monospace',
-//         fontSize: '1.4rem',
-//         color: '#d6b850'
-//       }}
-//     >
-//       &lt;projects&gt;
-//     </p>
-//   </Row>
-
-//   <ProjectList
-//     img={DevSquadImage}
-//     title='Dev Squad'
-//     description='Full stack social media MERN app, rich api calls, authentication,
-//      and validation.Utilized Model View Controllers, Mongoose ORM, JSX, HTML, Bootstrap
-//     Protected routes and endpoints with JSON Web Tokens,
-//     Redux for app state management and testing with Redux Chrome extension, creating actions and reducers for resources, creating a build script, secured keys, and deployed to Heroku with git commands.
-//     '
-//   >
-//     <a
-//       href='https://bit.ly/DEVSQUAD'
-//       target='_blank'
-//       rel='noreferrer'
-//       className='project-links'
-//     >
-//       Deployed
-//     </a>
-//     {/* <br></br> */}
-//     <Row></Row>
-//     <a
-//       href='https://bit.ly/Greg-DevSquad'
-//       target='_blank'
-//       rel='noreferrer'
-//       className='project-links'
-//     >
-//       Github
-//     </a>
-//   </ProjectList>
-
-//   <ProjectList
-//     img={ExcavationImage}
-//     title='GP Excavation'
-//     description='I designed and built a full stack MERN Website for a local excavation company to
-//     increase web presence.The back end is built for the deployment to Heroku and 3rd party dependency
-//     EmailJS was utilized for the form API for free quotes and newsletters.
-//     The front end is rich in plain css, animation and mobile responsive.
-//     Future goals include MongoDB set up for customer reviews and lead capture.'
-//   >
-//     <a
-//       href='https://bit.ly/GP-Excavation'
-//       target='_blank'
-//       rel='noreferrer'
-//       className='project-links'
-//     >
-//       Deployed
-//     </a>
-//     {/* <br></br> */}
-//     <Row></Row>
-//     <a
-//       href='https://github.com/GregPetropoulos/GP-Excavation'
-//       target='_blank'
-//       rel='noreferrer'
-//       className='project-links'
-//     >
-//       Github
-//     </a>
-//   </ProjectList>
-
-//   <ProjectList
-//     img={BuildAPageImage}
-//     title='Build-A-Page'
-//     description='Full stack MERN app that creates a rich mobile responsive NO-CODE HTML Template quickly and
-//      easily publish them to your website or save it locally.
-//     Model View Controllers paradigm, state management via
-//     Context Provider, JSX, JavaScript,  HTML, Bootstrap, Tailwind, CSS, Node, Express, Gravatar
-//     .'
-//   >
-//     <a
-//       href='https://bit.ly/Deployed-BAP'
-//       target='_blank'
-//       rel='noreferrer'
-//       className='project-links'
-//     >
-//       Deployed
-//     </a>
-//     {/* <br></br> */}
-//     <Row></Row>
-//     <a
-//       href='https://bit.ly/Greg-Build-A-Page'
-//       target='_blank'
-//       rel='noreferrer'
-//       className='project-links'
-//     >
-//       Github
-//     </a>
-//   </ProjectList>
-
-//   <ProjectList
-//     img={GolfImages}
-//     title='Golfers+'
-//     description='An app designed from front to back for golf quota scoring
-//     stats keeping while playing hole by hole'
-//   >
-//     {/* <Image src="../../images/golf.jpg" fluid /> */}
-//     <a
-//       href='https://bit.ly/Golfersplus-deployed'
-//       target='_blank'
-//       rel='noreferrer'
-//       className='project-links'
-//     >
-//       Deployed
-//     </a>
-//     {/* <br></br> */}
-//     <Row></Row>
-//     <a
-//       href='https://github.com/GregPetropoulos/Golf-Assistant-App'
-//       target='_blank'
-//       rel='noreferrer'
-//       className='project-links'
-//     >
-//       Github
-//     </a>
-//   </ProjectList>
-
-//   <ProjectList
-//     img={EmployeeImage}
-//     title='Employee Directory'
-//     description="I created an employee directory with React and as per industry standard, I broke up the application's UI into components, managed component state and props, and respond to user events.
-//     Employee data was acquired by the randomuser.me API"
-//   >
-//     <a
-//       href='https://gregpetropoulos.github.io/Employee-Directory/'
-//       target='_blank'
-//       rel='noreferrer'
-//       className='project-links'
-//     >
-//       Deployed
-//     </a>
-//     {/* <br></br> */}
-//     <Row></Row>
-//     <a
-//       href='https://github.com/GregPetropoulos/Employee-Directory'
-//       target='_blank'
-//       rel='noreferrer'
-//       className='project-links'
-//     >
-//       Github
-//     </a>
-//   </ProjectList>
-
-//   <ProjectList
-//     img={FitImage}
-//     title='Workout Tracker'
-//     description='I created a workout tracker and (NoSQL) Mongo database with a Mongoose schema and handle routes with Express.
-//      Use the MVC paradigm and connect the back end to the front end.'
-//   >
-//     <a
-//       href='https://fittracker210518.herokuapp.com/?id=60a6abb46ed3680015489964'
-//       target='_blank'
-//       rel='noreferrer'
-//       className='project-links'
-//     >
-//       Deployed
-//     </a>
-//     {/* <br></br> */}
-//     <Row></Row>
-//     <a
-//       href='https://github.com/GregPetropoulos/Workout-Tracker'
-//       target='_blank'
-//       rel='noreferrer'
-//       className='project-links'
-//     >
-//       Github
-//     </a>
-//   </ProjectList>
-//   <Row>
-//     <p
-//       style={{
-//         fontFamily: 'monospace',
-//         fontSize: '1.4rem',
-//         color: '#d6b850',
-//       }}
-//     >
-//       &lt;/projects&gt;
-//     </p>
-//   </Row>
-// </Container>
-//   );
-// }
-
 export default Projects;
