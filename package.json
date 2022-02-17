@@ -27,7 +27,6 @@
     "express": "^4.17.1",
     "nodemon": "^2.0.12",
     "react": "^17.0.2",
-    "react-tsparticles": "^1.37.4",
     "unsplash-js": "^7.0.15"
   }
 }

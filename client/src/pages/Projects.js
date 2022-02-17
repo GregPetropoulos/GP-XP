@@ -1,16 +1,15 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState, Fragment } from 'react';
 import ProjectItems from '../components/ProjectItems/ProjectItems';
-// import Footer from "../components/Footer";
-import Row from 'react-bootstrap/Row';
 import Spinner from 'react-bootstrap/Spinner';
 // import Unsplash, { toJson } from "unsplash-js";
 
 // PROJECT IMAGES
+import ProjectTrackerImage from '../images/project-tracker.jpg';
 import GolfImages from '../images/golf.jpg';
-// import EmployeeImage from '../images/employee-directory.jpg';
-// import FitImage from '../images/fit-image.jpg';
-// import BuildAPageImage from '../images/build-a-page.jpg';
+import EmployeeImage from '../images/employee-directory.jpg';
+import FitImage from '../images/fit-image.jpg';
+import BuildAPageImage from '../images/build-a-page.jpg';
 import DevSquadImage from '../images/dev-squad.jpg';
 import ExcavationImage from '../images/excavation.jpg';
 import ContactBookImage from '../images/contact-book.jpg';
@@ -58,17 +57,17 @@ const Projects = () => {
     },
     {
       id: 1,
-      imageId: 426586061,
-      imageRep: ContactBookImage,
-      imageName: 'Contact-Book',
+      imageId: 383392571,
+      imageRep: DevSquadImage,
+      imageName: 'Dev-Squad',
       repo: {}
       // repo: '' added in by useEffect
     },
     {
       id: 2,
-      imageId: 421770170,
-      imageRep: GithubFinderImage,
-      imageName: 'Github-Finder',
+      imageId: 426586061,
+      imageRep: ContactBookImage,
+      imageName: 'Contact-Book',
       repo: {}
       // repo: '' added in by useEffect
     },
@@ -83,9 +82,9 @@ const Projects = () => {
     },
     {
       id: 4,
-      imageId: 383392571,
-      imageRep: DevSquadImage,
-      imageName: 'Dev-Squad',
+      imageId: 421770170,
+      imageRep: GithubFinderImage,
+      imageName: 'Github-Finder',
       repo: {}
       // repo: '' added in by useEffect
     },
@@ -96,6 +95,35 @@ const Projects = () => {
       imageName: 'Golf-Assistant-App',
       repo: {}
       // repo: '' added in by useEffect
+    },
+    {
+      id: 6,
+      imageId: 370526931,
+      imageRep: EmployeeImage,
+      imageName: 'Employee Directory',
+      repo: {}
+      // repo: '' added in by useEffect
+    },
+    {
+      id: 7,
+      imageId: 366987622,
+      imageRep: ProjectTrackerImage,
+      imageName: 'Project-Tracker',
+      repo: {}
+    },
+    {
+      id: 8,
+      imageId: 341170033,
+      imageRep: FitImage,
+      imageName: 'Fitness-Tracker',
+      repo: {}
+    },
+    {
+      id: 9,
+      imageId: 379113296,
+      imageRep: BuildAPageImage,
+      imageName: 'Build-A-Page',
+      repo: {}
     }
   ]);
   //* DESTRUCTURE IMAGE STATE ARRAY
@@ -113,7 +141,7 @@ const Projects = () => {
 
   //*THE CALL TO GH *GET ALL REPOS
   useEffect(() => {
-    console.log('useEffect project axios call here');
+    // console.log('useEffect project axios call here');
 
     const getAllRepos = async () => {
       try {
@@ -128,7 +156,7 @@ const Projects = () => {
           repos: [...results],
           imageCheck: [...imageMatch]
         }));
-        console.log('res.data', res.data);
+        // console.log('res.data', res.data);
 
         //* MAPPING THROUGH THE IMAGE STATE ADDING REPO OBJECT TO IMAGES STATE TO THE IMAGE PER IMAGEID
         const resultsCopy = results;
@@ -165,7 +193,7 @@ const Projects = () => {
   const imageCopy = images;
   const randomNum = Math.floor(Math.random() * imageCopy.length);
   const randomJumboImage = imageCopy.filter((item) => item.id === randomNum);
-  console.log('randomJumboImage', randomJumboImage);
+  // console.log('randomJumboImage', randomJumboImage);
 
   //* Truncate ellipse function from stack overflow
   function truncate(str, n) {
@@ -177,37 +205,56 @@ const Projects = () => {
   // console.log('KEY CHECK HERE',process.env.MY_ACCESS);
   // console.log('KEY CHECK HERE',process.env.REACT_APP_MY_FAKE_KEY);
 
-  console.log('images', images);
-  console.log('projects', projects);
-  // To get home page link use below:
-  // console.log('imageA -- check', images[3].repo.homepage)
+  // console.log('images', images);
+  // console.log('projects', projects);
   if (loading) return <Spinner animation='border' variant='info' />;
   return (
     <Fragment>
-      <Row>
+      <div>
         <p
           style={{
             fontFamily: 'monospace',
             fontSize: '1.4rem',
-            color: '#d6b850'
+            color: '#d6b850',
           }}>
           &lt;projects&gt;
         </p>
-      </Row>
+      </div>
       <div>
         <header
           className='jumbo'
           style={{
             backgroundSize: 'cover',
-
             backgroundImage: `url(${randomJumboImage[0].imageRep})`,
             backgroundPosition: 'center center'
           }}>
           <div className='jumbo-contents'>
             <h1 className='jumbo-title'>{randomJumboImage[0].imageName}</h1>
             <div className='jumbo-buttons'>
-              <button className='jumbo-button'>Play</button>
-              <button className='jumbo-button'>My List</button>
+              <button
+                className='jumbo-button'
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open(
+                    randomJumboImage[0].repo.homepage,
+                    '_blank',
+                    'noreferrer noopener'
+                  );
+                }}>
+                See In Action
+              </button>
+              <button
+                className='jumbo-button'
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open(
+                    randomJumboImage[0].repo.html_url,
+                    '_blank',
+                    'noreferrer noopener'
+                  );
+                }}>
+                Github
+              </button>
             </div>
             <h1 className='jumbo-description'>
               {truncate(randomJumboImage[0].repo.description, 150)}
@@ -221,7 +268,7 @@ const Projects = () => {
         <div className='row-posters'>
           <ProjectItems
             loading={loading}
-            projects={projects}
+            images={images}
             isLarge={true}
             top5={true}
           />
@@ -232,25 +279,13 @@ const Projects = () => {
         <div className='row-posters'>
           <ProjectItems
             isLarge={false}
-            projects={projects}
+            images={images}
             loading={loading}
             top5={false}
           />
         </div>
       </div>
-      <div className='random-row'>
-        <h2>Random</h2>
-        <div className='row-posters'>
-          <ProjectItems
-            isLarge={false}
-            projects={projects}
-            loading={loading}
-            top5={false}
-          />
-        </div>
-      </div>
-
-      <Row>
+      <div>
         <p
           style={{
             fontFamily: 'monospace',
@@ -259,7 +294,7 @@ const Projects = () => {
           }}>
           &lt;/projects&gt;
         </p>
-      </Row>
+      </div>
     </Fragment>
   );
 };

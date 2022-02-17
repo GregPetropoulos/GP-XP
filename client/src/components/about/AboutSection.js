@@ -1,6 +1,5 @@
 import React from 'react';
 import Row from 'react-bootstrap/Row';
-// import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 // import { Link } from 'react-router-dom';
 import './style.css';
@@ -18,7 +17,6 @@ import {
 
 const AboutSection = () => {
   return (
-    // <Container className='about-container'>
     <Row>
       <Col lg={12} className='about-main-column'>
         <Row>
@@ -94,12 +92,11 @@ const AboutSection = () => {
               mind for rich user experiences.
             </p>
           </Col>
-          {/* </Row> */}
 
           <Row>
-            <Col lg={6} md={6} sm={6}>
+            {/* <Col lg={6} md={6} sm={6}>
               animation place holder{' '}
-            </Col>
+            </Col> */}
             <Col lg={6} md={6}>
               <span className='about-3p'>
                 <ul>
@@ -160,7 +157,6 @@ const AboutSection = () => {
         </Row>
       </Col>
     </Row>
-    // </Container>
   );
 };
 export default AboutSection;

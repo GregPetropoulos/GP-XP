@@ -193,20 +193,20 @@ body::-webkit-scrollbar {
 .random-row {
   text-align: center;
   /* margin-left:20px; */
-  color: #dc3545;
+  /* color: #dc3545; */
+  color: #e50914;
 }
 
-.poster-title {
+/* .poster-title {
   display: flex;
   justify-content: space-between;
   width: 100%;
 
   z-index: 999;
-}
+} */
 /* setup for scrollbar left to right in a row */
 .row-posters {
-  margin-left: 20px;
-
+  /* margin-left: 20px; */
   display: flex;
   overflow-y: hidden;
   overflow-x: scroll;
@@ -224,6 +224,8 @@ body::-webkit-scrollbar {
   max-height: 250px;
   margin-right: 10px;
   transition: transform 450ms;
+  position: relative;
+  text-align: center;
 }
 .small-row-poster {
   object-fit: contain;
@@ -240,7 +242,7 @@ body::-webkit-scrollbar {
   transform: scale(1.09);
 }
 .jumbo {
-  color: white;
+  color: whitesmoke;
   object-fit: contain;
   height: 448px;
 }
@@ -254,6 +256,8 @@ body::-webkit-scrollbar {
   font-size: 3rem;
   font-weight: 800;
   padding-bottom: 0.3rem;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
 }
 .jumbo-buttons {
 }

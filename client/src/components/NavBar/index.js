@@ -2,8 +2,6 @@ import React, { useState, useRef } from 'react';
 import { useOnClickOutside } from '../hooks/MenuHook';
 import Burger from './Burger';
 import RightNav from './RightNav';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);

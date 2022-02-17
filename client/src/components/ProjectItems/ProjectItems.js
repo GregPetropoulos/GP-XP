@@ -1,50 +1,64 @@
 import React, { Fragment } from 'react';
-import Row from 'react-bootstrap/Row';
-import Container from 'react-bootstrap/Container';
-import Col from 'react-bootstrap/Col';
-import './style.css';
 import Spinner from 'react-bootstrap/Spinner';
 
 import PropTypes from 'prop-types';
-import formatDate from '../utils/formatDate';
+// import formatDate from '../utils/formatDate';
 
-const ProjectItems = ({ loading, isLarge, projects, top5 }) => {
+const ProjectItems = ({ loading, isLarge, top5, images }) => {
   if (loading) return <Spinner animation='border' variant='info' />;
-  const projectsCopy = projects;
-  const { imageCheck } = projectsCopy;
+  const imageArr = images;
+  // console.log('imageArr', imageArr);
   return (
     <Fragment>
-      {imageCheck.map((item) =>
+      {imageArr.map((item) =>
         top5 && item.id >= 0 && item.id <= 4 ? (
           <img
             className={`${isLarge ? 'row-poster' : 'small-row-poster'}`}
-            key={item.id}
+            key={item.imageId}
             src={item.imageRep}
-            title={item.imageName}
+            // title={item.imageName}
             alt={`Coming soon ${item.imageName}`}
+            onClick={(e) => {
+              e.preventDefault();
+              window.open(item.repo.homepage, '_blank', 'noreferrer noopener');
+            }}
           />
         ) : null
       )}
 
-      {imageCheck.map(
-        (item) =>
-          top5 === false && (
-            <img
-              className={`${isLarge ? 'row-poster' : 'small-row-poster'}`}
-              key={item.id}
-              src={item.imageRep}
-              title={item.imageName}
-              alt={`Coming soon ${item.imageName}`}
-            />
-          )
-      )}
+      {imageArr
+        .sort((a, b) => (a.repo.updated_at < b.repo.updated_at ? 1 : -1))
+        .map(
+          (item) =>
+            top5 === false && (
+              <img
+                className={`${isLarge ? 'row-poster' : 'small-row-poster'}`}
+                key={item.imageId}
+                src={item.imageRep}
+                title={item.imageName}
+                alt={
+                  !imageArr
+                    ? `Coming soon ${item.imageName}`
+                    : 'Working hard to update this'
+                }
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open(
+                    item.repo.homepage,
+                    '_blank',
+                    'noreferrer noopener'
+                  );
+                }}
+              />
+            )
+        )}
     </Fragment>
   );
 };
 
-// ProjectItems.propTypes = {
-// repo: PropTypes.array.isRequired,
-// loading: PropTypes.bool.isRequired
-// };
+ProjectItems.propTypes = {
+  images: PropTypes.array.isRequired,
+  loading: PropTypes.bool
+};
 
 export default ProjectItems;
