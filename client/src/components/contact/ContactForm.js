@@ -74,11 +74,11 @@ const ContactForm = () => {
           </Col>
         </Row>
 
-        <Row>
+        {/* <Row>
           <p className="email-prompt">
             Or just a send a quick message below! :
           </p>
-        </Row>
+        </Row> */}
         
         {/* <Row>
           <Col className="form-container">

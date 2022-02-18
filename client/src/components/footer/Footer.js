@@ -49,10 +49,10 @@ const Footer = () => {
             <FontAwesomeIcon className='icon' icon={faTwitter} size='4x' />
           </a>
         </Col>
-
+{/* 
         <Col lg={12} className='contact-footer'>
           gregpetropoulos@yahoo.com
-        </Col>
+        </Col> */}
       </Row>
     </Container>
   );

@@ -1,30 +1,21 @@
 # Greg's XPortfolio
 
-## Links
 ## [Portfolio](https://gregpetropoulos.dev)
 ## License
 ![GitHub License Badge](https://shields.io/badge/license-MIT-green)
 ## Description
-I created a portfolio to show my latest projects and newly learned technologies. As web developer we can always improve our work and skills. Check out my portfolio using hooks, JavaScript, bootstrap, CSS, HTML and npm library.  This portfolio is a M.E.R.N stack app deployed on heroku and personal domain name. 
+I created a portfolio to show my latest projects and newly learned technologies. I am always seeking ways to improve knowledge, skills, and creativity. Check out my portfolio using React hooks, JavaScript, bootstrap, CSS, HTML and npm library. My portfolio is a M.E.R.N full stack app deployed on Heroku with a personal domain name.
 
 # Demo
 ## Landing
-![Land](./client/src/images/landing.png)
 ## Home
-![Home](./client/src/images/home.png)
 ## Nav Menu
-![Menu](./client/src/images/menu.png)
 ## About
-![About](./client/src/images/about.png)
 ## Projects
-![Projects](./client/src/images/projects.png)
 ## Contact
-![Contact](./client/src/images/contact.png)
 ## Experimental
-![Experimental](./client/src/images/experiment.png)
 
 ## Table of Contents 
-* [Links](#links)
 * [License](#license)
 * [Description](#description)
 * [Demo](#demo)

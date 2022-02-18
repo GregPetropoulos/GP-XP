@@ -37,10 +37,10 @@ const Projects = () => {
 
   //*STATE
   const [loading, setLoading] = useState(false);
-  const [projects, setProjects] = useState({
-    repos: [],
-    imageCheck: []
-  });
+  // const [projects, setProjects] = useState({
+  //   repos: [],
+  //   imageCheck: []
+  // });
   const [error, setError] = useState(false);
 
   // * IMAGES IN ARRAY ALL REPOS
@@ -150,12 +150,12 @@ const Projects = () => {
         const res = await axios.get(allRepoUrl);
         const results = res.data;
 
+        //ADDING IMAGES AND REPOS TO PROJECTS STATE
+        // setProjects(() => ({
+        //   repos: [...results],
+        //   imageCheck: [...imageMatch]
+        // }));
         // return res;
-        //* ADDING IMAGES AND REPOS TO PROJECTS STATE
-        setProjects(() => ({
-          repos: [...results],
-          imageCheck: [...imageMatch]
-        }));
         // console.log('res.data', res.data);
 
         //* MAPPING THROUGH THE IMAGE STATE ADDING REPO OBJECT TO IMAGES STATE TO THE IMAGE PER IMAGEID
@@ -206,16 +206,25 @@ const Projects = () => {
   // console.log('KEY CHECK HERE',process.env.REACT_APP_MY_FAKE_KEY);
 
   // console.log('images', images);
-  // console.log('projects', projects);
-  if (loading) return <Spinner animation='border' variant='info' />;
+  if (loading)
+    return (
+      <div
+        style={{
+          width: '100',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}>
+        <Spinner animation='border' variant='info' size='lg' />
+      </div>
+    );
   return (
     <Fragment>
       <div>
         <p
           style={{
-            fontFamily: 'monospace',
             fontSize: '1.4rem',
-            color: '#d6b850',
+            color: '#d6b850'
           }}>
           &lt;projects&gt;
         </p>
@@ -288,7 +297,6 @@ const Projects = () => {
       <div>
         <p
           style={{
-            fontFamily: 'monospace',
             fontSize: '1.4rem',
             color: '#d6b850'
           }}>

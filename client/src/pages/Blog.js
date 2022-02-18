@@ -8,7 +8,6 @@ const Blog = () => {
       <Row>
         <p
           style={{
-            fontFamily: 'monospace',
             fontSize: '1.4rem',
             color: '#08a7ce'
           }}
@@ -21,7 +20,6 @@ const Blog = () => {
       <Row>
         <p
           style={{
-            fontFamily: 'monospace',
             fontSize: '1.4rem',
             color: '#08a7ce'
           }}

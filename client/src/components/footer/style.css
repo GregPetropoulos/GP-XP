@@ -13,14 +13,14 @@ justify-content: space-around;
 }
 
 .contact-footer{
-  font-family: 'Libre Barcode 39 Extended', cursive;
+  /* font-family: 'Libre Barcode 39 Extended', cursive; */
   justify-content: center;
   display:flex;
   flex-wrap: wrap;
   overflow: hidden;
   /* color: #08a7ce; */
-  font-size: 1.8rem;
-  margin:2%;
+  font-size: 1.2rem;
+  margin:4%;
 
 }
 icon{

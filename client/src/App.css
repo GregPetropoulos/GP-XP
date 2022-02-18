@@ -16,7 +16,8 @@
 }
 
 body {
-  font-family: 'Trykker', serif;
+  /* font-family: 'Trykker', Arial, Helvetica, sans-serif; */
+  font-family: 'Montserrat', sans-serif;
   font-style: italic;
   font-size: 0.9rem;
   color: whitesmoke;
@@ -193,8 +194,10 @@ body::-webkit-scrollbar {
 .random-row {
   text-align: center;
   /* margin-left:20px; */
-  /* color: #dc3545; */
-  color: #e50914;
+  color: whitesmoke;
+  font-family: 'Bebas Neue', cursive;
+
+
 }
 
 /* .poster-title {
@@ -253,6 +256,7 @@ body::-webkit-scrollbar {
   height: 190px;
 }
 .jumbo-title {
+  font-family: 'Bebas Neue', cursive;
   font-size: 3rem;
   font-weight: 800;
   padding-bottom: 0.3rem;

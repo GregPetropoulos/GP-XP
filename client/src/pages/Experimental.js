@@ -10,7 +10,6 @@ const Experimental = () => {
       <Row>
         <p
           style={{
-            fontFamily: 'monospace',
             fontSize: '1.4rem',
             color: '#08a7ce'
           }}>
@@ -41,7 +40,6 @@ const Experimental = () => {
         </Col>
         <p
           style={{
-            fontFamily: 'monospace',
             fontSize: '1.4rem',
             color: '#08a7ce'
           }}>

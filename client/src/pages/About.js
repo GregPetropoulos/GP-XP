@@ -10,7 +10,6 @@ const About = () => {
       <Row>
         <p
           style={{
-            fontFamily: 'monospace',
             fontSize: '1.4rem',
             color: '#08a7ce'
           }}>
@@ -19,8 +18,8 @@ const About = () => {
       </Row>
       <AboutSection />
       <Row>
-        <p          style={{
-            fontFamily: 'monospace',
+        <p
+          style={{
             fontSize: '1.4rem',
             color: '#08a7ce'
           }}>

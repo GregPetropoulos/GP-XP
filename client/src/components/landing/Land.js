@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-import Container from 'react-bootstrap/Container';
 import Typewriter from 'typewriter-effect';
 import './style.css';
 import MainFooter from '../mainFooter/MainFooter';
@@ -7,8 +6,14 @@ import MainFooter from '../mainFooter/MainFooter';
 const Land = () => {
   return (
     <Fragment>
-      <Container>
-      
+      {/* <Container> */}
+      {/* <Row>
+        <Col lg={8}> */}
+        
+        
+   <div className="land-wrapper">
+
+
           <h2>
             <Typewriter
               onInit={(typewriter) => {
@@ -30,7 +35,11 @@ const Land = () => {
               }}
             />
           </h2>
-      </Container>
+          {/* </Col>
+      </Row> */}
+      {/* </Container> */}
+      </div>
+<MainFooter/>
     </Fragment>
   );
 };
