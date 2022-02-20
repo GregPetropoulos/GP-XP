@@ -11,9 +11,9 @@ const ProjectItems = ({ loading, isLarge, top5, images }) => {
   return (
     <Fragment>
       {imageArr.map((item) =>
-        top5 && item.id >= 0 && item.id <= 4 ? (
+        top5===true && item.id >= 0 && item.id <= 4 ? (
           <img
-            className={`${isLarge ? 'row-poster' : 'small-row-poster'}`}
+            className={`${isLarge && 'row-poster'}`}
             key={item.imageId}
             src={item.imageRep}
             // title={item.imageName}
@@ -32,7 +32,7 @@ const ProjectItems = ({ loading, isLarge, top5, images }) => {
           (item) =>
             top5 === false && (
               <img
-                className={`${isLarge ? 'row-poster' : 'small-row-poster'}`}
+                className={`${!isLarge &&'small-row-poster'}`}
                 key={item.imageId}
                 src={item.imageRep}
                 title={item.imageName}

@@ -5,16 +5,17 @@ import Spinner from 'react-bootstrap/Spinner';
 // import Unsplash, { toJson } from "unsplash-js";
 
 // PROJECT IMAGES
-import ProjectTrackerImage from '../images/project-tracker.jpg';
-import GolfImages from '../images/golf.jpg';
-import EmployeeImage from '../images/employee-directory.jpg';
-import FitImage from '../images/fit-image.jpg';
-import BuildAPageImage from '../images/build-a-page.jpg';
-import DevSquadImage from '../images/dev-squad.jpg';
-import ExcavationImage from '../images/excavation.jpg';
-import ContactBookImage from '../images/contact-book.jpg';
-import GithubFinderImage from '../images/github-finder.jpg';
-import ITLoggerImage from '../images/it-logger.jpg';
+import { ProjectImage } from '../images/ProjectImage';
+// import ProjectTrackerImage from '../images/project-tracker.png';
+// import GolfImages from '../images/golf.png';
+// import EmployeeImage from '../images/employee-directory.png';
+// import FitImage from '../images/fit-tracker.png';
+// import BuildAPageImage from '../images/build-a-page.png';
+// import DevSquadImage from '../images/dev-squad.png';
+// import ExcavationImage from '../images/excavation.png';
+// import ContactBookImage from '../images/contact-book.png';
+// import GithubFinderImage from '../images/github-finder.png';
+// import ITLoggerImage from '../images/it-logger.png';
 import axios from 'axios';
 
 const Projects = () => {
@@ -37,95 +38,17 @@ const Projects = () => {
 
   //*STATE
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
   // const [projects, setProjects] = useState({
   //   repos: [],
   //   imageCheck: []
   // });
-  const [error, setError] = useState(false);
 
   // * IMAGES IN ARRAY ALL REPOS
   // *Ideally will come from the unsplash api and made as a piece of state merged with the github api ID numbers--I hardcoded these in
   // The repos relationships are id and imageId
-  const [images, setImages] = useState([
-    {
-      id: 0,
-      imageId: 435850053,
-      imageRep: ITLoggerImage,
-      imageName: 'IT-Logger-App',
-      repo: {}
-      // repo: '' added in by useEffect
-    },
-    {
-      id: 1,
-      imageId: 383392571,
-      imageRep: DevSquadImage,
-      imageName: 'Dev-Squad',
-      repo: {}
-      // repo: '' added in by useEffect
-    },
-    {
-      id: 2,
-      imageId: 426586061,
-      imageRep: ContactBookImage,
-      imageName: 'Contact-Book',
-      repo: {}
-      // repo: '' added in by useEffect
-    },
-    {
-      id: 3,
-      imageId: 391642169,
-      imageRep: ExcavationImage,
-      imageName: 'GP-Excavation',
-      repo: {}
-
-      // repo: '' added in by useEffect
-    },
-    {
-      id: 4,
-      imageId: 421770170,
-      imageRep: GithubFinderImage,
-      imageName: 'Github-Finder',
-      repo: {}
-      // repo: '' added in by useEffect
-    },
-    {
-      id: 5,
-      imageId: 365557403,
-      imageRep: GolfImages,
-      imageName: 'Golf-Assistant-App',
-      repo: {}
-      // repo: '' added in by useEffect
-    },
-    {
-      id: 6,
-      imageId: 370526931,
-      imageRep: EmployeeImage,
-      imageName: 'Employee Directory',
-      repo: {}
-      // repo: '' added in by useEffect
-    },
-    {
-      id: 7,
-      imageId: 366987622,
-      imageRep: ProjectTrackerImage,
-      imageName: 'Project-Tracker',
-      repo: {}
-    },
-    {
-      id: 8,
-      imageId: 341170033,
-      imageRep: FitImage,
-      imageName: 'Fitness-Tracker',
-      repo: {}
-    },
-    {
-      id: 9,
-      imageId: 379113296,
-      imageRep: BuildAPageImage,
-      imageName: 'Build-A-Page',
-      repo: {}
-    }
-  ]);
+  const [images, setImages] = useState(ProjectImage);
+  
   //* DESTRUCTURE IMAGE STATE ARRAY
   const imageMatch = images;
 
@@ -149,6 +72,7 @@ const Projects = () => {
         setLoading(true);
         const res = await axios.get(allRepoUrl);
         const results = res.data;
+        // console.log(results);
 
         //ADDING IMAGES AND REPOS TO PROJECTS STATE
         // setProjects(() => ({
@@ -190,10 +114,9 @@ const Projects = () => {
   }, []);
 
   //* Randomly generating image for the Jumbotron
-  const imageCopy = images;
+  const imageCopy = [...images]
   const randomNum = Math.floor(Math.random() * imageCopy.length);
   const randomJumboImage = imageCopy.filter((item) => item.id === randomNum);
-  // console.log('randomJumboImage', randomJumboImage);
 
   //* Truncate ellipse function from stack overflow
   function truncate(str, n) {
@@ -204,8 +127,6 @@ const Projects = () => {
   // console.table(projects)
   // console.log('KEY CHECK HERE',process.env.MY_ACCESS);
   // console.log('KEY CHECK HERE',process.env.REACT_APP_MY_FAKE_KEY);
-
-  // console.log('images', images);
   if (loading)
     return (
       <div
