@@ -2,7 +2,6 @@
 import ProjectTrackerImage from './project-tracker.png';
 import GolfImages from './golf.png';
 import EmployeeImage from './employee-directory.png';
-import FitImage from './fit-tracker.png';
 import BuildAPageImage from './build-a-page.png';
 import DevSquadImage from './dev-squad.png';
 import ExcavationImage from './excavation.png';
@@ -79,13 +78,6 @@ export const ProjectImage = () => {
         },
         {
           id: 8,
-          imageId: 366987622,
-          imageRep: FitImage,
-          imageName: 'Fitness-Tracker',
-          repo: {}
-        },
-        {
-          id: 9,
           imageId: 379113296,
           imageRep: BuildAPageImage,
           imageName: 'Build-A-Page',
