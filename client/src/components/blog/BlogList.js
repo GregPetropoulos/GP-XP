@@ -23,7 +23,7 @@ function BlogList() {
             <img src={article.social_image} alt={article.title} className='blog-image'></img>
             <p className='blog-description'>
               {article.description}
-              <a href={article.url}>Read More.</a>
+              <a href={article.url}> Read More.</a>
             </p>
             <p>
               {article.readable_publish_date} | {article.tags}{' '}

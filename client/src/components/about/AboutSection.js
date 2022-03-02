@@ -139,7 +139,7 @@ const AboutSection = () => {
           <Col lg={12} className='about-link-col-buttons'>
             <button className='resume-button'>
               <a
-                href='https://drive.google.com/file/d/1GfRu1yjqCOL3v94fZqwkisjBZkW6cC81/view?usp=sharing'
+                href='https://drive.google.com/file/d/1oOQa5YWcDl-4gf1AxJJkiAfwREmD4yr1/view?usp=sharing'
                 target='_blank'
                 rel='noreferrer'>
                 Resume
