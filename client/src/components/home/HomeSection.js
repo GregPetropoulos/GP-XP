@@ -1,19 +1,18 @@
 import React from 'react';
 import Row from 'react-bootstrap/Row';
-import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
-import './style.css';
 import Footer from '../footer/Footer';
+import Container from 'react-bootstrap/esm/Container';
 
 function HomeSection({ img }) {
   return (
-    <Container className='home-container'>
+    <Container>
       <Row>
-        <Col className='home-main-column'>
+        <Col className='home-main-column' >
           <Row className='profile-box'>
             {/* <br/> */}
             <a
-              href='https://drive.google.com/file/d/1GfRu1yjqCOL3v94fZqwkisjBZkW6cC81/view?usp=sharing'
+              href='https://drive.google.com/file/d/1oOQa5YWcDl-4gf1AxJJkiAfwREmD4yr1/view?usp=sharing'
               target='_blank'
               rel='noreferrer'
               className='my-pic-link'>
@@ -26,8 +25,8 @@ function HomeSection({ img }) {
               web applications to run across platforms and devices.
             </p>
           </Col>
-          <Footer></Footer>
         </Col>
+          <Footer />
       </Row>
     </Container>
   );
