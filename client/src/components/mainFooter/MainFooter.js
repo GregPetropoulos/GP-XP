@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-import './style.css';
 
 const MainFooter = () => {
   const today = new Date();

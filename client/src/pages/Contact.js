@@ -6,8 +6,7 @@ import ContactForm from '../components/contact/ContactForm';
 const Contact = () => {
   return (
     <Container>
-      <Row>
-        <p
+        <p className='page-title'
           style={{
             fontSize: '1.4rem',
             color: '#08a7ce'
@@ -15,10 +14,8 @@ const Contact = () => {
         >
           &lt;contact&gt;
         </p>
-      </Row>
       <ContactForm />
-      <Row>
-        <p
+        <p className='page-title'
           style={{
             fontSize: '1.4rem',
             color: '#08a7ce'
@@ -26,7 +23,6 @@ const Contact = () => {
         >
           &lt;/contact&gt;
         </p>
-      </Row>
     </Container>
   );
 }

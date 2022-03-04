@@ -7,25 +7,22 @@ import Container from 'react-bootstrap/Container';
 const About = () => {
   return (
     <Container>
-      <Row>
-        <p
+      
+        <p className='page-title'
           style={{
             fontSize: '1.4rem',
-            color: '#08a7ce'
+            color: '#08a7ce', 
           }}>
           &lt;about&gt;
         </p>
-      </Row>
       <AboutSection />
-      <Row>
-        <p
+        <p className='page-title'
           style={{
             fontSize: '1.4rem',
             color: '#08a7ce'
           }}>
           &lt;/about&gt;
         </p>
-      </Row>
     </Container>
   );
 };

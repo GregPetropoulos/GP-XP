@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import Typewriter from 'typewriter-effect';
-import './style.css';
 import MainFooter from '../mainFooter/MainFooter';
 
 const Land = () => {

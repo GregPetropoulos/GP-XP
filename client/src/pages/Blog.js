@@ -5,8 +5,7 @@ import BlogList from '../components/blog/BlogList';
 const Blog = () => {
   return (
     <Container>
-      <Row>
-        <p
+        <p className='page-title'
           style={{
             fontSize: '1.4rem',
             color: '#08a7ce'
@@ -14,11 +13,9 @@ const Blog = () => {
         >
           &lt;blog&gt;
         </p>
-      </Row>
       <BlogList />
 
-      <Row>
-        <p
+        <p className='page-title'
           style={{
             fontSize: '1.4rem',
             color: '#08a7ce'
@@ -26,7 +23,6 @@ const Blog = () => {
         >
           &lt;/blog&gt;
         </p>
-      </Row>
     </Container>
   );
 };

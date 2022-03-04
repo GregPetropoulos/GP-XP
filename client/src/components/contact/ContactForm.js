@@ -1,30 +1,28 @@
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import './style.css';
 import Container from 'react-bootstrap/Container';
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Footer from '../footer/Footer';
 
-
 const ContactForm = () => {
-//   const initialData = {
-//     name:'',
-//     email:'',
-//     textarea:''
+  //   const initialData = {
+  //     name:'',
+  //     email:'',
+  //     textarea:''
 
-//   }
-//   // STATE
-// const [formInput, setFormInput] = useState(initialData)
-// console.log('form check', formInput)
+  //   }
+  //   // STATE
+  // const [formInput, setFormInput] = useState(initialData)
+  // console.log('form check', formInput)
 
-// const onChange = (e) => {
-//   setFormInput({ formInput, [e.target.name]: e.target.value });
-// };
-// const handleSubmit = () =>{
-//   fetch('')
-  
-// }
+  // const onChange = (e) => {
+  //   setFormInput({ formInput, [e.target.name]: e.target.value });
+  // };
+  // const handleSubmit = () =>{
+  //   fetch('')
+
+  // }
   return (
     <>
       <Container className='contact-form-container'>
@@ -35,26 +33,24 @@ const ContactForm = () => {
               href='mailto: gregpetropoulos@yahoo.com'
               target='_blank'
               rel='noopener noreferrer'
-              style={{ color: '#d6b850' }}
-            >
+              style={{ color: '#d6b850' }}>
               gregpetropoulos@yahoo.com
             </a>
             <p>
-              Don't hesitate to call or connect on {' '}
+              Don't hesitate to call or connect on{' '}
               <a
                 href='http://bit.ly/Greg--Linkedin'
                 target='_blank'
                 rel='noopener noreferrer'
-                style={{ color: '#d6b850' }}
-              >
+                style={{ color: '#d6b850' }}>
                 Linkedin
-              </a>{' '} and take a peak at my{' '}
+              </a>{' '}
+              and take a peak at my{' '}
               <a
                 href='https://drive.google.com/file/d/1oOQa5YWcDl-4gf1AxJJkiAfwREmD4yr1/view?usp=sharing'
                 target='_blank'
                 rel='noopener noreferrer'
-                style={{ color: '#d6b850' }}
-              >
+                style={{ color: '#d6b850' }}>
                 resume
               </a>{' '}
               to learn more
@@ -66,8 +62,7 @@ const ContactForm = () => {
                 href='mailto: gregpetropoulos@yahoo.com'
                 target='_blank'
                 rel='noopener noreferrer'
-                style={{ color: '#08a7ce' }}
-              >
+                style={{ color: '#08a7ce' }}>
                 gregpetropoulos@yahoo.com
               </a>
             </p>
@@ -79,7 +74,7 @@ const ContactForm = () => {
             Or just a send a quick message below! :
           </p>
         </Row> */}
-        
+
         {/* <Row>
           <Col className="form-container">
             <Form onSubmit={handleSubmit}>

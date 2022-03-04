@@ -142,7 +142,7 @@ const Projects = () => {
   return (
     <Fragment>
       <div>
-        <p
+        <p className='page-title'
           style={{
             fontSize: '1.4rem',
             color: '#d6b850'
@@ -216,7 +216,7 @@ const Projects = () => {
         </div>
       </div>
       <div>
-        <p
+        <p className='page-title'
           style={{
             fontSize: '1.4rem',
             color: '#d6b850'

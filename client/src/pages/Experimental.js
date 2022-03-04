@@ -7,8 +7,8 @@ import SVG from '../components/SVG';
 const Experimental = () => {
   return (
     <Container>
-      <Row>
-        <p
+
+        <p className='page-title'
           style={{
             fontSize: '1.4rem',
             color: '#08a7ce'
@@ -38,14 +38,14 @@ const Experimental = () => {
           style={{ textAlign: 'center', fontSize: '25px' }}>
           More to come...
         </Col>
-        <p
+        <p className='page-title'
           style={{
             fontSize: '1.4rem',
             color: '#08a7ce'
           }}>
           &lt;/experimental&gt;
         </p>
-      </Row>
+
     </Container>
   );
 };

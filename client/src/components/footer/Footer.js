@@ -2,7 +2,6 @@ import React from 'react';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
-import './style.css';
 // FONT AWESOME
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -14,7 +13,7 @@ import {
 
 const Footer = () => {
   return (
-    <Container>
+    <Container className='main-footer-container'>
       <Row className='icon-row'>
         <Col className='icon-col'>
           <a
@@ -33,7 +32,7 @@ const Footer = () => {
             <FontAwesomeIcon className='icon' icon={faLinkedin} size='4x' />
           </a>
         </Col>
-<Col className='icon-col'>
+        <Col className='icon-col'>
           <a
             href='https://www.youtube.com/channel/UC59RJzqORuQTPjePJVml-pw'
             target='_blank'
@@ -48,8 +47,8 @@ const Footer = () => {
             style={{ color: '#1DA1F2' }}>
             <FontAwesomeIcon className='icon' icon={faTwitter} size='4x' />
           </a>
-          </Col>
-{/* 
+        </Col>
+        {/* 
         <Col lg={12} className='contact-footer'>
           gregpetropoulos@yahoo.com
         </Col> */}
