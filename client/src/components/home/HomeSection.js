@@ -8,7 +8,7 @@ function HomeSection({ img }) {
   return (
     <Container>
       <Row>
-        <Col className='home-main-column' >
+        <Col className='home-main-column'>
           <Row className='profile-box'>
             {/* <br/> */}
             <a
@@ -19,14 +19,18 @@ function HomeSection({ img }) {
               <img className='profile-image' src={img} alt='Greg Petropoulos' />
             </a>
           </Row>
-          <Col className=''>
-            <p className='home-description'>
-              Hi my name is Greg Petropoulos and I create engaging websites and
-              web applications to run across platforms and devices.
+        </Col>
+        <Row className='home-description'>
+          <Col xl={8} lg={12} md={12} >
+            <p>
+              Hi my name is Greg Petropoulos and I enjoy bringing to life
+              engaging websites and web applications to run across platforms and
+              devices.
             </p>
           </Col>
-        </Col>
-          <Footer />
+        </Row>
+
+        <Footer />
       </Row>
     </Container>
   );

@@ -20,6 +20,8 @@ function Home() {
         <p style={{ fontSize: '1.4rem' }}>&lt;home&gt;</p>
       </Row>
       <HomeSection  img={ProfileImage} />
+      <div className='home-buffer'></div>
+
       <Projects />
       <About />
       <Contact />

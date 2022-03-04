@@ -10,13 +10,13 @@ import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import Experimental from './pages/Experimental';
 import './App.css';
-// import NavBarResp from './components/NavBarResp/NavBarResp';
+import NavBarResp from './components/NavBarResp/NavBarResp';
 
 const App = () => {
   return (
     <Router>
       <NavBar />
-      {/* <NavBarResp /> */}
+      <NavBarResp />
       <Routes>
         <Route exact path='/' element={<Land />} />
         <Route exact path='/home' element={<Home />} />

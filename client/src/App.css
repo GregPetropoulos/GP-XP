@@ -9,9 +9,9 @@
   --almost--black: #0000;
 }
 /** CSS RESPONSIVE DEBUGGER */
-* {
+/* * {
   border: 1px solid blue !important;
-}
+} */
 
 /** RESET */
 * {
@@ -21,7 +21,7 @@
 }
 html {
   /* Set font family styles here if needed */
-  border: 5px dotted green;
+  /* border: 5px dotted green; */
   overflow-x: hidden;
 }
 body {
@@ -34,9 +34,46 @@ body {
   width: 100%;
   /* The min-height:100vh has a parental reversal where the html will assume this value */
   min-height: 100vh;
-  border: 5px dashed red;
+  /* border: 5px dashed red; */
   overflow-x: hidden;
 }
+
+
+/* Getting rid of scrollbar-- On Projects page A Netflix feature */
+body {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+}
+/* Getting rid of scrollbar-- On Projects page A Netflix feature */
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+/* ?? might not exist */
+.ul-of-repos {
+  display: flex;
+  /* flex-direction:row; */
+  width: 100%;
+  text-align: center;
+  /* margin:50px; */
+  /* justify-content: space-between; */
+  overflow: hidden;
+  list-style-type: none;
+}
+
+
+
+/*****MIGRATED STYLE SHEETS TO ONE GLOBAL CSS FROM EACH COMPONENT BELOW****/
+/* * LANDING PAGE  */
+.land-wrapper {
+  text-align: center;
+  margin: 20px;
+  height: 500px;
+  padding-top: 15px;
+}
+
+/* *NAVBAR */
 .logo {
   font-size: 4rem;
   color: var(--yellow-color);
@@ -103,85 +140,58 @@ a:active {
   display: flex;
   justify-content: space-around;
 }
-.about-link-col-buttons {
-  display: flex;
-  justify-content: space-between;
+
+/* *NAVBARRESP */
+/* See media query for this */
+
+
+
+
+/** HOME SECTION */
+.home-buffer{
+height:75px;
 }
-.resume-button {
-  border-radius: 6px;
-  width: 40%;
-  font-size: 1.2rem;
-  font-weight: bolder;
-  background-color: #464646;
-  transition: 1000ms, top ease-in-out;
-}
-.resume-button:hover {
-  transform: scale(1.2);
-  transition-duration: 0.9s;
-  box-shadow: inset 400px 0 0 0 #7f3331;
-  border-radius: 10px;
-}
-.github-button {
-  border-radius: 6px;
-  width: 40%;
-  font-size: 1.2rem;
-  font-weight: bolder;
-  background-color: #464646;
-  transition: 1000ms, top ease-in-out;
-}
-.github-button:hover {
-  transform: scale(1.2);
-  transition-duration: 0.9s;
-  box-shadow: inset 400px 0 0 0 #7f3331;
-  border-radius: 10px;
+.home-main-column {
+  /* align-items: center; */
 }
 
-.about-skills-icon-row {
-  display: flex;
-  justify-content: space-between;
-  margin: 10px;
-  align-items: center;
-}
-
-.skill-icon {
-  margin: 4px;
-  margin-bottom: 15px;
-  padding-top: 15px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 15px;
-
+.profile-image {
+  object-fit: cover;
+  position: relative;
+  top: 0;
+  width: 200px;
+  height: 200px;
+  object-position: top;
   border-radius: 50%;
-  height: 100%;
+  border: 4px solid #d6b850;
+  transition: 2000ms, bottom ease-in-out;
+  margin: 4px;
 }
-.col-skills-icon {
+.profile-image:hover {
+  transform: translate(0, -6rem);
+}
+.profile-box {
+  padding: 2px;
+  margin: 1rem;
   display: flex;
   justify-content: center;
+  align-items: flex-end;
+  height: 200px;
 }
-/* Getting rid of scrollbar-- A Netflix feature */
-body {
-  -ms-overflow-style: none; /* for Internet Explorer, Edge */
-  scrollbar-width: none; /* for Firefox */
-  overflow-y: scroll;
-}
-
-body::-webkit-scrollbar {
-  display: none; /* for Chrome, Safari, and Opera */
-}
-
-/* ?? might not exist */
-.ul-of-repos {
+.home-description {
   display: flex;
-  /* flex-direction:row; */
-  width: 100%;
-  text-align: center;
-  /* margin:50px; */
-  /* justify-content: space-between; */
-  overflow: hidden;
-  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+   word-wrap: break-word;
+
 }
+
 
 /** PROJECTS */
+.page-title{
+  margin: 8px;
+}
 .top-5-row,
 .trending-row,
 .random-row {
@@ -286,51 +296,71 @@ body::-webkit-scrollbar {
   );
 }
 
-/*****MIGRATED STYLE SHEETS TO ONE GLOBAL CSS FROM EACH COMPONENT BELOW****/
-/* * LANDING PAGE  */
-.land-wrapper {
-  text-align: center;
-  margin: 20px;
-  height: 500px;
-  padding-top: 15px;
-}
 
-/* *NAVBAR */
-/* *NAVBARRESP */
 
-/** HOME SECTION */
-.home-main-column {
-  /* align-items: center; */
-}
-
-.profile-image {
-  object-fit: cover;
-  position: relative;
-  top: 0;
-  width: 200px;
-  height: 200px;
-  object-position: top;
-  border-radius: 50%;
-  border: 4px solid #d6b850;
-  transition: 2000ms, bottom ease-in-out;
-  margin: 4px;
-}
-.profile-image:hover {
-  transform: translate(0, -6rem);
-}
-.profile-box {
-  padding: 2px;
-  margin: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  height: 200px;
-}
-.home-description {
-  text-align: center;
-}
 
 /**ABOUT SECTION */
+.resume-button {
+  /* display: flex; */
+  /* justify-content: space-between; */
+}
+.resume-button {
+  border-radius: 6px;
+  width: 50%;
+  margin:13px;
+  padding:5px;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  background-color: #464646;
+  transition: 1000ms, top ease-in-out;
+}
+.resume-button:hover {
+  transform: scale(1.2);
+  transition-duration: 0.9s;
+  box-shadow: inset 400px 0 0 0 #7f3331;
+  border-radius: 10px;
+
+}
+.github-button {
+  margin:13px;
+
+  border-radius: 6px;
+  width: 50%;
+  padding:5px;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  background-color: #464646;
+  transition: 1000ms, top ease-in-out;
+}
+.github-button:hover {
+  transform: scale(1.2);
+  transition-duration: 0.9s;
+  box-shadow: inset 400px 0 0 0 #7f3331;
+  border-radius: 10px;
+}
+
+.about-skills-icon-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  align-items: center;
+}
+
+.skill-icon {
+  margin: 4px;
+  margin-bottom: 15px;
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+
+  border-radius: 50%;
+  height: 100%;
+}
+.col-skills-icon {
+  display: flex;
+  justify-content: center;
+}
 .about-container {
   /* color:#2d9687;    */
   /* font-size:1.2rem; */
@@ -548,7 +578,7 @@ icon {
 
 /** ALL MEDIA QUERYS */
 /* ---------------------- */
-/* for the navbar media query */
+/* for the original navbar media query */
 @media (max-width: 768px) {
   .logo {
     color: var(--red-color);
@@ -561,6 +591,10 @@ icon {
 }
 
 @media (max-width: 400px) {
+
+  nav {
+    display: none;
+  }
   .main-footer-container {
     display: none;
   }
@@ -573,12 +607,28 @@ icon {
   .page-title {
     text-align: center;
   }
-  .logo2,
+  .home-buffer,.logo2,
   .jumbo,
   .about-1p,
   .about-2p,
   .about-4p,
   .quote-andre {
     display: none;
+  }
+}
+/* for the responsive navbar NavBarResp */
+@media (min-width: 400px) {
+  .mobilenav {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .navbar,
+  .responsive-navbar-nav {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.4rem;
+    border-radius: 18px;
   }
 }

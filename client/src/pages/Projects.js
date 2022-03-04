@@ -225,6 +225,8 @@ const Projects = () => {
         </p>
       </div>
     </Fragment>
+
+
   );
 };
 export default Projects;

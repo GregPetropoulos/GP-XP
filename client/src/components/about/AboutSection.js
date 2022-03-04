@@ -76,11 +76,11 @@ const AboutSection = () => {
             </Row>
             <p className='about-1p'>
               I am a Full Stack Web Developer with a background in geologic
-              sciences and I am always eager to learn and collaborate. A sleuth
-              at heart, I find discovery and fulfillment rewarding and web
+              sciences and always eager to learn and collaborate. A sleuth at
+              heart, I find discovery and fulfillment rewarding and web
               development offers an opportunity to create value and utilize my
-              strengths. My approach is simple: write out the logic with pen &
-              paper, code, test, and refactor.
+              strengths. I am React/JavaScript enthusiast and enjoy bringing
+              applications to life.
             </p>
           </Col>
         </Row>
@@ -118,12 +118,12 @@ const AboutSection = () => {
           </Row>
         </Row>
         <p className='about-4p'>
-          Over the last year I have held a fulltime non tech job, raised a
+          {/* Over the last year I have held a fulltime non tech job, raised a
           family, purchased a home, and dug deep into my bootcamp training and
-          look forward to the future.
+          look forward to the future. */}
           <span></span>
           Outside of web development I enjoy spending time with my family,
-          working out, and exploring old treasure maps.
+          working out, cooking, and exploring old treasure maps.
         </p>
         <p className='quote-andre'>
           {' '}
@@ -134,24 +134,31 @@ const AboutSection = () => {
         {/* <button className='resume-button btn btn-lg'>
        href="https://drive.google.com/file/d/1lkxDTr-djCSyYnHw-P0MXyWJ_ADinmcY/view?usp=sharing">Resume</a>
     </button> */}
-        <Row>
-          <Col lg={12} className='about-link-col-buttons'>
-            <button className='resume-button'>
-              <a
-                href='https://drive.google.com/file/d/1oOQa5YWcDl-4gf1AxJJkiAfwREmD4yr1/view?usp=sharing'
-                target='_blank'
-                rel='noreferrer'>
-                Resume
-              </a>
-            </button>
-            <button className='github-button'>
-              <a
-                href='https://github.com/GregPetropoulos'
-                target='_blank'
-                rel='noreferrer'>
-                Github
-              </a>
-            </button>
+        <Row
+          style={{
+            textAlign: 'center',
+            display: 'flex',
+            justifyContent: 'center'
+          }}>
+          <Col lg={3} md={3} sm={4} xs={6} className='resume-button'>
+            {/* <button > */}
+            <a
+              href='https://drive.google.com/file/d/1oOQa5YWcDl-4gf1AxJJkiAfwREmD4yr1/view?usp=sharing'
+              target='_blank'
+              rel='noreferrer'>
+              Resume
+            </a>
+            {/* </button> */}
+          </Col>
+          <Col lg={3} md={3} sm={4} xs={6} className='github-button'>
+            {/* <button > */}
+            <a
+              href='https://github.com/GregPetropoulos'
+              target='_blank'
+              rel='noreferrer'>
+              Github
+            </a>
+            {/* </button> */}
           </Col>
         </Row>
       </Col>
