@@ -1,8 +1,8 @@
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-import React, { useState } from 'react';
-import Form from 'react-bootstrap/Form';
+// import React, { useState } from 'react';
+// import Form from 'react-bootstrap/Form';
 import Footer from '../footer/Footer';
 
 const ContactForm = () => {

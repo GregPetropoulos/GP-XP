@@ -1,4 +1,3 @@
-import React from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Footer from '../footer/Footer';
@@ -10,7 +9,6 @@ function HomeSection({ img }) {
       <Row>
         <Col className='home-main-column'>
           <Row className='profile-box'>
-            {/* <br/> */}
             <a
               href='https://drive.google.com/file/d/1oOQa5YWcDl-4gf1AxJJkiAfwREmD4yr1/view?usp=sharing'
               target='_blank'
@@ -21,7 +19,7 @@ function HomeSection({ img }) {
           </Row>
         </Col>
         <Row className='home-description'>
-          <Col xl={8} lg={12} md={12} >
+          <Col xl={8} lg={12} md={12}>
             <p>
               Hi my name is Greg Petropoulos and I enjoy bringing to life
               engaging websites and web applications to run across platforms and

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Row, Container } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
 import BlogList from '../components/blog/BlogList';
 
 const Blog = () => {
