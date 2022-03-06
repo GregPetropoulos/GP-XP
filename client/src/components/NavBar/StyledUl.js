@@ -36,5 +36,4 @@ export const Ul = styled.ul`
     @media (max-width:768px){
     
   }
-`;
-
+`

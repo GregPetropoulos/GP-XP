@@ -14,7 +14,7 @@ const Experimental = () => {
         }}>
         &lt;experimental&gt;
       </p>
-      <h3 style={{ textAlign: 'center' }}> Actively pursuing</h3>
+      <h3 style={{ textAlign: 'center' }}> Actively Pursuing</h3>
       <ul
         style={{
           listStyle: 'none',

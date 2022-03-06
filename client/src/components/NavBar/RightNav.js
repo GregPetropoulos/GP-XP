@@ -9,7 +9,7 @@ const RightNav = ({ open, ...props }) => {
     <>
       <Ul open={open} aria-hidden={!isHidden} {...props}>
         <li>
-          <Link to='/home' className= 'menu-links' tabIndex={tabIndex}>
+          <Link to='/' className= 'menu-links' tabIndex={tabIndex}>
             Home
           </Link>
         </li>
