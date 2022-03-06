@@ -1,16 +1,16 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, {  useEffect, useState, Fragment } from 'react';
+import React, { lazy, Suspense, useEffect, useState, Fragment } from 'react';
 import axios from 'axios';
 import Spinner from 'react-bootstrap/Spinner';
 // import Unsplash, { toJson } from "unsplash-js";
 
 // PROJECT IMAGES
 // import ProjectImage from '../images/ProjectImage';
-import ProjectImage from '../images/ProjectImage'
-// const ProjectItems = lazy(()=>import('../components/ProjectItems/ProjectItems'));
-import ProjectItems  from '../components/ProjectItems'
-
-
+import { ProjectImage } from '../images/ProjectImage';
+const ProjectItems = lazy(() =>
+  import('../components/ProjectItems/ProjectItems')
+);
+// import ProjectItems  from '../components/ProjectItems/ProjectItems'
 
 const Projects = () => {
   //*CONFIGURATIONS AND KEYS
@@ -42,7 +42,7 @@ const Projects = () => {
   // *Ideally will come from the unsplash api and made as a piece of state merged with the github api ID numbers--I hardcoded these in
   // The repos relationships are id and imageId
   const [images, setImages] = useState(ProjectImage);
-  
+
   // *VARIABLES FOR THE GITHUB API
   const baseUrl = `https://api.github.com/users/GregPetropoulos`;
   const repoUrl = `/repos?per_page=100&sort=created:asc&client_id=${githubClientId}&client_secret=${githubClientSecret}`;
@@ -65,7 +65,7 @@ const Projects = () => {
         const results = res.data;
         // console.log(results);
         // return res;
-        console.log('res.data', res.data);
+        // console.log('res.data', res.data);
 
         //* MAPPING THROUGH THE IMAGE STATE ADDING REPO OBJECT TO IMAGES STATE TO THE IMAGE PER IMAGEID
         const resultsCopy = results;
@@ -99,10 +99,10 @@ const Projects = () => {
   }, []);
 
   //* Randomly generating image for the Jumbotron
-  const imageCopy = [...images]
+  const imageCopy = [...images];
   const randomNum = Math.floor(Math.random() * imageCopy.length);
   const randomJumboImage = imageCopy.filter((item) => item.id === randomNum);
-console.log('imageCopy', imageCopy);
+  // console.log('imageCopy', imageCopy);
   //* Truncate ellipse function from stack overflow
   function truncate(str, n) {
     return str?.length > n ? str.substr(0, n - 1) + '...' : str;
@@ -127,7 +127,8 @@ console.log('imageCopy', imageCopy);
   return (
     <Fragment>
       <div>
-        <p className='page-title'
+        <p
+          className='page-title'
           style={{
             fontSize: '1.4rem',
             color: '#d6b850'
@@ -180,36 +181,56 @@ console.log('imageCopy', imageCopy);
       </div>
       <div className='top-5-row'>
         <h2>My Top 5 Repos</h2>
-      
-        <div className='row-posters'>
-        {/* <Suspense fallback={<h1 className='loading-spinner'>Loading.....<Spinner className='spinner' animation='border' variant='primary' /></h1>}> */}
-          <ProjectItems
-            loading={loading}
-            images={images}
-            isLarge={true}
-            top5={true}
-          />
-          {/* </Suspense> */}
-        </div>
 
+        <div className='row-posters'>
+          <Suspense
+            fallback={
+              <h1 className='loading-spinner'>
+                Loading.....
+                <Spinner
+                  className='spinner'
+                  animation='border'
+                  variant='primary'
+                />
+              </h1>
+            }>
+            <ProjectItems
+              loading={loading}
+              images={images}
+              isLarge={true}
+              top5={true}
+            />
+          </Suspense>
+          /
+        </div>
       </div>
       <div className='trending-row'>
         <h2>Trending</h2>
-       
-        <div className='row-posters'>
-        {/* <Suspense fallback={<h1 className='loading-spinner'>Loading.....<Spinner className='spinner' animation='border' variant='primary' /></h1>}> */}
-          <ProjectItems
-            isLarge={false}
-            images={images}
-            loading={loading}
-            top5={false}
-          />
-          {/* </Suspense> */}
-        </div>
 
+        <div className='row-posters'>
+          <Suspense
+            fallback={
+              <h1 className='loading-spinner'>
+                Loading.....
+                <Spinner
+                  className='spinner'
+                  animation='border'
+                  variant='primary'
+                />
+              </h1>
+            }>
+            <ProjectItems
+              isLarge={false}
+              images={images}
+              loading={loading}
+              top5={false}
+            />
+          </Suspense>
+        </div>
       </div>
       <div>
-        <p className='page-title'
+        <p
+          className='page-title'
           style={{
             fontSize: '1.4rem',
             color: '#d6b850'
@@ -218,8 +239,6 @@ console.log('imageCopy', imageCopy);
         </p>
       </div>
     </Fragment>
-
-
   );
 };
 export default Projects;

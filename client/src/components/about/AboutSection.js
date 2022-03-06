@@ -24,8 +24,7 @@ const AboutSection = () => {
           {/* ---- */}
           <Row className='about-skills-icon-row'>
             <p>
-              I am proficient in the MERN stack (MongoDB, Express,Node React)
-              JavaScript, HTML, CSS and I am open to learning new technologies.
+              I am proficient in the MERN stack, MongoDB, Express, Node, and React. My foundational knowledge includes JavaScript, HTML, CSS and I am open to learning new technologies.
             </p>
             <Col className='col-skills-icon'>
               <FontAwesomeIcon
