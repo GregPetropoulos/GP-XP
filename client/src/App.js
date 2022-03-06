@@ -1,20 +1,24 @@
-import React from 'react';
+import React, {lazy, Suspense}from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Land from './components/landing/Land';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBar from './components/NavBar/index';
-import Home from './pages/Home';
-import Projects from './pages/Projects';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Blog from './pages/Blog';
-import Experimental from './pages/Experimental';
 import './App.css';
-import NavBarResp from './components/NavBarResp/NavBarResp';
+import Spinner from 'react-bootstrap/Spinner';
+
+const Land =lazy(() => import('./components/landing/Land'));
+const NavBar = lazy(() => import('./components/NavBar/index'));
+const Home = lazy(()=> import('./pages/Home'));
+const Projects = lazy(()=> import('./pages/Projects'));
+const About = lazy (()=> import('./pages/About'));
+const Contact = lazy(()=> import('./pages/Contact'));
+const Blog = lazy(()=> import('./pages/Blog'));
+const Experimental = lazy(()=> import('./pages/Experimental'));
+
+const NavBarResp = lazy(()=> import('./components/NavBarResp/NavBarResp'));
 
 const App = () => {
   return (
     <Router>
+      <Suspense fallback={<h1 className='loading-spinner'>Loading.....<Spinner className='spinner' animation='border' variant='primary' /></h1>}>
       <NavBar />
       <NavBarResp />
       <Routes>
@@ -26,6 +30,7 @@ const App = () => {
         <Route exact path='/experimental' element={<Experimental />} />
         <Route exact path='/blog' element={<Blog />} />
       </Routes>
+      </Suspense>
     </Router>
   );
 };

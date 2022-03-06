@@ -9,9 +9,9 @@
   --almost--black: #0000;
 }
 /** CSS RESPONSIVE DEBUGGER */
-* {
+/* * {
   border: 1px solid blue !important;
-}
+} */
 
 /** RESET */
 * {
@@ -38,7 +38,6 @@ body {
   overflow-x: hidden;
 }
 
-
 /* Getting rid of scrollbar-- On Projects page A Netflix feature */
 body {
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
@@ -50,6 +49,13 @@ body::-webkit-scrollbar {
   display: none; /* for Chrome, Safari, and Opera */
 }
 
+.loading-spinner{
+  display: flex;
+  justify-content: center;
+  width:100%;
+  height: 100%;
+  margin:40px;
+}
 /* ?? might not exist */
 .ul-of-repos {
   display: flex;
@@ -62,22 +68,19 @@ body::-webkit-scrollbar {
   list-style-type: none;
 }
 
-
-
 /*****MIGRATED STYLE SHEETS TO ONE GLOBAL CSS FROM EACH COMPONENT BELOW****/
 /* * LANDING PAGE  */
 
-
 .land-wrapper {
-   /* display:flex; */
+  /* display:flex; */
   /* justify-content:center;  */
   /* text-align: center; */
   /* flex-direction: column; */
   /* align-items: center; */
   /* margin: 20px; */
-  width:100%;
+  width: 100%;
   height: 500px;
-text-align: center;
+  text-align: center;
 
   /* padding-top: 15px; */
 }
@@ -153,12 +156,9 @@ a:active {
 /* *NAVBARRESP */
 /* See media query for this */
 
-
-
-
 /** HOME SECTION */
-.home-buffer{
-height:75px;
+.home-buffer {
+  height: 75px;
 }
 .home-main-column {
   /* align-items: center; */
@@ -191,14 +191,12 @@ height:75px;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center; 
-   word-wrap: break-word;
-
+  text-align: center;
+  word-wrap: break-word;
 }
 
-
 /** PROJECTS */
-.page-title{
+.page-title {
   margin: 8px;
 }
 .top-5-row,
@@ -305,9 +303,6 @@ height:75px;
   );
 }
 
-
-
-
 /**ABOUT SECTION */
 .resume-button {
   /* display: flex; */
@@ -316,8 +311,8 @@ height:75px;
 .resume-button {
   border-radius: 6px;
   width: 50%;
-  margin:13px;
-  padding:5px;
+  margin: 13px;
+  padding: 5px;
   font-size: 1.2rem;
   font-weight: bolder;
   background-color: #464646;
@@ -328,14 +323,13 @@ height:75px;
   transition-duration: 0.9s;
   box-shadow: inset 400px 0 0 0 #7f3331;
   border-radius: 10px;
-
 }
 .github-button {
-  margin:13px;
+  margin: 13px;
 
   border-radius: 6px;
   width: 50%;
-  padding:5px;
+  padding: 5px;
   font-size: 1.2rem;
   font-weight: bolder;
   background-color: #464646;
@@ -387,7 +381,6 @@ height:75px;
 }
 .about-main-column {
   margin: 40px;
-
 }
 .about-1p,
 .about-2p {
@@ -412,9 +405,12 @@ height:75px;
   font-size: 1.7rem;
   margin-left: 24px;
 }
-.about-3p>ul>li{
+.about-3p > ul > li {
   list-style: none;
-
+  margin: 10px;
+}
+.bullet-icon {
+  margin: 10px;
 }
 /* .about-item-bullets{
   color:#e9b171
@@ -608,7 +604,6 @@ icon {
 }
 
 @media (max-width: 400px) {
-
   nav {
     display: none;
   }
@@ -624,7 +619,8 @@ icon {
   .page-title {
     text-align: center;
   }
-  .home-buffer,.logo2,
+  .home-buffer,
+  .logo2,
   .jumbo,
   .about-1p,
   .about-2p,

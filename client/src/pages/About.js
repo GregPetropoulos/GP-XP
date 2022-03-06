@@ -1,6 +1,7 @@
 import React from 'react';
 
-import AboutSection from '../components/about/AboutSection';
+// import AboutSection from '../components/about/AboutSection';
+import AboutSection from '../components/about/AboutSection'
 import Container from 'react-bootstrap/Container';
 // import Col from "react-bootstrap/Col";
 

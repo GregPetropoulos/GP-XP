@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 // import formatDate from '../utils/formatDate';
 
 const ProjectItems = ({ loading, isLarge, top5, images }) => {
-  if (loading) return <Spinner animation='border' variant='info' />;
+  if (loading) return <Spinner className='spinner' animation='border' variant='info' />;
   const imageArr = images;
   // console.log('imageArr', imageArr);
   return (

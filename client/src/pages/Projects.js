@@ -1,22 +1,16 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState, Fragment } from 'react';
-import ProjectItems from '../components/ProjectItems/ProjectItems';
+import React, {  useEffect, useState, Fragment } from 'react';
+import axios from 'axios';
 import Spinner from 'react-bootstrap/Spinner';
 // import Unsplash, { toJson } from "unsplash-js";
 
 // PROJECT IMAGES
-import { ProjectImage } from '../images/ProjectImage';
-// import ProjectTrackerImage from '../images/project-tracker.png';
-// import GolfImages from '../images/golf.png';
-// import EmployeeImage from '../images/employee-directory.png';
-// import FitImage from '../images/fit-tracker.png';
-// import BuildAPageImage from '../images/build-a-page.png';
-// import DevSquadImage from '../images/dev-squad.png';
-// import ExcavationImage from '../images/excavation.png';
-// import ContactBookImage from '../images/contact-book.png';
-// import GithubFinderImage from '../images/github-finder.png';
-// import ITLoggerImage from '../images/it-logger.png';
-import axios from 'axios';
+// import ProjectImage from '../images/ProjectImage';
+import ProjectImage from '../images/ProjectImage'
+// const ProjectItems = lazy(()=>import('../components/ProjectItems/ProjectItems'));
+import ProjectItems  from '../components/ProjectItems'
+
+
 
 const Projects = () => {
   //*CONFIGURATIONS AND KEYS
@@ -49,9 +43,6 @@ const Projects = () => {
   // The repos relationships are id and imageId
   const [images, setImages] = useState(ProjectImage);
   
-  //* DESTRUCTURE IMAGE STATE ARRAY
-  const imageMatch = images;
-
   // *VARIABLES FOR THE GITHUB API
   const baseUrl = `https://api.github.com/users/GregPetropoulos`;
   const repoUrl = `/repos?per_page=100&sort=created:asc&client_id=${githubClientId}&client_secret=${githubClientSecret}`;
@@ -73,14 +64,8 @@ const Projects = () => {
         const res = await axios.get(allRepoUrl);
         const results = res.data;
         // console.log(results);
-
-        //ADDING IMAGES AND REPOS TO PROJECTS STATE
-        // setProjects(() => ({
-        //   repos: [...results],
-        //   imageCheck: [...imageMatch]
-        // }));
         // return res;
-        // console.log('res.data', res.data);
+        console.log('res.data', res.data);
 
         //* MAPPING THROUGH THE IMAGE STATE ADDING REPO OBJECT TO IMAGES STATE TO THE IMAGE PER IMAGEID
         const resultsCopy = results;
@@ -117,7 +102,7 @@ const Projects = () => {
   const imageCopy = [...images]
   const randomNum = Math.floor(Math.random() * imageCopy.length);
   const randomJumboImage = imageCopy.filter((item) => item.id === randomNum);
-
+console.log('imageCopy', imageCopy);
   //* Truncate ellipse function from stack overflow
   function truncate(str, n) {
     return str?.length > n ? str.substr(0, n - 1) + '...' : str;
@@ -195,25 +180,33 @@ const Projects = () => {
       </div>
       <div className='top-5-row'>
         <h2>My Top 5 Repos</h2>
+      
         <div className='row-posters'>
+        {/* <Suspense fallback={<h1 className='loading-spinner'>Loading.....<Spinner className='spinner' animation='border' variant='primary' /></h1>}> */}
           <ProjectItems
             loading={loading}
             images={images}
             isLarge={true}
             top5={true}
           />
+          {/* </Suspense> */}
         </div>
+
       </div>
       <div className='trending-row'>
         <h2>Trending</h2>
+       
         <div className='row-posters'>
+        {/* <Suspense fallback={<h1 className='loading-spinner'>Loading.....<Spinner className='spinner' animation='border' variant='primary' /></h1>}> */}
           <ProjectItems
             isLarge={false}
             images={images}
             loading={loading}
             top5={false}
           />
+          {/* </Suspense> */}
         </div>
+
       </div>
       <div>
         <p className='page-title'
