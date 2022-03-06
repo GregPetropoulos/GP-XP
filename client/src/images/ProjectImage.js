@@ -1,16 +1,16 @@
 
-import ProjectTrackerImage from './project-tracker.png';
-import GolfImages from './golf.png';
-import EmployeeImage from './employee-directory.png';
-import BuildAPageImage from './build-a-page.png';
-import DevSquadImage from './dev-squad.png';
-import ExcavationImage from './excavation.png';
-import ContactBookImage from './contact-book.png';
-import GithubFinderImage from './github-finder.png';
-import ITLoggerImage from './it-logger.png';
-import FeedBackImage from './feedback-app.png';
-import GithubSpotterImage from './github-spotter.png';
-import RadioButtonsImage from './radio-buttons.png';
+import ProjectTrackerImage from './project-tracker.webp';
+import GolfImages from './golf.webp';
+import EmployeeImage from './employee-directory.webp';
+import BuildAPageImage from './build-a-page.webp';
+import DevSquadImage from './dev-squad.webp';
+import ExcavationImage from './excavation.webp';
+import ContactBookImage from './contact-book.webp';
+import GithubFinderImage from './github-finder.webp';
+import ITLoggerImage from './it-logger.webp';
+import FeedBackImage from './feedback-app.webp';
+import GithubSpotterImage from './github-spotter.webp';
+import RadioButtonsImage from './radio-buttons.webp';
 
 export const ProjectImage = () => {
   return [
