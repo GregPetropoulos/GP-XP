@@ -12,7 +12,7 @@ const Contact = lazy(() => import('./pages/Contact'));
 const Blog = lazy(() => import('./pages/Blog'));
 const Experimental = lazy(() => import('./pages/Experimental'));
 const NavBarResp = lazy(() => import('./components/NavBarResp/NavBarResp'));
-
+const ErrorSection =lazy (()=> import('./components/error/ErrorSection'))
 const App = () => {
   return (
     <Router>
@@ -32,6 +32,7 @@ const App = () => {
           <Route exact path='/contact' element={<Contact />} />
           <Route exact path='/experimental' element={<Experimental />} />
           <Route exact path='/blog' element={<Blog />} />
+          <Route exact path='/*' element={<ErrorSection />} />
         </Routes>
       </Suspense>
     </Router>

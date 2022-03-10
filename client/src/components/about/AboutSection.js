@@ -1,6 +1,8 @@
 import React from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import GregPetropoulosResume from '../../resume/GregPetropoulosResume-3-3-22.docx';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faHtml5,
@@ -24,7 +26,9 @@ const AboutSection = () => {
           {/* ---- */}
           <Row className='about-skills-icon-row'>
             <p>
-              I am proficient in the MERN stack, MongoDB, Express, Node, and React. My foundational knowledge includes JavaScript, HTML, CSS and I am open to learning new technologies.
+              I am proficient in the MERN stack, MongoDB, Express, Node, and
+              React. My foundational knowledge includes JavaScript, HTML, CSS
+              and I am open to learning new technologies.
             </p>
             <Col className='col-skills-icon'>
               <FontAwesomeIcon
@@ -189,14 +193,19 @@ const AboutSection = () => {
           style={{
             textAlign: 'center',
             display: 'flex',
-            justifyContent: 'center'
+            justifyContent: 'space-around'
           }}>
           <Col lg={3} md={3} sm={4} xs={6} className='resume-button'>
             {/* <button > */}
-            <a
+            {/* <a
               href='https://drive.google.com/file/d/1oOQa5YWcDl-4gf1AxJJkiAfwREmD4yr1/view?usp=sharing'
               target='_blank'
-              rel='noreferrer'>
+              rel='noreferrer'> */}
+
+            <a
+              href={GregPetropoulosResume}
+              download
+              style={{ color: '#d6b850' }}>
               Resume
             </a>
             {/* </button> */}

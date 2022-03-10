@@ -1,3 +1,6 @@
+import React from 'react';
+import { useForm, ValidationError } from '@formspree/react';
+import GregPetropoulosResume from '../../resume/GregPetropoulosResume-3-3-22.docx';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
@@ -6,23 +9,11 @@ import Container from 'react-bootstrap/Container';
 import Footer from '../footer/Footer';
 
 const ContactForm = () => {
-  //   const initialData = {
-  //     name:'',
-  //     email:'',
-  //     textarea:''
+  const [state, handleSubmit] = useForm('mvolrjgl');
+  if (state.succeeded) {
+    return <p>Thanks for sending a message!</p>;
+  }
 
-  //   }
-  //   // STATE
-  // const [formInput, setFormInput] = useState(initialData)
-  // console.log('form check', formInput)
-
-  // const onChange = (e) => {
-  //   setFormInput({ formInput, [e.target.name]: e.target.value });
-  // };
-  // const handleSubmit = () =>{
-  //   fetch('')
-
-  // }
   return (
     <>
       <Container className='contact-form-container'>
@@ -45,15 +36,22 @@ const ContactForm = () => {
                 style={{ color: '#d6b850' }}>
                 Linkedin
               </a>{' '}
-              and take a peak at my{' '}
+              and download my{' '}
+              <a
+                href={GregPetropoulosResume}
+                download
+                style={{ color: '#d6b850' }}>
+                {' '}
+                resume{' '}
+              </a>
+              to learn more or click this{' '}
               <a
                 href='https://drive.google.com/file/d/1oOQa5YWcDl-4gf1AxJJkiAfwREmD4yr1/view?usp=sharing'
                 target='_blank'
                 rel='noopener noreferrer'
                 style={{ color: '#d6b850' }}>
-                resume
+                resume link
               </a>{' '}
-              to learn more
             </p>
             <p>Cell: 919.717.2680</p>
             <p>
@@ -69,40 +67,33 @@ const ContactForm = () => {
           </Col>
         </Row>
 
-        {/* <Row>
-          <p className="email-prompt">
-            Or just a send a quick message below! :
-          </p>
-        </Row> */}
+        {/* Email submission */}
 
-        {/* <Row>
-          <Col className="form-container">
-            <Form onSubmit={handleSubmit}>
-              <Form.Group controlId="nameForm.ControlInput1">
-                <Form.Label>NAME</Form.Label>
-                <Form.Control onChange= {onChange} name='name' value={name} type="text" placeholder="name" />
-              </Form.Group>
-
-              <Form.Group controlId="emailForm.ControlInput2">
-                <Form.Label>EMAIL</Form.Label>
-                <Form.Control as='email' onChange= {onChange} name='email' value={email} type="text"  placeholder="name@example.com" />
-              </Form.Group>
-
-              <Form.Group controlId="messageForm.ControlTextarea1">
-                <Form.Label>MESSAGE</Form.Label>
-                <Form.Control as="textarea" rows={8} />
-              </Form.Group>
-              <button
-                type="submit"
-                className="btn"
-                style={{ color: "whitesmoke", backgroundColor: "#08a7ce" }}
-              >
-                Submit
-              </button>
-            </Form> */}
+        <form className='contact-form' onSubmit={handleSubmit}>
+          <label htmlFor='email'>Email Address</label>
+          <input
+            className='contact-input'
+            id='email'
+            type='email'
+            name='email'
+            placeholder='name@gmail.com'
+          />
+          <ValidationError prefix='Email' field='email' errors={state.errors} />
+          <label htmlFor='message'>Message</label>
+          <textarea className='contact-textarea' id='message' name='message' />
+          <ValidationError
+            prefix='Message'
+            field='message'
+            errors={state.errors}
+          />
+          <button
+            className='contact-button'
+            type='submit'
+            disabled={state.submitting}>
+            Submit
+          </button>
+        </form>
         <Footer />
-        {/* </Col>  */}
-        {/* </Row>  */}
       </Container>
     </>
   );
