@@ -10,7 +10,6 @@ const Projects = lazy(() => import('./pages/Projects'));
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Blog = lazy(() => import('./pages/Blog'));
-const Experimental = lazy(() => import('./pages/Experimental'));
 const NavBarResp = lazy(() => import('./components/NavBarResp/NavBarResp'));
 const ErrorSection =lazy (()=> import('./components/error/ErrorSection'))
 const App = () => {
@@ -30,7 +29,6 @@ const App = () => {
           <Route exact path='/projects' element={<Projects />} />
           <Route exact path='/about' element={<About />} />
           <Route exact path='/contact' element={<Contact />} />
-          <Route exact path='/experimental' element={<Experimental />} />
           <Route exact path='/blog' element={<Blog />} />
           <Route exact path='/*' element={<ErrorSection />} />
         </Routes>

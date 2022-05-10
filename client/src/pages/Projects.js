@@ -2,7 +2,12 @@
 import React, { lazy, Suspense, useEffect, useState, Fragment } from 'react';
 import axios from 'axios';
 import Spinner from 'react-bootstrap/Spinner';
-// import Unsplash, { toJson } from "unsplash-js";
+import Card from 'react-bootstrap/Card';
+import CardGroup from 'react-bootstrap/CardGroup';
+import Button from 'react-bootstrap/Button';
+import DevSquad from '../images/dev-squad.webp';
+import ITLogger from '../images/it-logger.webp';
+import SupportDesk from '../images/support-desk.webp';
 
 // PROJECT IMAGES
 // import ProjectImage from '../images/ProjectImage';
@@ -16,44 +21,31 @@ const Projects = () => {
   //*CONFIGURATIONS AND KEYS
   let githubClientId;
   let githubClientSecret;
-  // let unsplashAccess;
-  // let fakeKey;
 
   if (process.env.NODE_ENV !== 'production') {
     githubClientId = process.env.REACT_APP_GITHUB_CLIENT_ID;
     githubClientSecret = process.env.REACT_APP_GITHUB_CLIENT_SECRET;
-    // unsplashAccess=process.env.REACT_APP_MY_ACCESS
-    // fakeKey=process.env.REACT_APP_MY_FAKE_ACCESS
   } else {
     githubClientId = process.env.GITHUB_CLIENT_ID;
     githubClientSecret = process.env.GITHUB_CLIENT_SECRET;
-    // unsplashAccess=process.env.MY_ACCESS
   }
 
   //*STATE
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-  // const [projects, setProjects] = useState({
-  //   repos: [],
-  //   imageCheck: []
-  // });
-
-  // * IMAGES IN ARRAY ALL REPOS
-  // *Ideally will come from the unsplash api and made as a piece of state merged with the github api ID numbers--I hardcoded these in
+  const [data, SetData] = useState([]);
   // The repos relationships are id and imageId
-  const [images, setImages] = useState(ProjectImage);
+  // const [images, setImages] = useState(ProjectImage);
 
   // *VARIABLES FOR THE GITHUB API
   const baseUrl = `https://api.github.com/users/GregPetropoulos`;
   const repoUrl = `/repos?per_page=100&sort=created:asc&client_id=${githubClientId}&client_secret=${githubClientSecret}`;
   const allRepoUrl = `${baseUrl}${repoUrl}`;
+  // const repo1 = `https://api.github.com/GregPetropoulos/SupportDesk/?&client_id=${githubClientId}&client_secret=${githubClientSecret}`;
+  // const repo2 = `https://api.github.com/GregPetropoulos/IT-Logger-App`;
+  // const repo3 = `https://api.github.com/GregPetropoulos/Dev-Squad`;
 
-  // *VARIABLES FOR THE UNSPLASH API
-  // const baseUrlUnsplash=`https://api.unsplash.com/photos/?client_id=${fakeKey}`
-
-  // console.log('baseUrlUnsplash',baseUrlUnsplash);
-
-  //*THE CALL TO GH *GET ALL REPOS
+  //*THE CALL TO GH All REPOS ONLY NEED 3 REPOS
   useEffect(() => {
     // console.log('useEffect project axios call here');
 
@@ -61,57 +53,50 @@ const Projects = () => {
       try {
         setError(false);
         setLoading(true);
+        // const res = await Promise.all([
+        //   axios.get(repo1),
+        // axios.get(repo2),
+        // axios.get(repo3)
+        // ]);
         const res = await axios.get(allRepoUrl);
         const results = res.data;
-        // console.log(results);
+        console.log(results);
+
         // return res;
         // console.log('res.data', res.data);
 
         //* MAPPING THROUGH THE IMAGE STATE ADDING REPO OBJECT TO IMAGES STATE TO THE IMAGE PER IMAGEID
-        const resultsCopy = results;
-        setImages((prev) => {
-          return prev.map((p) => ({
-            ...p,
-            ...{
-              repo: resultsCopy.find(
-                (item) => item.id === p.imageId && item.homepage
-              )
-            }
-          }));
-        });
+        // const resultsCopy = results;
+        // setImages((prev) => {
+        //   return prev.map((p) => ({
+        //     ...p,
+        //     ...{
+        //       repo: resultsCopy.find(
+        //         (item) => item.id === p.imageId && item.homepage
+        //       )
+        //     }
+        //   }));
+        // });
       } catch (error) {
         setError(true);
+        throw Error('Promise Failed');
       }
       setLoading(false);
     };
 
     getAllRepos();
-
-    //* calling on the unsplash api
-    // const repoUnsplashImages = async () => {
-    //   const res = await axios.get(`${baseUrlUnsplash}`)
-    //   setImages(res.data);
-    //   console.log('res.data', res.data);
-    //   console.log('baseUrlUnsplash',baseUrlUnsplash);
-    //   return res;
-    // }
-    // repoUnsplashImages()
   }, []);
 
   //* Randomly generating image for the Jumbotron
-  const imageCopy = [...images];
-  const randomNum = Math.floor(Math.random() * imageCopy.length);
-  const randomJumboImage = imageCopy.filter((item) => item.id === randomNum);
+  // const imageCopy = [...images];
+  // const randomNum = Math.floor(Math.random() * imageCopy.length);
+  // const randomJumboImage = imageCopy.filter((item) => item.id === randomNum);
   // console.log('imageCopy', imageCopy);
   //* Truncate ellipse function from stack overflow
-  function truncate(str, n) {
-    return str?.length > n ? str.substr(0, n - 1) + '...' : str;
-  }
+  // function truncate(str, n) {
+  //   return str?.length > n ? str.substr(0, n - 1) + '...' : str;
+  // }
 
-  // * NO TRENDING FUNCTION NEEDED FOR TRENDING CATEGORY SINCE GITHUB API IS RETURNING THE LATEST REPOS
-  // console.table(projects)
-  // console.log('KEY CHECK HERE',process.env.MY_ACCESS);
-  // console.log('KEY CHECK HERE',process.env.REACT_APP_MY_FAKE_KEY);
   if (loading)
     return (
       <div
@@ -136,7 +121,170 @@ const Projects = () => {
           &lt;projects&gt;
         </p>
       </div>
-      <div>
+
+      <CardGroup
+        style={{ width: '100%', gap: '14px', margin: '2px', padding: '2xp' }}>
+        <Card bg='dark'>
+          <Card.Link
+            href='https://support-desk-services.herokuapp.com/'
+            target='_blank'
+            rel='noreferrer'
+            alt=''>
+            <Card.Img variant='top' src={SupportDesk}></Card.Img>
+          </Card.Link>
+          <Card.Body>
+            <Card.Title style={{ textAlign: 'center' }}>
+              Support Desk Services
+            </Card.Title>
+            <Card.Text>
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </Card.Text>
+          </Card.Body>
+          <Button
+            variant='outline-danger'
+            size='md'
+            style={{ width: '100%' }}
+            target='_blank'
+            rel='noreferrer'
+            href=''>
+            Live Demo
+          </Button>
+
+          <div
+            style={{
+              display: 'flex',
+              margin: '6px',
+              justifyContent: 'space-around'
+            }}>
+            <Button
+              variant='info'
+              size='sm'
+              style={{ width: '50%', marginRight: '5px' }}
+              target='_blank'
+              rel='noreferrer'
+              href='https://support-desk-services.herokuapp.com/'>
+              Deployed
+            </Button>
+            <Button
+              variant='info'
+              size='sm'
+              style={{ width: '50%',marginLeft: '5px'  }}
+              target='_blank'
+              rel='noreferrer'
+              href='https://github.com/GregPetropoulos/SupportDesk'>
+              Github
+            </Button>
+          </div>
+        </Card>
+        <Card bg='dark'>
+          <Card.Link
+            href='https://dev-talk-dev.herokuapp.com/'
+            target='_blank'
+            rel='noreferrer'
+            alt=''>
+            <Card.Img variant='top' src={DevSquad}></Card.Img>
+          </Card.Link>
+          <Card.Body>
+            <Card.Title style={{ textAlign: 'center' }}>Dev Squad</Card.Title>
+            <Card.Text>
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </Card.Text>
+          </Card.Body>
+
+          <Button
+            variant='outline-danger'
+            size='md'
+            style={{ width: '100%' }}
+            target='_blank'
+            rel='noreferrer'
+            href=''>
+            Live Demo
+          </Button>
+          <div
+            style={{
+              display: 'flex',
+              margin: '6px',
+              justifyContent: 'space-around'
+            }}>
+            <Button
+              variant='info'
+              size='sm'
+              style={{ width: '50%', marginRight: '5px' }}
+              target='_blank'
+              rel='noreferrer'
+              href='https://dev-talk-dev.herokuapp.com/'>
+              Deployed
+            </Button>
+
+            <Button
+              variant='info'
+              size='sm'
+              style={{ width: '50%',marginLeft: '5px'  }}
+              target='_blank'
+              rel='noreferrer'
+              href=' https://github.com/GregPetropoulos/Dev-Squad'>
+              Github
+            </Button>
+          </div>
+        </Card>
+        <Card bg='dark'>
+          <Card.Link
+            href='https://it-loggerv1.herokuapp.com/'
+            target='_blank'
+            rel='noreferrer'
+            alt=''>
+            <Card.Img variant='top' src={ITLogger}></Card.Img>
+          </Card.Link>
+          <Card.Body>
+            <Card.Title style={{ textAlign: 'center' }}>
+              IT-Logger (Internal)
+            </Card.Title>
+            <Card.Text>
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </Card.Text>
+          </Card.Body>
+          <Button
+            variant='outline-danger'
+            size='md'
+            style={{}}
+            target='_blank'
+            rel='noreferrer'
+            href=''>
+            Live Demo
+          </Button>
+
+          <div
+            style={{
+              display: 'flex',
+              margin: '6px',
+              justifyContent: 'space-around'
+            }}>
+            <Button
+              variant='info'
+              size='sm'
+              style={{ width: '50%', marginRight: '5px' }}
+              target='_blank'
+              rel='noreferrer'
+              href='https://it-loggerv1.herokuapp.com/'>
+              Deployed
+            </Button>
+            <Button
+              variant='info'
+              size='sm'
+              style={{ width: '50%', marginLeft: '5px'   }}
+              target='_blank'
+              rel='noreferrer'
+              href='https://github.com/GregPetropoulos/IT-Logger-App'>
+              Github
+            </Button>
+          </div>
+        </Card>
+      </CardGroup>
+
+      {/* <div>
         <header
           className='jumbo'
           style={{
@@ -178,8 +326,9 @@ const Projects = () => {
           </div>
           <div className='jumbo-fade-bottom' />
         </header>
-      </div>
-      <div className='top-5-row'>
+      </div> */}
+
+      {/* <div className='top-5-row'>
         <h2>My Top 5 Repos</h2>
 
         <div className='row-posters'>
@@ -228,16 +377,16 @@ const Projects = () => {
           </Suspense>
         </div>
       </div>
-      <div>
-        <p
-          className='page-title'
-          style={{
-            fontSize: '1.4rem',
-            color: '#d6b850'
-          }}>
-          &lt;/projects&gt;
-        </p>
-      </div>
+      <div> */}
+      <p
+        className='page-title'
+        style={{
+          fontSize: '1.4rem',
+          color: '#d6b850'
+        }}>
+        &lt;/projects&gt;
+      </p>
+      {/* </div> */}
     </Fragment>
   );
 };

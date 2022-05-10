@@ -639,6 +639,15 @@ icon {
   /* position:fixed; */
   /* z-index: 999; */
 }
+/* *CARDS FOR PROJECTS */
+/* .CardGroup{
+  display: flex;
+  justify-content: space-around;
+  background-color: #28a745;
+}
+.Card{
+  background-color: green;
+} */
 
 /** ALL MEDIA QUERYS */
 /* ---------------------- */

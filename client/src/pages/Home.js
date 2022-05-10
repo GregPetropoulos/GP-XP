@@ -7,7 +7,6 @@ import ProfileImage from '../images/mobile-profile-image.webp';
 import Projects from './Projects';
 import About from './About';
 import Contact from './Contact';
-import Experimental from './Experimental';
 import Blog from './Blog';
 import MainFooter from '../components/mainFooter/MainFooter';
 
@@ -25,7 +24,6 @@ function Home() {
       <Projects />
       <About />
       <Contact />
-      <Experimental />
       <Blog />
       <Row>
         <p style={{ fontSize: '1.4rem' }}>&lt;/home&gt;</p>
