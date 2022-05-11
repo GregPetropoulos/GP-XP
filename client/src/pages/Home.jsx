@@ -1,23 +1,20 @@
-import React from 'react';
-import Row from 'react-bootstrap/Row';
-import Container from 'react-bootstrap/Container';
-import HomeSection from '../components/home/HomeSection';
+import {Fragment} from 'react';
+import HomeSection from '../components/HomeSection';
 // import Footer from "../components/Footer";
-import ProfileImage from '../images/mobile-profile-image.webp';
+import ProfileImage from '../assets/images/mobile-profile-image.webp';
 import Projects from './Projects';
 import About from './About';
 import Contact from './Contact';
 import Blog from './Blog';
-import MainFooter from '../components/mainFooter/MainFooter';
+import MainFooter from '../components/MainFooter';
 
 // import SVG from '../components/SVG';
 
 function Home() {
   return (
-    <Container>
-      <Row>
+<Fragment>
+
         <p style={{ fontSize: '1.4rem' }}>&lt;home&gt;</p>
-      </Row>
       <HomeSection  img={ProfileImage} />
       <div className='home-buffer'></div>
 
@@ -25,11 +22,11 @@ function Home() {
       <About />
       <Contact />
       <Blog />
-      <Row>
         <p style={{ fontSize: '1.4rem' }}>&lt;/home&gt;</p>
-      </Row>
+
       <MainFooter />
-    </Container>
+</Fragment>
+
   );
 }
 

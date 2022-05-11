@@ -1,13 +1,11 @@
-import React from 'react';
+import {Fragment} from 'react';
 
-// import AboutSection from '../components/about/AboutSection';
-import AboutSection from '../components/about/AboutSection'
-import Container from 'react-bootstrap/Container';
+import AboutSection from '../components/AboutSection';
 // import Col from "react-bootstrap/Col";
 
 const About = () => {
   return (
-    <Container>
+    <Fragment>
       <p
         className='page-title'
         style={{
@@ -26,7 +24,7 @@ const About = () => {
         }}>
         &lt;/about&gt;
       </p>
-    </Container>
+    </Fragment>
   );
 };
 

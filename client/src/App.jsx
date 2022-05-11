@@ -1,8 +1,7 @@
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Spinner from 'react-bootstrap/Spinner';
+
 
 const NavBar = lazy(() => import('./components/NavBar/index'));
 const Home = lazy(() => import('./pages/Home'));
@@ -10,8 +9,9 @@ const Projects = lazy(() => import('./pages/Projects'));
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Blog = lazy(() => import('./pages/Blog'));
-const NavBarResp = lazy(() => import('./components/NavBarResp/NavBarResp'));
-const ErrorSection =lazy (()=> import('./components/error/ErrorSection'))
+const ErrorSection =lazy (()=> import('./components/ErrorSection'));
+
+
 const App = () => {
   return (
     <Router>
@@ -19,11 +19,10 @@ const App = () => {
         fallback={
           <h1 className='loading-spinner'>
             Loading.....
-            <Spinner className='spinner' animation='border' variant='primary' />
+            need spinner here
           </h1>
         }>
         <NavBar />
-        <NavBarResp />
         <Routes>
           <Route exact path='/' element={<Home />} />
           <Route exact path='/projects' element={<Projects />} />

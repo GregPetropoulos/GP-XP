@@ -34,29 +34,15 @@ I created a portfolio to show my latest projects and newly learned technologies.
 Setting the initial concept to give a clear direction on where to start and how to implement the Model Views Controllers paradigm.
 
 
-Wireframe
-![Wireframe](./client/src/images/wireframe.png)
-
 ### UI
-The UI/UX came to by inspiration of my favorite running shoes and the colors Nike used for their Juniper line
-Theme colors based off a Nike Juniper shoe
-![Color Inspiration](./client/src/images/nike-juniper.png)
-- yellow
-#d6b850
-- blue
-#08a7ce
-- red
-#7f3331
-- faded black
-#0e2124
+
 
 ## Technologies
 - React
 - npm
 - JavaScript
 - JSX
-- Bootstrap
-- react strap
+- TailwindUI
 - CSS
 
 
@@ -84,24 +70,16 @@ Standard Create React App
 ## Database
 MongoDB
 ## Features
-- Hamburger
 - Full Page Menu
-- Button and Link animation
-- Barcode email
-- SVG Experiment
 ## Test
 Smoke test
 ## Credits
 
-[Typewriter Effect](https://www.npmjs.com/package/typewriter-effect)
 
-[Animated Drawing Effect](https://www.dlford.io/draw-animation-svg-react-hooks/)
-
-[SVG Set Up](https://react-svgr.com/playground/)
 
 
 Full Stack Web Developer in React
-[Inspirational Portfolio](https://prashantsani.com/) in React with SVG animation
+
 
 
 
