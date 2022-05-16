@@ -1,15 +1,15 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { lazy, Suspense, useEffect, useState, Fragment } from 'react';
 import axios from 'axios';
-import DevSquad from '../assets/images/dev-squad.webp';
-import ITLogger from '../assets/images/it-logger.webp';
-import SupportDesk from '../assets/images/support-desk.webp';
+import ProjectImages from '../assets/images/ProjectImages';
 
-// PROJECT IMAGES
-// const ProjectItems = lazy(() => import('../components/ProjectItems'));
-// import ProjectItems  from '../components/ProjectItems/ProjectItems'
+import ProjectItems from '../components/ProjectItems';
+
 
 const Projects = () => {
+
+const [projectData, SetProjectData]=useState(ProjectItems)
+
   //*CONFIGURATIONS AND KEYS
   let githubClientId;
   let githubClientSecret;
@@ -114,8 +114,49 @@ const Projects = () => {
           &lt;projects&gt;
         </p>
       </div>
-      <div>Project cards here</div>
 
+{/* <ProjectItems loading={loading} projImages={projImages} /> */}
+{/* <ProjectItems loading={loading} cardImage={MobileITSupport} /> */}
+{/* <ProjectItems loading={loading} cardImage={MobileDevSquad} /> */}
+
+
+
+
+{/* ----------------OLD------------------- */}
+      {/* <div className='flex flex-col justify-center align-middle'>
+
+
+        <div className='flex flex-row w-full justify-center'>
+          <div className='w-1/2'><p>project1</p></div>
+        </div>
+
+        <div className='flex w-full flex-row sm:flex-wrap justify-center'>
+          <div className='w-full sm:w-1/2'><p>project2</p></div>
+          <div className='w-full sm:w-1/2'><p>project3</p></div>
+        </div>
+      
+      </div>
+
+      <div className=' flex flex-col w-full justify-center align-middle'> */}
+        {/* CARD1------------- */}
+        {/* <div className='flex flex-row justify-center w-60'>
+          <div className=' card-normal  bg-base-100 rounded-xl shadow-xl hover:outline mt-3'>
+            <figure className='rounded-xl'>
+              <img src={SupportDesk} alt={''} />
+            </figure>
+            <div className='card-body bg-secondary'>
+              <h2 className='card-title text-center'>Support Desk Services</h2>
+              <p>lorem stuff here</p>
+
+              <div className='card-actions justify-around'>
+                <button className='btn  btn-xs btn-primary'>Live Demo</button>
+                <button className='btn  btn-xs btn-primary'>Deployed</button>
+                <button className='btn  btn-xs btn-primary'>Github</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div> */}
       <p
         className='page-title'
         style={{

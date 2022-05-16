@@ -3,14 +3,14 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 
 
-const NavBar = lazy(() => import('./components/NavBar/index'));
+// const NavBar = lazy(() => import('./components/NavBar/index'));
+import Nav from './components/Nav'
 const Home = lazy(() => import('./pages/Home'));
 const Projects = lazy(() => import('./pages/Projects'));
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Blog = lazy(() => import('./pages/Blog'));
 const ErrorSection =lazy (()=> import('./components/ErrorSection'));
-
 
 const App = () => {
   return (
@@ -22,7 +22,7 @@ const App = () => {
             need spinner here
           </h1>
         }>
-        <NavBar />
+          <Nav/>
         <Routes>
           <Route exact path='/' element={<Home />} />
           <Route exact path='/projects' element={<Projects />} />
