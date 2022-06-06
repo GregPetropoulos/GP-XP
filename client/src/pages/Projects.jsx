@@ -1,14 +1,16 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { lazy, Suspense, useEffect, useState, Fragment } from 'react';
 import axios from 'axios';
-import ProjectImages from '../assets/images/ProjectImages';
+import ProjectData from '../assets/images/ProjectData';
 
 import ProjectItems from '../components/ProjectItems';
 
 
 const Projects = () => {
+const imageArr = ProjectData()
+// const [projectData, SetProjectData]=useState(imageArr)
+// console.log("imageArr from image arrays",projectData)  
 
-const [projectData, SetProjectData]=useState(ProjectItems)
 
   //*CONFIGURATIONS AND KEYS
   let githubClientId;
@@ -52,7 +54,7 @@ const [projectData, SetProjectData]=useState(ProjectItems)
         // ]);
         const res = await axios.get(allRepoUrl);
         const results = res.data;
-        console.log(results);
+        console.log("fetch results",results);
 
         // return res;
         // console.log('res.data', res.data);
@@ -114,8 +116,9 @@ const [projectData, SetProjectData]=useState(ProjectItems)
           &lt;projects&gt;
         </p>
       </div>
-
-{/* <ProjectItems loading={loading} projImages={projImages} /> */}
+{
+imageArr.map(data => (<ProjectItems loading={loading} data={data} key={data.id}/>))
+}
 {/* <ProjectItems loading={loading} cardImage={MobileITSupport} /> */}
 {/* <ProjectItems loading={loading} cardImage={MobileDevSquad} /> */}
 
