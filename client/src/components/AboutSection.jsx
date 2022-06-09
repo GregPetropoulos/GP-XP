@@ -1,159 +1,60 @@
-import {Fragment} from 'react'
-import GregPetropoulosResume from '../assets/resume/React_Full_Stack_Greg_Petropoulos_Resume_5.10.pdf';
+import { Fragment } from 'react';
+import { Link } from 'react-router-dom';
+import GregPetropoulosResume from '../assets/resume/React Full Stack--Greg Petropoulos_Resume_6.8.22.docx';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faHtml5,
-  faCss3,
-  faJs,
-  faMdb,
-  faReact,
-  faNodeJs,
-  faSketch,
-  faCodepen,
-  faConfluence,
-  faPushed
-} from '@fortawesome/free-brands-svg-icons';
-
-const AboutSection = () => {
+const AboutSection = ({ data }) => {
+  // const {}=data
   return (
-<Fragment>   
-            <p>
-              I am proficient in the MERN stack, MongoDB, Express, Node, and
-              React. My foundational knowledge includes JavaScript, HTML, CSS
-              and I am open to learning new technologies.
-            </p>
-              <FontAwesomeIcon
-                className='skill-icon'
-                icon={faReact}
-                size='6x'
-                color='#61DBFB'
-                style={{ background: '#000' }}
-                fixedWidth
-              />
-
-              <FontAwesomeIcon
-                className='skill-icon'
-                icon={faJs}
-                size='6x'
-                color='#f0db4f'
-                style={{ background: '#323330' }}
-                fixedWidth
-              />
-
-              <FontAwesomeIcon
-                className='skill-icon'
-                icon={faMdb}
-                size='6x'
-                color='#E8E7D5'
-                style={{ background: '#3FA037' }}
-                fixedWidth
-              />
-
-              <FontAwesomeIcon
-                className='skill-icon'
-                icon={faNodeJs}
-                size='6x'
-                color='#3c873a'
-                style={{ background: '#303030' }}
-                fixedWidth
-              />
-              <FontAwesomeIcon
-                className='skill-icon'
-                icon={faHtml5}
-                size='5x'
-                color='#E34C26'
-                style={{ background: '#EBEBEB' }}
-                fixedWidth
-              />
-              <FontAwesomeIcon
-                className='skill-icon'
-                icon={faCss3}
-                size='5x'
-                color='#2965f1'
-                style={{ background: '#EBEBEB' }}
-                fixedWidth
-              />
-          <p className='about-1p'>
-            I am a Full Stack Web Developer with a background in geologic
-            sciences and always eager to learn and collaborate.
-            <br />A sleuth at heart, I find discovery and fulfillment rewarding
-            and web development offers an opportunity to create value and
-            utilize my strengths. I am React/JavaScript enthusiast and enjoy
-            bringing applications to life.
-          </p>
-            <p className='about-2p'>
-              I have created several web applications with the key methods in
-              mind for rich user experiences.
-            </p>
-              <span className='about-3p'></span>
-                <ul>
-                  <li>
-                    <FontAwesomeIcon
-                      className='bullet-icon'
-                      icon={faCodepen}
-                      size='2x'
-                      color='#fff'
-                      style={{ background: '#000' }}
-                      fixedWidth
-                    />
-                    Pragmatic design and development of responsive web
-                    applications
-                  </li>
-                  <li>
-                    <FontAwesomeIcon
-                      className='bullet-icon'
-                      icon={faSketch}
-                      size='2x'
-                      color='#fff'
-                      style={{ background: '#000' }}
-                      fixedWidth
-                    />
-                    Stylistic and functional UI/UX, use of multiple API’s, and
-                    third party integrations & database
-                  </li>
-                  <li>
-                    <FontAwesomeIcon
-                      className='bullet-icon'
-                      icon={faConfluence}
-                      size='2x'
-                      color='#fff'
-                      style={{ background: '#000' }}
-                      fixedWidth
-                    />
-                    Models, Views, Controllers paradigm
-                  </li>
-                  <li>
-                    <FontAwesomeIcon
-                      className='bullet-icon'
-                      icon={faPushed}
-                      size='2x'
-                      color='#fff'
-                      style={{ background: '#000' }}
-                      fixedWidth
-                    />
-                    Outcome oriented and AGILE project management.
-                  </li>
-                </ul>
-        <p className='about-4p'>
-          <span></span>
-          Outside of web development I enjoy spending time with my family,
-          working out, cooking, and exploring old treasure maps.
-        </p>
+    <Fragment>
+      <div className='w-100 flex flex-col m-6 leading-relaxed text-sm sm:text-lg sm:items-center '>
+        <div className=' text-center sm:items-center sm:justify-center sm:flex sm:w-1/2'>
+          <p className='mb-3'>
+            I enjoy learning new things and see myself as a pragmatic person. I
+            find it rewarding to utilize my strengths in frontend web
+            development to reach a common goal. Let's bring ideas
+            to life! Click the link to learn more...
             <a
               href={GregPetropoulosResume}
-              download
-              style={{ color: '#d6b850' }}>
-              Resume
+              download='Greg-Petropoulos-React-Dev'
+              className='ml-1'>
+              {' '}
+              <button className=' mt-1 btn btn-xs btn-outline btn-primary'>
+                Resume
+              </button>
             </a>
-            <a
-              href='https://github.com/GregPetropoulos'
-              target='_blank'
-              rel='noreferrer'>
-              Github
-            </a>
+          </p>
+        </div>
 
-</Fragment>
-  )
+        {/* Tech */}
+        <h2 className=' text-center text-success mt-4 font-bold'>
+          Technologies
+        </h2>
+        <div className='flex flex-row flex-start justify-around text-success leading-relaxed sm:justify-between'>
+          <ul>
+            <span className='font-bold text-base'>Frontend</span>
+            <li className=''>JavaScript</li>
+            <li>React</li>
+            <li>Redux/RTK</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Tailwind</li>
+          </ul>
+          <div className='divider divider-horizontal text-primary sm:none'></div>
+          <ul>
+            <span className='font-bold text-base'>Backend</span>
+            <li>Node</li>
+            <li>Express</li>
+            <li>MongoDB</li>
+            <li>Mongoose</li>
+            <li>Git</li>
+            <li>REST API</li>
+          </ul>
+        </div>
+        <Link to='/more-me' className=' my-5 hover:animate-bounce'>
+          Want more....?
+        </Link>
+      </div>
+    </Fragment>
+  );
 };
 export default AboutSection;

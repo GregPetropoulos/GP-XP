@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import GregPetropoulosResume from '../assets/resume/React Full Stack--Greg Petropoulos_Resume_6.8.22.docx';
 
 const Nav = () => {
   return (
     // <nav>
-    <div className='navbar bg-base-300 '>
-      <div className='navbar-start'>
+    <div className='navbar bg-base-300 justify-center'>
+      <div className=' w-full justify-between md:hidden'>
         <div className='dropdown md:hidden'>
           <label tabIndex='0' className='btn btn-ghost swap swap-rotate '>
             {/* <!-- this hidden checkbox controls the state --> */}
@@ -49,11 +50,27 @@ const Nav = () => {
             <li>
               <Link to='/contact'>Contact</Link>
             </li>
+            <li>
+              <a href={GregPetropoulosResume} download>
+                Resume
+              </a>
+            </li>
           </ul>
         </div>
+
+        <div className='md:hidden'>
+          <a
+            className='btn normal-case font-bold sm:text-2xl hover:animate-bounce md:m-0'
+            href='mailto: gregpetropoulos@yahoo.com'
+            target='_blank'
+            rel='noopener noreferrer'>
+            <button>Greg Petropoulos</button>
+          </a>
+        </div>
       </div>
-      <div className='navbar-center hidden md:flex'>
-        <ul className='menu menu-horizontal p-3 text-2xl mr-16'>
+      {/* <div className='navbar-center hidden md:flex'> */}
+      <div className=' hidden md:flex'>
+        <ul className=' menu menu-horizontal p-3 text-2xl mr-16 md:m-0'>
           <li>
             <Link to='/'>Home</Link>
           </li>
@@ -69,12 +86,15 @@ const Nav = () => {
           <li>
             <Link to='/contact'>Contact</Link>
           </li>
+          <li>
+            <a href={GregPetropoulosResume} download>
+              Resume
+            </a>
+          </li>
         </ul>
       </div>
 
-      <div className='navbar-end '>
-        <a className='btn normal-case font-bold sm:text-2xl '>Greg Petropoulos</a>
-      </div>
+      {/* <div className='navbar-end ml-16'> */}
     </div>
     // </nav>
   );

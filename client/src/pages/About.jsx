@@ -1,30 +1,12 @@
-import {Fragment} from 'react';
-
 import AboutSection from '../components/AboutSection';
-// import Col from "react-bootstrap/Col";
 
 const About = () => {
   return (
-    <Fragment>
-      <p
-        className='page-title'
-        style={{
-          fontSize: '1.4rem',
-          color: '#08a7ce'
-        }}>
-        &lt;about&gt;
-      </p>
-
+    <section>
+      <p className='ml-3 mt-3 text-xl  text-secondary-content sm:text-3xl'>&lt;about&gt;</p>
       <AboutSection />
-      <p
-        className='page-title'
-        style={{
-          fontSize: '1.4rem',
-          color: '#08a7ce'
-        }}>
-        &lt;/about&gt;
-      </p>
-    </Fragment>
+      <p className='ml-3 text-xl text-secondary-content sm:text-3xl'>&lt;/about&gt;</p>
+    </section>
   );
 };
 

@@ -1,27 +1,13 @@
-import { Fragment } from 'react';
+
 import ContactForm from '../components/ContactForm';
 
 const Contact = () => {
   return (
-    <Fragment>
-      <p
-        className='page-title'
-        style={{
-          fontSize: '1.4rem',
-          color: '#08a7ce'
-        }}>
-        &lt;contact&gt;
-      </p>
+    <section>
+      <p className='ml-3 mt-3 text-xl text-secondary-content sm:text-3xl'>&lt;contact&gt;</p>
       <ContactForm />
-      <p
-        className='page-title'
-        style={{
-          fontSize: '1.4rem',
-          color: '#08a7ce'
-        }}>
-        &lt;/contact&gt;
-      </p>
-    </Fragment>
+      <p className='ml-3 text-xl text-secondary-content sm:text-3xl'>&lt;/contact&gt;</p>
+    </section>
   );
 };
 

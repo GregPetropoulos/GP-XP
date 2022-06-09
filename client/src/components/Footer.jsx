@@ -17,7 +17,7 @@ const Footer = () => {
           target='_blank'
           rel='noreferrer'
           style={{ color: '#F4CBB2' }}
-          className='m-3 p-3 h-full w-1/4 sm:w-full'>
+          className='m-3 p-3 h-full w-1/4  hover:scale-125 transition ease-in-out  sm:w-full'>
           <FontAwesomeIcon className='icon' icon={faGithub} size='2x' />
         </a>
 
@@ -26,7 +26,7 @@ const Footer = () => {
           target='_blank'
           rel='noreferrer'
           style={{ color: '#0e76a8' }}
-          className='m-3 p-3 h-full w-1/4 sm:w-full'>
+          className='m-3 p-3 h-full w-1/4  hover:scale-125 transition ease-in-out sm:w-full'>
           <FontAwesomeIcon className='icon' icon={faLinkedin} size='2x' />
         </a>
         <a
@@ -34,7 +34,7 @@ const Footer = () => {
           target='_blank'
           rel='noreferrer'
           style={{ color: '#FF0000' }}
-          className='m-3 p-3 h-full w-1/4 sm:w-full'>
+          className='m-3 p-3 h-full w-1/4  hover:scale-125 transition ease-in-out sm:w-full'>
           <FontAwesomeIcon className='icon' icon={faYoutube} size='2x' />
         </a>
         <a
@@ -42,7 +42,7 @@ const Footer = () => {
           target='_blank'
           rel='noreferrer'
           style={{ color: '#1DA1F2' }}
-          className='m-3 p-3 h-full w-1/4 sm:w-full'>
+          className='m-3 p-3 h-full w-1/4 hover:scale-125 transition ease-in-out sm:w-full'>
           <FontAwesomeIcon className='icon' icon={faTwitter} size='2x' />
         </a>
       </div>

@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import Footer from './Footer';
-import GregPetropoulosResume from '../assets/resume/React_Full_Stack_Greg_Petropoulos_Resume_5.10.pdf';
+import GregPetropoulosResume from '../assets/resume/React Full Stack--Greg Petropoulos_Resume_6.8.22.docx';
 import gregImage from '../assets/images/mobile/mobile-profile-image.webp';
 import Aside from './Aside';
 function HomeSection() {

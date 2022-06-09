@@ -1,4 +1,3 @@
-import {Fragment} from 'react';
 import HomeSection from '../components/HomeSection';
 import Projects from './Projects';
 import About from './About';
@@ -8,20 +7,16 @@ import MainFooter from '../components/MainFooter';
 
 function Home() {
   return (
-<Fragment>
-        <p style={{ fontSize: '1.4rem' }}>&lt;home&gt;</p>
-      <HomeSection/>
+    <main>
+      <p className='ml-3 mt-3 text-xl text-secondary-content sm:text-3xl'>&lt;home&gt;</p>
+      <HomeSection />
       <Projects />
       <About />
       <Contact />
       <Blog />
-        <p style={{ fontSize: '1.4rem' }}>&lt;/home&gt;</p>
-
+      <p className='ml-3 mt-3 text-xl text-secondary-content sm:text-3xl'>&lt;/home&gt;</p>
       <MainFooter />
-
-
-</Fragment>
-
+    </main>
   );
 }
 

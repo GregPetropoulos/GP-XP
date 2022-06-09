@@ -15,6 +15,7 @@ const ProjectData = () => {
       projectName: 'Support Desk',
       mobileImage: MobileSupportDesk,
     //   desktopImage: DesktopSupportDesk,
+    tech:'#React #Redux Toolkit #JWT #Node #Express #TailwindUI',
       youtube: '',
       deployed: 'https://support-desk-services.herokuapp.com/',
       github: 'https://github.com/GregPetropoulos/SupportDesk'
@@ -23,7 +24,8 @@ const ProjectData = () => {
       id: 1,
       projectName: 'IT Logger',
       mobileImage: MobileITLogger,
-    //   desktopImage: DesktopITLogger,
+      //   desktopImage: DesktopITLogger,
+    tech:'#React #Redux #JWT #Express #Node #Materialize',
       youtube: 'https://www.youtube.com/watch?v=eAs24z7NNYE',
       deployed: 'https://it-loggerv1.herokuapp.com/',
       github: 'https://github.com/GregPetropoulos/IT-Logger-App'
@@ -33,6 +35,7 @@ const ProjectData = () => {
       projectName: 'Dev Squad',
       mobileImage: MobileDevSquad,
     //   desktopImage: DesktopDevSquad,
+    tech:'#React #Redux #JWT #Node #Express #CSS',
       youtube: '',
       deployed: 'https://dev-talk-dev.herokuapp.com/',
       github: 'https://github.com/GregPetropoulos/Dev-Squad'

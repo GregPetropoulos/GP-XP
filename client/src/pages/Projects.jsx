@@ -1,16 +1,14 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { lazy, Suspense, useEffect, useState, Fragment } from 'react';
+import React, { lazy, Suspense, useEffect, useState } from 'react';
 import axios from 'axios';
 import ProjectData from '../assets/images/ProjectData';
 
 import ProjectItems from '../components/ProjectItems';
 
-
 const Projects = () => {
-const imageArr = ProjectData()
-// const [projectData, SetProjectData]=useState(imageArr)
-// console.log("imageArr from image arrays",projectData)  
-
+  const imageArr = ProjectData();
+  // const [projectData, SetProjectData]=useState(imageArr)
+  // console.log("imageArr from image arrays",projectData)
 
   //*CONFIGURATIONS AND KEYS
   let githubClientId;
@@ -54,7 +52,7 @@ const imageArr = ProjectData()
         // ]);
         const res = await axios.get(allRepoUrl);
         const results = res.data;
-        console.log("fetch results",results);
+        console.log('fetch results', results);
 
         // return res;
         // console.log('res.data', res.data);
@@ -78,18 +76,8 @@ const imageArr = ProjectData()
       setLoading(false);
     };
 
-    getAllRepos();
+    // getAllRepos();
   }, []);
-
-  //* Randomly generating image for the Jumbotron
-  // const imageCopy = [...images];
-  // const randomNum = Math.floor(Math.random() * imageCopy.length);
-  // const randomJumboImage = imageCopy.filter((item) => item.id === randomNum);
-  // console.log('imageCopy', imageCopy);
-  //* Truncate ellipse function from stack overflow
-  // function truncate(str, n) {
-  //   return str?.length > n ? str.substr(0, n - 1) + '...' : str;
-  // }
 
   // FOR THE BUTTONS/LINKS
   // target='_blank'
@@ -105,70 +93,20 @@ const imageArr = ProjectData()
 
   if (loading) return <div>spinner...needed here</div>;
   return (
-    <Fragment>
-      <div>
-        <p
-          className='page-title'
-          style={{
-            fontSize: '1.4rem',
-            color: '#d6b850'
-          }}>
-          &lt;projects&gt;
-        </p>
-      </div>
-{
-imageArr.map(data => (<ProjectItems loading={loading} data={data} key={data.id}/>))
-}
-{/* <ProjectItems loading={loading} cardImage={MobileITSupport} /> */}
-{/* <ProjectItems loading={loading} cardImage={MobileDevSquad} /> */}
-
-
-
-
-{/* ----------------OLD------------------- */}
-      {/* <div className='flex flex-col justify-center align-middle'>
-
-
-        <div className='flex flex-row w-full justify-center'>
-          <div className='w-1/2'><p>project1</p></div>
-        </div>
-
-        <div className='flex w-full flex-row sm:flex-wrap justify-center'>
-          <div className='w-full sm:w-1/2'><p>project2</p></div>
-          <div className='w-full sm:w-1/2'><p>project3</p></div>
-        </div>
-      
+    <section>
+      <p className='ml-3 text-xl text-secondary-content sm:text-3xl '>
+        &lt;projects&gt;
+      </p>
+      <div className='inline-block sm:flex sm:justify-around'>
+        {imageArr.map((data) => (
+          <ProjectItems loading={loading} data={data} key={data.id} />
+        ))}
       </div>
 
-      <div className=' flex flex-col w-full justify-center align-middle'> */}
-        {/* CARD1------------- */}
-        {/* <div className='flex flex-row justify-center w-60'>
-          <div className=' card-normal  bg-base-100 rounded-xl shadow-xl hover:outline mt-3'>
-            <figure className='rounded-xl'>
-              <img src={SupportDesk} alt={''} />
-            </figure>
-            <div className='card-body bg-secondary'>
-              <h2 className='card-title text-center'>Support Desk Services</h2>
-              <p>lorem stuff here</p>
-
-              <div className='card-actions justify-around'>
-                <button className='btn  btn-xs btn-primary'>Live Demo</button>
-                <button className='btn  btn-xs btn-primary'>Deployed</button>
-                <button className='btn  btn-xs btn-primary'>Github</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div> */}
-      <p
-        className='page-title'
-        style={{
-          fontSize: '1.4rem',
-          color: '#d6b850'
-        }}>
+      <p className='ml-3 text-xl text-secondary-content sm:text-3xl'>
         &lt;/projects&gt;
       </p>
-    </Fragment>
+    </section>
   );
 };
 export default Projects;
