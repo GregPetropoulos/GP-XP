@@ -10,6 +10,7 @@ const Nav = () => {
         <div className='dropdown md:hidden'>
           <label tabIndex='0' className='btn btn-ghost swap swap-rotate '>
             {/* <!-- this hidden checkbox controls the state --> */}
+            {/* <!-- this hidden checkbox also a bug in safari shows up --> */}
             <input type='checkbox' />
 
             {/* <!-- hamburger icon --> */}
