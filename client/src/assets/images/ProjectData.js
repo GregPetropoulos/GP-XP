@@ -16,7 +16,7 @@ const ProjectData = () => {
       mobileImage: MobileSupportDesk,
     //   desktopImage: DesktopSupportDesk,
     tech:'#React #Redux Toolkit #JWT #Node #Express #TailwindUI',
-      youtube: '',
+      youtube: 'https://youtu.be/JipI3YMuzqY',
       deployed: 'https://support-desk-services.herokuapp.com/',
       github: 'https://github.com/GregPetropoulos/SupportDesk'
     },
@@ -36,7 +36,7 @@ const ProjectData = () => {
       mobileImage: MobileDevSquad,
     //   desktopImage: DesktopDevSquad,
     tech:'#React #Redux #JWT #Node #Express #CSS',
-      youtube: '',
+      youtube: 'https://youtu.be/4u0wONaI-7c',
       deployed: 'https://dev-talk-dev.herokuapp.com/',
       github: 'https://github.com/GregPetropoulos/Dev-Squad'
     }
