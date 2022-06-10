@@ -1,13 +1,14 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import Spinner from './Spinner';
 // import MobileSupportDesk from '../../assets/images/mobile/original-mobile-support-desk.png';
 // import formatDate from '../utils/formatDate';
 
 const ProjectItems = ({ loading, data }) => {
   const { projectName, tech, mobileImage, github, deployed, youtube } = data;
 
-  if (loading) return <p>add spinner here</p>;
+  if (loading) return Spinner;
 
   return (
     <Fragment>
@@ -15,7 +16,11 @@ const ProjectItems = ({ loading, data }) => {
         <div className='w-[230px] h-[420px] bg-transparent cursor-pointer group perspective'>
           <div className='relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000'>
             <div className='absolute backface-hidden border-2  w-full h-full'>
-              <img src={mobileImage} className=' object-cover w-full h-full ' />
+              <img
+                src={mobileImage}
+                alt='Project screenshot'
+                className=' object-cover w-full h-full '
+              />
             </div>
 
             {/* BACK  OF CARD */}
