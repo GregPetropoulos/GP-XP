@@ -1,13 +1,18 @@
 // *USED FROMSPREE ON THIS FORM
 
-import React from 'react';
+// import {useNavigate} from "react-router-dom";
 import { useForm, ValidationError } from '@formspree/react';
 import GregPetropoulosResume from '../assets/resume/React Full Stack--Greg Petropoulos_Resume_6.8.22.docx';
 
 const ContactForm = () => {
+  // const navigate=useNavigate()
+
   const [state, handleSubmit] = useForm('mvolrjgl');
+
   if (state.succeeded) {
-    return <p>Thanks for sending a message!</p>;
+
+    // return navigate('/')
+    return <p className='text-center'>Thank you for sending a message! I will reach out to you shortly</p>;
   }
 
   return (
