@@ -26,12 +26,12 @@ const AboutSection = ({ data }) => {
         </div>
 
         {/* Tech */}
-        <h2 className=' text-center text-success mt-4 font-bold'>
+        <h2 className=' text-center text-primary mt-4 font-bold'>
           Technologies
         </h2>
-        <div className='flex flex-row flex-start justify-around text-success leading-relaxed sm:justify-between'>
+        <div className='flex flex-row flex-start justify-around text-primary leading-relaxed sm:justify-between'>
           <ul>
-            <span className='font-bold text-base'>Frontend</span>
+            <span className='font-bold text-primary'>Frontend</span>
             <li className=''>JavaScript</li>
             <li>React</li>
             <li>Redux/RTK</li>
@@ -41,7 +41,7 @@ const AboutSection = ({ data }) => {
           </ul>
           <div className='divider divider-horizontal text-primary sm:none'></div>
           <ul>
-            <span className='font-bold text-base'>Backend</span>
+            <span className='font-bold text-primary'>Backend</span>
             <li>Node</li>
             <li>Express</li>
             <li>MongoDB</li>
