@@ -11,8 +11,8 @@ const AboutSection = ({ data }) => {
           <p className='mb-3'>
             I enjoy learning new things and see myself as a pragmatic person. I
             find it rewarding to utilize my strengths in frontend web
-            development to reach a common goal. Let's bring ideas
-            to life! Click the link to learn more...
+            development to reach a common goal. Let's bring ideas to life! Click
+            the link to learn more...
             <a
               href={GregPetropoulosResume}
               download='Greg-Petropoulos-React-Dev'
@@ -50,9 +50,10 @@ const AboutSection = ({ data }) => {
             <li>REST API</li>
           </ul>
         </div>
-        <Link to='/more-me' className=' my-5 hover:animate-bounce'>
-          Want more....?
-        </Link>
+
+        {/* <Link to='/more-me' className='mt-16 text-center hover:animate-bounce'>
+        More about me
+        </Link> */}
       </div>
     </Fragment>
   );
