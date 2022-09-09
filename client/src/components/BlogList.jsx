@@ -1,16 +1,40 @@
 import React, { useState, useEffect, Fragment } from 'react';
+import Spinner from './Spinner';
 
 function BlogList() {
   const [articles, setArticles] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
+
   useEffect(() => {
-    fetch('https://dev.to/api/articles/latest?username=gregpetropoulos')
-      .then((res) => res.json())
-      .then((res) => {
-        setArticles(res);
-      });
+   
+    const getAllBlogs = async () => {
+      setError(false);
+      setLoading(true);
+      const controller = new AbortController();
+      const signal = controller.signal;
+      try {
+        fetch('https://dev.to/api/articles/latest?username=gregpetropoulos',{signal: signal})
+          .then((res) => res.json())
+          .then((res) => {
+            setArticles(res);
+          });
+      } catch (error) {
+        setError(true);
+        throw Error('Promise Failed');
+      }
+      setLoading(false);
+      // clean up return
+      return () => {
+        // cancel the request before component unmounts
+        controller.abort();
+      }
+    };
+    getAllBlogs();
   }, []);
 
   // console.log('article-check', articles);
+  if (loading) return <Spinner/>;
 
   return (
     <Fragment>
@@ -36,7 +60,7 @@ function BlogList() {
               </a>
             </p>
             <p className='text-neutral-content'>
-              {article.readable_publish_date} | #{article.tags}{' '}
+              {article.readable_publish_date} | {article.tags}{' '}
             </p>
             <p className='text-neutral-content'>
               {article.public_reactions_count} reactions

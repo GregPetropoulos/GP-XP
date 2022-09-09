@@ -2,7 +2,7 @@
 import React, { lazy, Suspense, useEffect, useState } from 'react';
 import axios from 'axios';
 import ProjectData from '../assets/images/ProjectData';
-
+import Spinner from '../components/Spinner'
 import ProjectItems from '../components/ProjectItems';
 
 const Projects = () => {
@@ -40,6 +40,8 @@ const Projects = () => {
   //*THE CALL TO GH All REPOS ONLY NEED 3 REPOS
   useEffect(() => {
     // console.log('useEffect project axios call here');
+    const CancelToken = axios.CancelToken;
+    const source = CancelToken.source();
 
     const getAllRepos = async () => {
       try {
@@ -50,7 +52,9 @@ const Projects = () => {
         // axios.get(repo2),
         // axios.get(repo3)
         // ]);
-        const res = await axios.get(allRepoUrl);
+        const res = await axios.get(allRepoUrl, {
+          cancelToken: source.token
+        });
         const results = res.data;
         console.log('fetch results', results);
 
@@ -74,6 +78,11 @@ const Projects = () => {
         throw Error('Promise Failed');
       }
       setLoading(false);
+        // clean up return
+        return () => {
+           // cancel the request before component unmounts
+    source.cancel();
+        }
     };
 
     // getAllRepos();
@@ -91,7 +100,7 @@ const Projects = () => {
   // href='https://it-loggerv1.herokuapp.com/'
   // href='https://github.com/GregPetropoulos/IT-Logger-App'
 
-  if (loading) return <div>spinner...needed here</div>;
+  if (loading) return <Spinner/>;
   return (
     <section>
       <p className='ml-3 text-xl text-secondary-content sm:text-3xl '>

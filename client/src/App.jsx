@@ -5,6 +5,7 @@
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
+import Spinner from './components/Spinner';
 
 // const NavBar = lazy(() => import('./components/NavBar/index'));
 import Nav from './components/Nav';
@@ -21,7 +22,7 @@ const App = () => {
     <Router>
       <Suspense
         fallback={
-          <h1 className='loading-spinner'>Loading..... need spinner here</h1>
+          <Spinner/>
         }>
         <Nav />
         <Routes>
