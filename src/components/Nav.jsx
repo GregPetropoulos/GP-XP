@@ -4,8 +4,7 @@ import GregPetropoulosResume from '../assets/resume/React Full Stack--Greg Petro
 
 const Nav = () => {
   return (
-    // <nav>
-    <div className='navbar bg-base-300 justify-center'>
+    <nav className='navbar bg-base-300 justify-center'>
       <div className=' w-full justify-between md:hidden'>
         <div className='dropdown md:hidden'>
           <label tabIndex='0' className='btn btn-ghost swap swap-rotate '>
@@ -96,8 +95,7 @@ const Nav = () => {
       </div>
 
       {/* <div className='navbar-end ml-16'> */}
-    </div>
-    // </nav>
+    </nav>
   );
 };
 

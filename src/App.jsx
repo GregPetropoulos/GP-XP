@@ -9,6 +9,8 @@ import Spinner from './components/Spinner';
 
 // const NavBar = lazy(() => import('./components/NavBar/index'));
 import Nav from './components/Nav';
+import HeadTags from './components/HeadTags';
+
 const Home = lazy(() => import('./pages/Home'));
 const Projects = lazy(() => import('./pages/Projects'));
 const About = lazy(() => import('./pages/About'));
@@ -20,10 +22,8 @@ const ErrorSection = lazy(() => import('./components/ErrorSection'));
 const App = () => {
   return (
     <Router>
-      <Suspense
-        fallback={
-          <Spinner/>
-        }>
+      <Suspense fallback={<Spinner />}>
+        <HeadTags />
         <Nav />
         <Routes>
           <Route exact path='/' element={<Home />} />
