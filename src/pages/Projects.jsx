@@ -39,6 +39,7 @@ const Projects = () => {
 
   //*THE CALL TO GH All REPOS ONLY NEED 3 REPOS
   useEffect(() => {
+    let isMounted=false
     // console.log('useEffect project axios call here');
     const CancelToken = axios.CancelToken;
     const source = CancelToken.source();
@@ -84,7 +85,7 @@ const Projects = () => {
     source.cancel();
         }
     };
-
+return ()=> isMounted = false
     // getAllRepos();
   }, []);
 
@@ -106,6 +107,9 @@ const Projects = () => {
       <p className='ml-3 text-xl text-secondary-content sm:text-3xl '>
         &lt;projects&gt;
       </p>
+      <div className=' m-2 flex flex-row justify-center'>
+        <small className=' text-xsm text-center'>**Note: All my projects were recently migrated from Heroku to Render and may take 45-120 seconds to spin up the servers once loaded  </small>
+      </div>
       <div className='inline-block sm:flex sm:justify-around'>
         {imageArr.map((data) => (
           <ProjectItems loading={loading} data={data} key={data.id} />
