@@ -1,24 +1,18 @@
 import { Fragment, useState } from 'react';
-import GregPetropoulosResume from '../assets/resume/React Full Stack--Greg Petropoulos_Resume_6.8.22.docx';
+import GregPetropoulosResume from '../assets/resume/Resume_10.20.22.docx';
 import gregImage from '../assets/images/mobile/mobile-profile-image.webp';
 import { HiHeart } from 'react-icons/hi';
 import ReactGa from 'react-ga'
 
 function HomeSection() {
-  // const [count, setCount] = useState(0);
   const [color, setColor] = useState('');
 
-  // console.log('count', count);
-  // console.log('color', color);
-
   const onClickCounter = () => {
-    // setCount((prev) => prev + 1);
     setColor('red-500');
     ReactGa.event({
       category:'Button',
       action:'click the heart like button'
     })
-    alert('heart clicked')
 
   };
   if (color.length > 0) {

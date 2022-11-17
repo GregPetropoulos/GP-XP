@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import GregPetropoulosResume from '../assets/resume/React Full Stack--Greg Petropoulos_Resume_6.8.22.docx';
+import GregPetropoulosResume from '../assets/resume/Resume_10.20.22.docx';
 
 const AboutSection = ({ data }) => {
   // const {}=data
