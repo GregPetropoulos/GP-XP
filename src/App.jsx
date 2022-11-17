@@ -2,10 +2,11 @@
 // 6.9.22
 // My portfolio GP-XP
 
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Spinner from './components/Spinner';
+import ReactGa from 'react-ga';
 
 // const NavBar = lazy(() => import('./components/NavBar/index'));
 import Nav from './components/Nav';
@@ -20,6 +21,13 @@ const MoreMe = lazy(() => import('./pages/MoreMe'));
 const ErrorSection = lazy(() => import('./components/ErrorSection'));
 
 const App = () => {
+  useEffect(() => {
+    ReactGa.initialize('G-C4LTJX72RT');
+
+    // To report page
+    ReactGa.pageview(window.location.pathname+window.location.search);
+  }, []);
+
   return (
     <Router>
       <Suspense fallback={<Spinner />}>

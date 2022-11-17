@@ -1,8 +1,31 @@
-import { Fragment } from 'react';
-import Footer from './Footer';
+import { Fragment, useState } from 'react';
 import GregPetropoulosResume from '../assets/resume/React Full Stack--Greg Petropoulos_Resume_6.8.22.docx';
 import gregImage from '../assets/images/mobile/mobile-profile-image.webp';
+import { HiHeart } from 'react-icons/hi';
+import ReactGa from 'react-ga'
+
 function HomeSection() {
+  const [count, setCount] = useState(0);
+  const [color, setColor] = useState('');
+
+  console.log('count', count);
+  console.log('color', color);
+
+  const onClickCounter = () => {
+    setCount((prev) => prev + 1);
+    setColor('red-500');
+    ReactGa.event({
+      category:'Button',
+      action:'click the heart like button'
+    })
+
+  };
+  if (color.length > 0) {
+    setTimeout(() => {
+      setColor('');
+    }, [250]);
+  }
+
   return (
     <Fragment>
       <div className='avatar flex justify-center '>
@@ -11,6 +34,11 @@ function HomeSection() {
             <img className='' src={gregImage} alt='Greg Petropoulos' />
           </a>
         </div>
+        <HiHeart size={20}
+          className={' m-10 btn btn-circle bg-base-100 h-6 w-6 text-primary hover:scale-110 hover:text-red-500'
+          }
+          onClick={onClickCounter}
+        />
       </div>
       <div className='flex justify-center grow-0'>
         <p className='text-center  p-3 sm:text-2xl sm:w-1/2'>
@@ -18,7 +46,6 @@ function HomeSection() {
           that brings ideas to life
         </p>
       </div>
-      <Footer />
     </Fragment>
   );
 }
