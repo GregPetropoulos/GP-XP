@@ -25,7 +25,7 @@ const App = () => {
     ReactGa.initialize('G-C4LTJX72RT');
 
     // To report page
-    ReactGa.pageview(window.location.pathname+window.location.search);
+    ReactGa.pageview('/');
   }, []);
 
   return (

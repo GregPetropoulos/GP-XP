@@ -5,19 +5,20 @@ import { HiHeart } from 'react-icons/hi';
 import ReactGa from 'react-ga'
 
 function HomeSection() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
   const [color, setColor] = useState('');
 
-  console.log('count', count);
-  console.log('color', color);
+  // console.log('count', count);
+  // console.log('color', color);
 
   const onClickCounter = () => {
-    setCount((prev) => prev + 1);
+    // setCount((prev) => prev + 1);
     setColor('red-500');
     ReactGa.event({
       category:'Button',
       action:'click the heart like button'
     })
+    alert('heart clicked')
 
   };
   if (color.length > 0) {
