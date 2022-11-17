@@ -1,8 +1,7 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { lazy, Suspense, useEffect, useState } from 'react';
 import axios from 'axios';
 import ProjectData from '../assets/images/ProjectData';
-import Spinner from '../components/Spinner'
+import Spinner from '../components/Spinner';
 import ProjectItems from '../components/ProjectItems';
 
 const Projects = () => {
@@ -39,11 +38,12 @@ const Projects = () => {
 
   //*THE CALL TO GH All REPOS ONLY NEED 3 REPOS
   useEffect(() => {
-    let isMounted=false
+    let isMounted = false;
     // console.log('useEffect project axios call here');
     const CancelToken = axios.CancelToken;
     const source = CancelToken.source();
 
+//TODO Show all top 10 repo projects on projects page
     const getAllRepos = async () => {
       try {
         setError(false);
@@ -76,39 +76,30 @@ const Projects = () => {
         // });
       } catch (error) {
         setError(true);
-        throw Error('Promise Failed');
+        throw Error('Promise Failed',error.message);
       }
       setLoading(false);
-        // clean up return
-        return () => {
-           // cancel the request before component unmounts
-    source.cancel();
-        }
+      // clean up return
+      return () => {
+        // cancel the request before component unmounts
+        source.cancel();
+      };
     };
-return ()=> isMounted = false
+    return () => (isMounted = false);
     // getAllRepos();
   }, []);
 
-  // FOR THE BUTTONS/LINKS
-  // target='_blank'
-  // rel='noreferrer'
-  // href='https://support-desk-services.herokuapp.com/'
-  // href='https://github.com/GregPetropoulos/SupportDesk'
-  // -----
-  // href='https://dev-talk-dev.herokuapp.com/'
-  // href=' https://github.com/GregPetropoulos/Dev-Squad'
-  // ------
-  // href='https://it-loggerv1.herokuapp.com/'
-  // href='https://github.com/GregPetropoulos/IT-Logger-App'
-
-  if (loading) return <Spinner/>;
+  if (loading) return <Spinner />;
   return (
     <section>
       <p className='ml-3 text-xl text-secondary-content sm:text-3xl '>
         &lt;projects&gt;
       </p>
       <div className=' m-2 flex flex-row justify-center'>
-        <small className=' text-xsm text-center'>**Note: All my projects were recently migrated from Heroku to Render and may take 45-120 seconds to spin up the servers once loaded  </small>
+        <small className=' text-xsm text-center'>
+          **Note: All my projects were recently migrated from Heroku to Render
+          and may take 45-120 seconds to spin up the servers once loaded{' '}
+        </small>
       </div>
       <div className='inline-block sm:flex sm:justify-around'>
         {imageArr.map((data) => (
