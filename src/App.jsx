@@ -22,7 +22,13 @@ const ErrorSection = lazy(() => import('./components/ErrorSection'));
 
 const App = () => {
   useEffect(() => {
-    ReactGa.initialize('G-C4LTJX72RT');
+    ReactGa.initialize('G-C4LTJX72RT', {
+      debug: true,
+      titleCase: false,
+      gaOptions: {
+        userId: 123
+      }
+    });
 
     // To report page
     ReactGa.pageview(window.location.pathname + window.location.search);
