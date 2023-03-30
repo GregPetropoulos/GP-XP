@@ -1,9 +1,7 @@
 import { Fragment } from 'react';
-import { Link } from 'react-router-dom';
-import GregPetropoulosResume from '../assets/resume/Resume_10.20.22.docx';
+import GregPetropoulosResume from '../assets/resume/React-Developer--Greg Petropoulos_Resume-3.25.23.docx';
 
 const AboutSection = ({ data }) => {
-  // const {}=data
   return (
     <Fragment>
       <div className='w-100 flex flex-col m-6 leading-relaxed text-sm sm:text-lg sm:items-center '>
@@ -33,11 +31,18 @@ const AboutSection = ({ data }) => {
           <ul>
             <span className='font-bold text-primary'>Frontend</span>
             <li className=''>JavaScript</li>
+            <li className=''>TypeScript</li>
+            <li>React Native</li>
             <li>React</li>
             <li>Redux/RTK</li>
+            <li>ContextAPI</li>
+            <li>Gatsby</li>
             <li>HTML</li>
             <li>CSS</li>
+            <li>SCSS</li>
             <li>Tailwind</li>
+            <li>Bootstrap</li>
+            <li>DaisyUI</li>
           </ul>
           <div className='divider divider-horizontal text-primary sm:none'></div>
           <ul>
@@ -46,6 +51,9 @@ const AboutSection = ({ data }) => {
             <li>Express</li>
             <li>MongoDB</li>
             <li>Mongoose</li>
+            <li>Contentful</li>
+            <li>Strapi</li>
+            <li>Umbraco</li>
             <li>Git</li>
             <li>REST API</li>
           </ul>

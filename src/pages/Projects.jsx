@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import ProjectData from '../assets/images/ProjectData';
 import Spinner from '../components/Spinner';
@@ -23,8 +23,8 @@ const Projects = () => {
 
   //*STATE
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
-  const [data, SetData] = useState([]);
+  const errorRef = useRef(false);
+  // const [data, SetData] = useState([]);
   // The repos relationships are id and imageId
   // const [images, setImages] = useState(ProjectImage);
 
@@ -43,10 +43,10 @@ const Projects = () => {
     const CancelToken = axios.CancelToken;
     const source = CancelToken.source();
 
-//TODO Show all top 10 repo projects on projects page
+    //TODO Show all top 10 repo projects on projects page
     const getAllRepos = async () => {
       try {
-        setError(false);
+        errorRef.current = false;
         setLoading(true);
         // const res = await Promise.all([
         //   axios.get(repo1),
@@ -57,7 +57,7 @@ const Projects = () => {
           cancelToken: source.token
         });
         const results = res.data;
-        console.log('fetch results', results);
+        // console.log('fetch results', results);
 
         // return res;
         // console.log('res.data', res.data);
@@ -75,8 +75,8 @@ const Projects = () => {
         //   }));
         // });
       } catch (error) {
-        setError(true);
-        throw Error('Promise Failed',error.message);
+        errorRef.current = true;
+        throw Error('Promise Failed', error.message);
       }
       setLoading(false);
       // clean up return

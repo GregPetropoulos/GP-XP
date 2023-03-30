@@ -1,6 +1,4 @@
 import React, { Fragment } from 'react';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import Spinner from './Spinner';
 // import MobileSupportDesk from '../../assets/images/mobile/original-mobile-support-desk.png';
 // import formatDate from '../utils/formatDate';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import GregPetropoulosResume from '../assets/resume/Resume_10.20.22.docx';
+import GregPetropoulosResume from '../assets/resume/React-Developer--Greg Petropoulos_Resume-3.25.23.docx';
 
 const Nav = () => {
   return (
