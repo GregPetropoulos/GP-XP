@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import GregPetropoulosResume from '../assets/resume/React-Developer--Greg Petropoulos_Resume-3.25.23.docx';
+import GregPetropoulosResume from '../assets/resume/GregPetropoulosReactResume-9-4-23.pdf';
 
 const AboutSection = ({ data }) => {
   return (
@@ -7,26 +7,18 @@ const AboutSection = ({ data }) => {
       <div className='w-100 flex flex-col m-6 leading-relaxed text-sm sm:text-lg sm:items-center '>
         <div className=' text-center sm:items-center sm:justify-center sm:flex sm:w-1/2'>
           <p className='mb-3'>
-            I enjoy learning new things and see myself as a pragmatic person. I
-            find it rewarding to utilize my strengths in frontend web
-            development to reach a common goal. Let's bring ideas to life! Click
-            the link to learn more...
-            <a
-              href={GregPetropoulosResume}
-              download='Greg-Petropoulos-React-Dev'
-              className='ml-1'>
+            I enjoy learning new things and see myself as a pragmatic person. I find it rewarding to
+            utilize my strengths in frontend web development to reach a common goal. Let's bring
+            ideas to life! Click the link to learn more...
+            <a href={GregPetropoulosResume} download='Greg-Petropoulos-React-Dev' className='ml-1'>
               {' '}
-              <button className=' mt-1 btn btn-xs btn-outline btn-primary'>
-                Resume
-              </button>
+              <button className=' mt-1 btn btn-xs btn-outline btn-primary'>Resume</button>
             </a>
           </p>
         </div>
 
         {/* Tech */}
-        <h2 className=' text-center text-primary mt-4 font-bold'>
-          Technologies
-        </h2>
+        <h2 className=' text-center text-primary mt-4 font-bold'>Technologies</h2>
         <div className='flex flex-row flex-start justify-around text-primary leading-relaxed sm:justify-between'>
           <ul>
             <span className='font-bold text-primary'>Frontend</span>

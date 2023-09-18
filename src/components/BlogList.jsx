@@ -14,7 +14,7 @@ function BlogList() {
       const signal = controller.signal;
       try {
         fetch('https://dev.to/api/articles/latest?username=gregpetropoulos', {
-          signal: signal
+          signal: signal,
         })
           .then((res) => res.json())
           .then((res) => {
@@ -50,12 +50,11 @@ function BlogList() {
             <img
               src={article.social_image}
               alt={article.title}
-              className='object-contain rounded-t-lg drop-shadow-2xl'></img>
+              className='object-contain rounded-t-lg drop-shadow-2xl'
+            ></img>
             <p className='font-light mt-3 '>
               {article.description}
-              <a
-                href={article.url}
-                className='link link-hover hover:text-accent-content'>
+              <a href={article.url} className='link link-hover hover:text-accent-content'>
                 {' '}
                 Read More.
               </a>
@@ -63,9 +62,7 @@ function BlogList() {
             <p className='text-neutral-content'>
               {article.readable_publish_date} | {article.tags}{' '}
             </p>
-            <p className='text-neutral-content'>
-              {article.public_reactions_count} reactions
-            </p>
+            <p className='text-neutral-content'>{article.public_reactions_count} reactions</p>
           </div>
         );
       })}

@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import GregPetropoulosResume from '../assets/resume/React-Developer--Greg Petropoulos_Resume-3.25.23.docx';
+import GregPetropoulosResume from '../assets/resume/GregPetropoulosReactResume-9-4-23.pdf';
 import gregImage from '../assets/images/mobile/mobile-profile-image.webp';
 
 function HomeSection() {
@@ -14,8 +14,8 @@ function HomeSection() {
       </div>
       <div className='flex justify-center grow-0'>
         <p className='text-center  p-3 sm:text-2xl sm:w-1/2'>
-          Hi my name is Greg Petropoulos and I am a React Full Stack developer
-          that brings ideas to life
+          Hi my name is Greg Petropoulos and I am a React Full Stack developer that brings ideas to
+          life
         </p>
       </div>
     </Fragment>

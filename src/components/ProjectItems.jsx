@@ -1,7 +1,5 @@
 import React, { Fragment } from 'react';
 import Spinner from './Spinner';
-// import MobileSupportDesk from '../../assets/images/mobile/original-mobile-support-desk.png';
-// import formatDate from '../utils/formatDate';
 
 const ProjectItems = ({ loading, data }) => {
   const { projectName, tech, mobileImage, github, deployed, youtube } = data;
@@ -24,28 +22,29 @@ const ProjectItems = ({ loading, data }) => {
             {/* BACK  OF CARD */}
             <div className='absolute my-rotate-y-180 backface-hidden w-full h-full bg-secondary overflow-hidden'>
               <div className='text-center flex flex-col items-center mt-3 h-full text-primary p-2'>
-                <h1 className='text-2xl font-semibold pb-2 sm:text-3xl'>
-                  {projectName}
-                </h1>
+                <h1 className='text-2xl font-semibold pb-2 sm:text-3xl'>{projectName}</h1>
                 <a
                   target='_blank'
                   rel='noopener noreferrer'
                   href={youtube}
-                  className='text-sm shadow-xl bg-primary-content px-4 py-2 font-semibold text-neutral-content rounded-full absolute -bottom-2/3 delay-200 duration-1000 group-hover:bottom-2/3 scale-0 group-hover:scale-125 hover:outline hover:shadow-black'>
+                  className='text-sm shadow-xl bg-primary-content px-4 py-2 font-semibold text-neutral-content rounded-full absolute -bottom-2/3 delay-200 duration-1000 group-hover:bottom-2/3 scale-0 group-hover:scale-125 hover:outline hover:shadow-black'
+                >
                   Live Demo
                 </a>
                 <a
                   target='_blank'
                   rel='noopener noreferrer'
                   href={deployed}
-                  className=' text-sm  shadow-xl bg-primary-content px-6 py-2 font-semibold text-neutral-content rounded-full absolute -bottom-1/2 delay-400 duration-1000 group-hover:bottom-1/2 scale-0 group-hover:scale-125 hover:outline hover:shadow-black'>
+                  className=' text-sm  shadow-xl bg-primary-content px-6 py-2 font-semibold text-neutral-content rounded-full absolute -bottom-1/2 delay-400 duration-1000 group-hover:bottom-1/2 scale-0 group-hover:scale-125 hover:outline hover:shadow-black'
+                >
                   Deployed
                 </a>
                 <a
                   target='_blank'
                   rel='noopener noreferrer'
                   href={github}
-                  className=' text-sm  shadow-xl bg-primary-content px-4 py-2 font-semibold text-neutral-content rounded-full absolute -bottom-1/3 delay-600 duration-700 group-hover:bottom-1/3 scale-0 group-hover:scale-125 hover:outline hover:shadow-black'>
+                  className=' text-sm  shadow-xl bg-primary-content px-4 py-2 font-semibold text-neutral-content rounded-full absolute -bottom-1/3 delay-600 duration-700 group-hover:bottom-1/3 scale-0 group-hover:scale-125 hover:outline hover:shadow-black'
+                >
                   Github
                 </a>
                 <div className='h-full flex flex-col justify-end mb-5'>

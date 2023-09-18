@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import GregPetropoulosResume from '../assets/resume/React-Developer--Greg Petropoulos_Resume-3.25.23.docx';
+import GregPetropoulosResume from '../assets/resume/GregPetropoulosReactResume-9-4-23.pdf';
 
 const Nav = () => {
   return (
@@ -18,7 +18,8 @@ const Nav = () => {
               xmlns='http://www.w3.org/2000/svg'
               width='32'
               height='32'
-              viewBox='0 0 512 512'>
+              viewBox='0 0 512 512'
+            >
               <path d='M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z' />
             </svg>
 
@@ -28,13 +29,15 @@ const Nav = () => {
               xmlns='http://www.w3.org/2000/svg'
               width='32'
               height='32'
-              viewBox='0 0 512 512'>
+              viewBox='0 0 512 512'
+            >
               <polygon points='400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49' />
             </svg>
           </label>
           <ul
             tabIndex='0'
-            className='menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52'>
+            className='menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52'
+          >
             <li>
               <Link to='/'>Home</Link>
             </li>
@@ -63,7 +66,8 @@ const Nav = () => {
             className='btn normal-case font-bold sm:text-2xl hover:animate-bounce md:m-0'
             href='mailto: gregpetropoulos@yahoo.com'
             target='_blank'
-            rel='noopener noreferrer'>
+            rel='noopener noreferrer'
+          >
             <button>Greg Petropoulos</button>
           </a>
         </div>

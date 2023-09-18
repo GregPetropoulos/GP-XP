@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 const HeadTags = (props) => {
   const {
     title = 'Greg Petropoulos -- React Front-end Developer',
-    metaDescription = 'Greg Petropoulos React Developer'
+    metaDescription = 'Greg Petropoulos React Developer',
   } = props;
 
   return (
@@ -18,11 +18,7 @@ const HeadTags = (props) => {
       <meta property='og:locale' key='og:locale' content='en_US' />
       <meta charSet='utf-8' />
       <meta property='og:type' key='og:type' content='website' />
-      <meta
-        property='og:description'
-        key='og:description'
-        content={metaDescription}
-      />
+      <meta property='og:description' key='og:description' content={metaDescription} />
       <meta
         property='og:image'
         key='og:image'

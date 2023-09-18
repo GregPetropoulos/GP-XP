@@ -2,29 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @layer components {
   .more-me-image {
-    background: url("../src/assets/images/desktop/desktop-profile.jpg");
+    background: url('../src/assets/images/desktop/desktop-profile.jpg');
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
     background-size: contain;
     background-position: center;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: rgba(255, 255, 255, .02);
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.02);
   }
 }
 
-  /* For Webkit-based browsers (Chrome, Safari and Opera) */
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
 
 /* For IE, Edge and Firefox */
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 /** CSS RESPONSIVE DEBUGGER */
@@ -49,5 +47,3 @@
 } */
 /* *------------------- */
 /* *---------------------- */
-
-

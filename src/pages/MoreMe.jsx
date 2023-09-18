@@ -1,8 +1,6 @@
 // import gregImage from '../assets/images/mobile/mobile-profile-image.webp';
 const MoreMe = () => {
-  return (
-    <div className='flex items-center justify-center w-screen h-screen bg-black'></div>
-  );
+  return <div className='flex items-center justify-center w-screen h-screen bg-black'></div>;
 };
 
 export default MoreMe;
