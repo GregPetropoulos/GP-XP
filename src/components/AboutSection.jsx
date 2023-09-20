@@ -1,11 +1,57 @@
-import { Fragment } from 'react';
 import GregPetropoulosResume from '../assets/resume/GregPetropoulosReactResume-9-4-23.pdf';
 
-const AboutSection = ({ data }) => {
+const AboutSection = () => {
+  const feTech = [
+    { name: 'JavaScript', type: 'frontend' },
+    { name: 'React Native', type: 'frontend' },
+    { name: 'React', type: 'frontend' },
+    { name: 'TypeScript', type: 'frontend' },
+    { name: 'Redux/RTK', type: 'frontend' },
+    { name: 'ContextAPI', type: 'frontend' },
+    { name: 'Gatsby', type: 'frontend' },
+    { name: 'HTML', type: 'frontend' },
+    { name: 'CSS', type: 'frontend' },
+    { name: 'SCSS', type: 'frontend' },
+    { name: 'Tailwind', type: 'frontend' },
+    { name: 'Bootstrap', type: 'frontend' },
+    { name: 'React-Bootstrap', type: 'frontend' },
+    { name: 'DaisyUI', type: 'frontend' },
+    { name: 'Git', type: 'frontend' },
+  ];
+  const beTech = [
+    { name: 'Node', type: 'backend' },
+    { name: 'Express', type: 'backend' },
+    { name: 'MongoDB', type: 'backend' },
+    { name: 'Mongoose', type: 'backend' },
+    { name: 'Contentful', type: 'backend' },
+    { name: 'Strapi', type: 'backend' },
+    { name: 'Umbraco', type: 'backend' },
+    { name: 'Git', type: 'backend' },
+    { name: 'REST API', type: 'backend' },
+  ];
+  const testTech = [
+    { name: 'Cypress', type: 'frontend' },
+    { name: 'Storybook', type: 'frontend' },
+    { name: 'Postman', type: 'backend' },
+  ];
+  const renderTech = (techArr, title) => {
+    return (
+      <>
+        <div className='flex flex-col w-full align-center mx-3'>
+          <h4 className='text-lg font-bold'>{title}</h4>
+          {techArr.map((item, idx) => (
+            <div key={idx} className='flex flex-row  my-2 bg-accent p-1 rounded  text-primary'>
+              {item.name}
+            </div>
+          ))}
+        </div>
+      </>
+    );
+  };
   return (
-    <Fragment>
-      <div className='w-100 flex flex-col m-6 leading-relaxed text-sm sm:text-lg sm:items-center '>
-        <div className=' text-center sm:items-center sm:justify-center sm:flex sm:w-1/2'>
+    <>
+      <div className='flex flex-col items-center w-full '>
+        <div className='flex flex-row justify-center w-1/2'>
           <p className='mb-3'>
             I enjoy learning new things and see myself as a pragmatic person. I find it rewarding to
             utilize my strengths in frontend web development to reach a common goal. Let's bring
@@ -18,44 +64,14 @@ const AboutSection = ({ data }) => {
         </div>
 
         {/* Tech */}
-        <h2 className=' text-center text-primary mt-4 font-bold'>Technologies</h2>
-        <div className='flex flex-row flex-start justify-around text-primary leading-relaxed sm:justify-between'>
-          <ul>
-            <span className='font-bold text-primary'>Frontend</span>
-            <li className=''>JavaScript</li>
-            <li className=''>TypeScript</li>
-            <li>React Native</li>
-            <li>React</li>
-            <li>Redux/RTK</li>
-            <li>ContextAPI</li>
-            <li>Gatsby</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>SCSS</li>
-            <li>Tailwind</li>
-            <li>Bootstrap</li>
-            <li>DaisyUI</li>
-          </ul>
-          <div className='divider divider-horizontal text-primary sm:none'></div>
-          <ul>
-            <span className='font-bold text-primary'>Backend</span>
-            <li>Node</li>
-            <li>Express</li>
-            <li>MongoDB</li>
-            <li>Mongoose</li>
-            <li>Contentful</li>
-            <li>Strapi</li>
-            <li>Umbraco</li>
-            <li>Git</li>
-            <li>REST API</li>
-          </ul>
+        <h3 className='text-xl text-primary text-center my-4'>Technologies</h3>
+        <div className='flex flex-row justify-between flex-wrap  sm:w-1/2 sm:flex-nowrap sm:text-left'>
+          {renderTech(feTech, 'Frontend')}
+          {renderTech(beTech, 'Backend')}
+          {renderTech(testTech, 'Test')}
         </div>
-
-        {/* <Link to='/more-me' className='mt-16 text-center hover:animate-bounce'>
-        More about me
-        </Link> */}
       </div>
-    </Fragment>
+    </>
   );
 };
 export default AboutSection;
