@@ -3,6 +3,7 @@ import React, { useState} from 'react';
 import projectData from '../assets/data/projectData';
 import Spinner from '../components/Spinner';
 import ProjectItems from '../components/ProjectItems';
+import Meta from '../components/Meta';
 
 const Projects = () => {
   // const [projectData, SetProjectData]=useState(imageArr)
@@ -91,6 +92,7 @@ const Projects = () => {
   loading && <Spinner />;
   return (
     <section>
+      <Meta title='Greg Petropoulos react developer project page' description='Fullstack applications built by the react developer Greg Petropoulos' />
       <p className='ml-3 text-xl text-secondary-content sm:text-3xl '>&lt;projects&gt;</p>
       <div className=' m-2 flex flex-row justify-center'>
         <small className=' text-xsm text-center'>

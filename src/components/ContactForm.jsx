@@ -25,7 +25,7 @@ const ContactForm = () => {
           Email Address
         </label>
         <input
-          className='input input-accent text-success'
+          className='input input-accent text-primary'
           id='email'
           type='email'
           name='email'
@@ -36,7 +36,7 @@ const ContactForm = () => {
           Message
         </label>
         <textarea
-          className='textarea textarea-accent text-success'
+          className='textarea textarea-accent text-primary'
           id='message'
           name='message'
           placeholder='Send me a message'
@@ -55,7 +55,7 @@ const ContactForm = () => {
         <a
           href={GregPetropoulosResume}
           download='Greg-Petropoulos-React-Dev'
-          className='  w-1/3 btn btn-xs btn-outline btn-primary sm:btn-lg '
+          className='w-1/2 btn btn-outline btn-primary btn-xs text-xs sm:btn-lg '
         >
           RESUME
         </a>

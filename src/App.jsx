@@ -9,9 +9,7 @@ import Nav from './components/Nav';
 import MainFooter from './components/MainFooter';
 
 // TODO Implement Meta
-//TODO refactor Spinner
 //TODO REFACTOR PROJECTS AND MORE ME
-// TODO REFACTOR TABLE TECH
 const App = () => {
   useEffect(() => {
     ReactGa.initialize(

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Spinner from './Spinner';
 
 function BlogList() {
@@ -34,11 +34,10 @@ function BlogList() {
     getAllBlogs();
   }, []);
 
-  // console.log('article-check', articles);
   if (loading) return <Spinner />;
 
   return (
-    <Fragment>
+    <>
       {articles.map((article) => {
         return (
           <div key={article.id} className='bg-secondary m-2 p-4 rounded-md'>
@@ -66,7 +65,7 @@ function BlogList() {
           </div>
         );
       })}
-    </Fragment>
+    </>
   );
 }
 export default BlogList;
