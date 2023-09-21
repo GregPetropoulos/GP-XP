@@ -3,12 +3,10 @@ import { Outlet } from 'react-router-dom';
 
 import Spinner from './components/Spinner';
 import ReactGa from 'react-ga';
-
 import Nav from './components/Nav';
-// import HeadTags from './components/HeadTags';//change to META
+import Meta from './components/Meta';
 import MainFooter from './components/MainFooter';
 
-// TODO Implement Meta
 //TODO REFACTOR PROJECTS AND MORE ME
 const App = () => {
   useEffect(() => {
@@ -29,7 +27,7 @@ const App = () => {
 
   return (
     <Suspense fallback={<Spinner />}>
-      {/* <HeadTags /> */}
+      <Meta />
       <Nav />
       <Outlet />
       <MainFooter />

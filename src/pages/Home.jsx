@@ -10,6 +10,7 @@ import Meta from '../components/Meta';
 import dressShopImage from '../assets/images/desktop/home-desktop.png';
 
 // TODO MAKE DEMO
+//TODO SCROLL BACK TO TOP
 const TopProjects = () => {
   return (
     <section>

@@ -13,10 +13,10 @@ function HomeSection() {
         </div>
       </div>
       <div className='flex justify-center grow-0'>
-        <p className='text-center  p-3 sm:text-2xl sm:w-1/2'>
+        <h1 className='text-center  p-3 sm:text-2xl sm:w-1/2'>
           Hi my name is Greg Petropoulos and I am a React Full Stack developer that brings ideas to
           life
-        </p>
+        </h1>
       </div>
     </Fragment>
   );

@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 // import axios from 'axios';
 import projectData from '../assets/data/projectData';
 import Spinner from '../components/Spinner';
@@ -92,7 +92,10 @@ const Projects = () => {
   loading && <Spinner />;
   return (
     <section>
-      <Meta title='Greg Petropoulos react developer project page' description='Fullstack applications built by the react developer Greg Petropoulos' />
+      <Meta
+        title='Greg Petropoulos react developer project page'
+        description='Fullstack applications built by the react developer Greg Petropoulos'
+      />
       <p className='ml-3 text-xl text-secondary-content sm:text-3xl '>&lt;projects&gt;</p>
       <div className=' m-2 flex flex-row justify-center'>
         <small className=' text-xsm text-center'>
