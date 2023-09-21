@@ -39,19 +39,19 @@ const Nav = () => {
             className='menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52'
           >
             <li>
-              <Link to='/'>Home</Link>
+              <Link to='/' alt='Home Link'>Home</Link>
             </li>
             <li>
-              <Link to='/projects'>Projects</Link>
+              <Link to='/projects' alt='Projects Link'>Projects</Link>
             </li>
             <li>
-              <Link to='/about'>About</Link>
+              <Link to='/about' alt='About Link'>About</Link>
             </li>
             <li>
-              <Link to='/blog'>Blog</Link>
+              <Link to='/blog' alt='Blog Link'>Blog</Link>
             </li>
             <li>
-              <Link to='/contact'>Contact</Link>
+              <Link to='/contact' alt='Contact Link'>Contact</Link>
             </li>
             <li>
               <a href={GregPetropoulosResume} download>
@@ -67,6 +67,7 @@ const Nav = () => {
             href='mailto: gregpetropoulos@yahoo.com'
             target='_blank'
             rel='noopener noreferrer'
+            alt='email link'
           >
             <button>Greg Petropoulos</button>
           </a>
@@ -76,22 +77,22 @@ const Nav = () => {
       <div className=' hidden md:flex'>
         <ul className=' menu menu-horizontal p-3 text-2xl mr-16 md:m-0'>
           <li>
-            <Link to='/'>Home</Link>
+            <Link to='/' alt='Home Link'>Home</Link>
           </li>
           <li>
-            <Link to='/projects'>Projects</Link>
+            <Link to='/projects' alt='Projects Link'>Projects</Link>
           </li>
           <li>
-            <Link to='/about'>About</Link>
+            <Link to='/about' alt='About Link'>About</Link>
           </li>
           <li>
-            <Link to='/blog'>Blog</Link>
+            <Link to='/blog' alt='Blog Link'>Blog</Link>
           </li>
           <li>
-            <Link to='/contact'>Contact</Link>
+            <Link to='/contact' alt='Contact Link'>Contact</Link>
           </li>
           <li>
-            <a href={GregPetropoulosResume} download>
+            <a href={GregPetropoulosResume} download alt='Greg Petropoulos resume pdf download'>
               Resume
             </a>
           </li>

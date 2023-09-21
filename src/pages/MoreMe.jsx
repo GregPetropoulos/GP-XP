@@ -15,7 +15,7 @@ export default MoreMe;
 //           <p className='mb-2 text-sm'>
 //             A bit more on me, I was honored to serve in the U.S. Marines
 //           </p>
-//           <Link to='/'>
+//           <Link to='/' alt='Home Link'>
 //             <button className='btn btn-primary'>Go Back</button>
 //           </Link>
 //         </div>

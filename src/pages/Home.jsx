@@ -79,7 +79,7 @@ const TopProjects = () => {
       </div>
 
       <div className=' flex justify-center  '>
-        <Link to='/projects' className='  btn btn-outline btn-primary btn-xs text-xs sm:btn-lg '>
+        <Link to='/projects' alt='Projects Link' className='btn btn-outline btn-primary btn-xs text-xs sm:btn-lg '>
           See more projects
         </Link>
       </div>
