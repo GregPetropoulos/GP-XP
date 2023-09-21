@@ -1,10 +1,9 @@
-import { Fragment } from 'react';
 import GregPetropoulosResume from '../assets/resume/GregPetropoulosReactResume-9-4-23.pdf';
 import gregImage from '../assets/images/mobile/mobile-profile-image.webp';
 
 function HomeSection() {
   return (
-    <Fragment>
+    <>
       <div className='avatar flex justify-center '>
         <div className='w-32 mask mask-hexagon'>
           <a href={GregPetropoulosResume} download className=''>
@@ -18,7 +17,7 @@ function HomeSection() {
           life
         </h1>
       </div>
-    </Fragment>
+    </>
   );
 }
 
