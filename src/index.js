@@ -19,7 +19,7 @@ const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Blog = lazy(() => import('./pages/Blog'));
 const MoreMe = lazy(() => import('./pages/MoreMe'));
-const ErrorSection = lazy(() => import('./components/ErrorSection'));
+const ErrorSection = lazy(() => import('./pages/ErrorSection'));
 
 const router = createBrowserRouter(
   createRoutesFromElements(

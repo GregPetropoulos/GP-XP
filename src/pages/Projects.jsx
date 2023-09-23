@@ -91,26 +91,28 @@ const Projects = () => {
 
   loading && <Spinner />;
   return (
-    <section>
+    <>
       <Meta
         title='Greg Petropoulos react developer project page'
-        description='Fullstack applications built by the react developer Greg Petropoulos'
+        description='Projects page with fullstack applications built by the react developer Greg Petropoulos'
       />
-      <p className='ml-3 text-xl text-secondary-content sm:text-3xl '>&lt;projects&gt;</p>
-      <div className=' m-2 flex flex-row justify-center'>
-        <small className=' text-xsm text-center'>
-          **Note: All my projects were recently migrated from Heroku to Render and may take 45-120
-          seconds to spin up the servers once loaded{' '}
-        </small>
-      </div>
-      <div className='inline-block sm:flex sm:justify-around'>
-        {projectData.map((data) => (
-          <ProjectItems loading={loading} data={data} key={data.id} />
-        ))}
-      </div>
+      <section>
+        <p className='ml-3 text-xl text-secondary-content sm:text-3xl '>&lt;projects&gt;</p>
+        <div className=' m-2 flex flex-row justify-center'>
+          <small className=' text-xsm text-center'>
+            **Note: All my projects were recently migrated from Heroku to Render and may take 45-120
+            seconds to spin up the servers once loaded{' '}
+          </small>
+        </div>
+        <div className='inline-block sm:flex sm:justify-around'>
+          {projectData.map((data) => (
+            <ProjectItems loading={loading} data={data} key={data.id} />
+          ))}
+        </div>
 
-      <p className='ml-3 text-xl text-secondary-content sm:text-3xl'>&lt;/projects&gt;</p>
-    </section>
+        <p className='ml-3 text-xl text-secondary-content sm:text-3xl'>&lt;/projects&gt;</p>
+      </section>
+    </>
   );
 };
 export default Projects;

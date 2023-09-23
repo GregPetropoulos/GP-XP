@@ -62,8 +62,6 @@ const AboutSection = () => {
             </a>
           </p>
         </div>
-
-        {/* Tech */}
         <h3 className='text-xl text-primary text-center my-4'>Technologies</h3>
         <div className='flex flex-row justify-between flex-wrap  sm:w-1/2 sm:flex-nowrap sm:text-left'>
           {renderTech(feTech, 'Frontend')}

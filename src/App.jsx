@@ -26,12 +26,14 @@ const App = () => {
   }, []);
 
   return (
-    <Suspense fallback={<Spinner />}>
+    <>
       <Meta />
-      <Nav />
-      <Outlet />
-      <MainFooter />
-    </Suspense>
+      <Suspense fallback={<Spinner />}>
+        <Nav />
+        <Outlet />
+        <MainFooter />
+      </Suspense>
+    </>
   );
 };
 

@@ -1,13 +1,13 @@
-import HomeSection from '../components/HomeSection';
 import { Link } from 'react-router-dom';
 import About from './About';
 import Contact from './Contact';
 import Blog from './Blog';
-import Section from '../components/Section';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faYoutube, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import Meta from '../components/Meta';
 import dressShopImage from '../assets/images/desktop/home-desktop.png';
+import GregPetropoulosResume from '../assets/resume/GregPetropoulosReactResume-9-4-23.pdf';
+import gregImage from '../assets/images/mobile/mobile-profile-image.webp';
 
 // TODO MAKE DEMO
 //TODO SCROLL BACK TO TOP
@@ -88,20 +88,90 @@ const TopProjects = () => {
     </section>
   );
 };
+const HomeSection = () => {
+  return (
+    <>
+      <div className='avatar flex justify-center '>
+        <div className='w-32 mask mask-hexagon'>
+          <a href={GregPetropoulosResume} download alt='Resume download link'>
+            <img src={gregImage} alt=' Greg Petropoulos' />
+          </a>
+        </div>
+      </div>
+      <div className='flex justify-center grow-0'>
+        <h1 className='text-center  p-3 sm:text-2xl sm:w-1/2'>
+          Hi my name is Greg Petropoulos and I am a React Full Stack developer that brings ideas to
+          life
+        </h1>
+      </div>
+    </>
+  );
+};
+const IconSection = () => {
+  return (
+    <section>
+      <div className=' flex flex-row-reverse flex-wrap  align-middle  text-center my-3 mx-20  justify-evenly sm:justify-center sm:flex-nowrap sm:flex-row'>
+        <a
+          href='https://github.com/GregPetropoulos'
+          target='_blank'
+          rel='noreferrer'
+          alt='Github Icon Link'
+          style={{ color: '#F4CBB2' }}
+          className=' m-2 hover:scale-125 transition ease-in-out'
+        >
+          <FontAwesomeIcon className='icon' icon={faGithub} size='2x' />
+        </a>
+
+        <a
+          href='www.linkedin.com/in/greg-petropoulos'
+          target='_blank'
+          rel='noreferrer'
+          alt='Linkedin Icon Link'
+          style={{ color: '#0e76a8' }}
+          className=' m-2 hover:scale-125 transition ease-in-out'
+        >
+          <FontAwesomeIcon className='icon' icon={faLinkedin} size='2x' />
+        </a>
+        <a
+          href='https://www.youtube.com/channel/UC59RJzqORuQTPjePJVml-pw'
+          target='_blank'
+          rel='noreferrer'
+          alt='Youtube Icon Link'
+          style={{ color: '#FF0000' }}
+          className=' m-2 hover:scale-125 transition ease-in-out '
+        >
+          <FontAwesomeIcon className='icon' icon={faYoutube} size='2x' />
+        </a>
+        <a
+          href='https://twitter.com/GregoriosPetro1'
+          target='_blank'
+          rel='noreferrer'
+          alt='Twitter Icon Link'
+          style={{ color: '#1DA1F2' }}
+          className='m-2 hover:scale-125 transition ease-in-out '
+        >
+          <FontAwesomeIcon className='icon' icon={faTwitter} size='2x' />
+        </a>
+      </div>
+    </section>
+  );
+};
 
 const Home = () => {
   return (
-    <div className='flex flex-col align-center'>
+    <>
       <Meta />
-      <p className='ml-3 mt-3 text-xl text-secondary-content sm:text-3xl'>&lt;home&gt;</p>
-      <HomeSection />
-      <Section />
-      <TopProjects />
-      <About />
-      <Contact />
-      <Blog />
-      <p className='ml-3 mt-3 text-xl text-secondary-content sm:text-3xl'>&lt;/home&gt;</p>
-    </div>
+      <div className='flex flex-col align-center'>
+        <p className='ml-3 mt-3 text-xl text-secondary-content sm:text-3xl'>&lt;home&gt;</p>
+        <HomeSection />
+        <IconSection />
+        <TopProjects />
+        <About />
+        <Contact />
+        <Blog />
+        <p className='ml-3 mt-3 text-xl text-secondary-content sm:text-3xl'>&lt;/home&gt;</p>
+      </div>
+    </>
   );
 };
 
