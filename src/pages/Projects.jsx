@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 // import axios from 'axios';
 import projectData from '../assets/data/projectData';
 import Spinner from '../components/Spinner';
-import ProjectItems from '../components/ProjectItems';
+// import ProjectItems from '../components/ProjectItems';
 import Meta from '../components/Meta';
+import { truncateString } from '../utils';
 
 const Projects = () => {
+
   // const [projectData, SetProjectData]=useState(imageArr)
   // console.log("imageArr from image arrays",projectData)
 
@@ -88,7 +90,6 @@ const Projects = () => {
   //   return () => (isMounted = false);
   //   // getAllRepos();
   // }, []);
-
   loading && <Spinner />;
   return (
     <>
@@ -98,18 +99,33 @@ const Projects = () => {
       />
       <section>
         <p className='ml-3 text-xl text-secondary-content sm:text-3xl '>&lt;projects&gt;</p>
-        <div className=' m-2 flex flex-row justify-center'>
-          <small className=' text-xsm text-center'>
-            **Note: All my projects were recently migrated from Heroku to Render and may take 45-120
-            seconds to spin up the servers once loaded{' '}
-          </small>
-        </div>
-        <div className='inline-block sm:flex sm:justify-around'>
-          {projectData.map((data) => (
-            <ProjectItems loading={loading} data={data} key={data.id} />
+        <div className='flex flex-col  w-full items-center flex-wrap'>
+          {projectData.map((item) => (
+            <a
+              href={item.deployed}
+              key={item.id}
+              target='_blank'
+              rel='noopener noreferrer'
+              alt={'link to' + item.projectName}
+              className='flex flex-col items-center  m-4 bg-white border border-gray-200 rounded-lg shadow sm:flex-row sm:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-secondary dark:hover:bg-gray-700'
+            >
+              <img
+                className='object-cover w-full rounded-t-lg h-48 sm:h-auto sm:w-28 sm:rounded-none sm:rounded-l-lg'
+                src={item.mobileImage}
+                alt={'image of' + item.projectName}
+              />
+              <div className='flex flex-col justify-between p-4  leading-normal'>
+                <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+                  {item.projectName}
+                </h5>
+                <p className=' mb-3 font-normal text-gray-700 dark:text-gray-400'>
+                 {truncateString(item.description,220)}
+                </p>
+                <p>{item.tech}</p>
+              </div>
+            </a>
           ))}
         </div>
-
         <p className='ml-3 text-xl text-secondary-content sm:text-3xl'>&lt;/projects&gt;</p>
       </section>
     </>

@@ -18,6 +18,7 @@ const projectData = [
     youtube: 'https://youtu.be/JipI3YMuzqY',
     deployed: 'https://supportdesk-8110.onrender.com',
     github: 'https://github.com/GregPetropoulos/SupportDesk',
+    description:'A (MERN) React Redux Toolkit full stack application with JWT authentication, CRUD operations, protected routes, and NoSQL database. Support Desk Services application is a customer facing product support system to engage with technicians and solve encountered issues'
   },
   {
     id: 1,
@@ -28,6 +29,7 @@ const projectData = [
     youtube: 'https://www.youtube.com/watch?v=eAs24z7NNYE',
     deployed: 'https://it-support.onrender.com',
     github: 'https://github.com/GregPetropoulos/IT-Logger-App',
+    description:`A full stack react app with redux for state management. This is an Internal app for IT Department's to trouble-shoot and communicate with a system log that can be set to alert for high priority issues. Each is seen by all authenticated users and the authenticated user also has their own dashboard of only their own logs. Each log can be added, deleted, edited, filter`
   },
   {
     id: 2,
@@ -38,6 +40,7 @@ const projectData = [
     youtube: 'https://youtu.be/4u0wONaI-7c',
     deployed: 'https://devsquad-g4t4.onrender.com',
     github: 'https://github.com/GregPetropoulos/Dev-Squad',
+    description:`This is a full stack MERN social media app for software developers to connect and exchange ideas. The App is rich in API calls using insomnia, Protected routes and endpoints with JSON Web Tokens, Redux for app state management and testing with Redux Chrome extension, creating actions and reducers for resources, creating a build script, secured keys, and deployed to Heroku with git commands`
   },
 ];
 
