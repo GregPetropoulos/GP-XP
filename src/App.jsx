@@ -30,7 +30,9 @@ const App = () => {
       <Meta />
       <Suspense fallback={<Spinner />}>
         <Nav />
-        <Outlet />
+        <main className='pt-24'>
+          <Outlet />
+        </main>
         <MainFooter />
       </Suspense>
     </>

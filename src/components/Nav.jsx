@@ -4,7 +4,7 @@ import GregPetropoulosResume from '../assets/resume/GregPetropoulosReactResume-9
 
 const Nav = () => {
   return (
-    <nav className='navbar bg-base-300 justify-center'>
+    <nav className='navbar bg-base-300 justify-center fixed top-0 w-screen z-50 '>
       <div className=' w-full justify-between md:hidden'>
         <div className='dropdown md:hidden'>
           <label tabIndex='0' className='btn btn-ghost swap swap-rotate '>
@@ -83,7 +83,6 @@ const Nav = () => {
           </a>
         </div>
       </div>
-      {/* <div className='navbar-center hidden md:flex'> */}
       <div className=' hidden md:flex'>
         <ul className=' menu menu-horizontal p-3 text-2xl mr-16 md:m-0'>
           <li>
@@ -118,9 +117,8 @@ const Nav = () => {
           </li>
         </ul>
       </div>
-
-      {/* <div className='navbar-end ml-16'> */}
     </nav>
+    
   );
 };
 
