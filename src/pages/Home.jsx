@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import About from './About';
 import Contact from './Contact';
@@ -5,13 +6,29 @@ import Blog from './Blog';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faYoutube, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import Meta from '../components/Meta';
-import dressShopImage from '../assets/images/desktop/home-desktop.png';
+import dressShopImage from '../assets/images/desktop/home-desktop.webp';
 import GregPetropoulosResume from '../assets/resume/GregPetropoulosReactResume-9-4-23.pdf';
 import gregImage from '../assets/images/mobile/mobile-profile-image.webp';
+import Spinner from '../components/Spinner';
 
 // TODO MAKE DEMO
 //TODO SCROLL BACK TO TOP
 const TopProjects = () => {
+  const [loading, setLoading] = useState(false);
+  if (loading) {
+    return (
+      <Spinner
+        msg={`Thanks for clicking on it 😃. This is one of my favorite applications, it's hosted on render's free tier and could take 45-60 seconds to spin up the backend server, thanks for looking and a new tab will open shortly!👋`}
+      />
+    );
+  }
+  const handleLink = (externalUrl) => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      return window.open(externalUrl, '_blank', 'noreferrer');
+    }, 10000);
+  };
   return (
     <section>
       <div className='flex flex-row justify-center w-full my-10'>
@@ -52,7 +69,7 @@ const TopProjects = () => {
               </a>
               <button
                 className='btn btn-sm m-2 hover:scale-125 transition ease-in-out text-center '
-                onClick={() => window.open('https://fashionshopservice.onrender.com/', '_blank')}
+                onClick={() => handleLink('https://fashionshopservice.onrender.com/')}
               >
                 Launch
                 <svg

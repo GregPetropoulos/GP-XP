@@ -1,13 +1,12 @@
-import React, { useState} from 'react';
-// import axios from 'axios';
+import React, { useState } from 'react';
 import projectData from '../assets/data/projectData';
 import Spinner from '../components/Spinner';
-// import ProjectItems from '../components/ProjectItems';
 import Meta from '../components/Meta';
 import { truncateString } from '../utils';
+import { Link } from 'react-router-dom';
 
+//TODO Imp Github btn
 const Projects = () => {
-
   // const [projectData, SetProjectData]=useState(imageArr)
   // console.log("imageArr from image arrays",projectData)
 
@@ -90,7 +89,27 @@ const Projects = () => {
   //   return () => (isMounted = false);
   //   // getAllRepos();
   // }, []);
-  loading && <Spinner />;
+  if (loading) {
+    return (
+      <Spinner
+        msg={`The application clicked on is hosted on render's free tier and will take 60 seconds to spin up the backend server, thanks for looking and a new tab will open shortly! 😃 👋`}
+      />
+    );
+  }
+  const handleLink = (externalUrl) => {
+    if (
+      externalUrl === 'https://www.sacornerstone.org/' ||
+      externalUrl === 'https://www.jhm.org/'
+    ) {
+      return window.open(externalUrl, '_blank', 'noreferrer');
+    } else {
+      setLoading(true);
+      setTimeout(() => {
+        setLoading(false);
+        return window.open(externalUrl, '_blank', 'noreferrer');
+      }, 10000);
+    }
+  };
   return (
     <>
       <Meta
@@ -99,15 +118,21 @@ const Projects = () => {
       />
       <section>
         <p className='ml-3 text-xl text-secondary-content sm:text-3xl '>&lt;projects&gt;</p>
-        <div className='flex flex-col  w-full items-center flex-wrap'>
-          {projectData.map((item) => (
-            <a
-              href={item.deployed}
-              key={item.id}
-              target='_blank'
-              rel='noopener noreferrer'
+        <div className='flex flex-col items-center'>
+          <h3 className=' text-center text-2xl m-4'>
+            Thanks for coming by, I have compiled a list of my current work, open source and
+            freelance projects.
+          </h3>
+        </div>
+        {projectData.sort((a,b)=> b.year-a.year ).map((item) => (
+          <div key={item.id} className='flex flex-col  w-full items-center flex-wrap'>
+            <button
+              onClick={() => handleLink(item.deployed)}
+              // to={item.deployed}
+              // target={'_blank'}
+              // rel='noopener noreferrer'
               alt={'link to' + item.projectName}
-              className='flex flex-col items-center  m-4 bg-white border border-gray-200 rounded-lg shadow sm:flex-row sm:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-secondary dark:hover:bg-gray-700'
+              className='flex flex-col items-center mx-4 mt-4 bg-white border border-gray-200 rounded-lg shadow sm:flex-row sm:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-secondary dark:hover:bg-gray-700'
             >
               <img
                 className='object-cover w-full rounded-t-lg h-48 sm:h-auto sm:w-28 sm:rounded-none sm:rounded-l-lg'
@@ -119,13 +144,29 @@ const Projects = () => {
                   {item.projectName}
                 </h5>
                 <p className=' mb-3 font-normal text-gray-700 dark:text-gray-400'>
-                 {truncateString(item.description,220)}
+                  {truncateString(item.description, 220)}
                 </p>
-                <p>{item.tech}</p>
+                <div className='flex flex-row flex-wrap'>
+                  {item.tech.map((item, index) => (
+                    <div key={index} className='flex flex-col m-1'>
+                      {item === 'React' || item === 'React Native' ? (
+                        <div className='badge badge-info'>{item}</div>
+                      ) : (
+                        <div className='badge badge-ghost badge-outline'>{item}</div>
+                      )}
+                    </div>
+                  ))}
+                </div>
               </div>
-            </a>
-          ))}
-        </div>
+            </button>
+            {/* <div className='flex flex-row w-1/2 justify-center align-center bg-primary mb-4'>
+
+              <button className='btn btn-outline btn-sm m-1 '>Deployed</button>
+              <button className='btn btn-outline btn-sm m-1'>Code</button>
+              <button className='btn btn-outline btn-sm m-1'>Demo</button>
+            </div> */}
+          </div>
+        ))}
         <p className='ml-3 text-xl text-secondary-content sm:text-3xl'>&lt;/projects&gt;</p>
       </section>
     </>
