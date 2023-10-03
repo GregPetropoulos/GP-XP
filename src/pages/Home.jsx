@@ -140,7 +140,7 @@ const IconSection = () => {
         </a>
 
         <a
-          href='www.linkedin.com/in/greg-petropoulos'
+          href='https://www.linkedin.com/in/greg-petropoulos'
           target='_blank'
           rel='noreferrer'
           alt='Linkedin Icon Link'
