@@ -62,6 +62,23 @@ const AboutSection = () => {
             </a>
           </p>
         </div>
+        <div className='w-1/2 justify-center mb-2'>
+          <p className='text-base text-primary my-4'>
+            Most recently I entered a{' '}
+            <a className='text-red-600' alt='fall-in' href='https://www.fallin.today/winners'>
+              Fall-In
+            </a>{' '}
+            Hackathon to help veterans with mental health and led a team to a first place win.
+            Click the watch button to see the post win podcast interview
+          </p>
+          <a
+            href='https://zencastr.com/z/Z1iwPONn'
+            alt='hackathon podcast'
+            className='btn btn-outline btn-primary btn-xs text-xs sm:btn-md '
+          >
+            Watch
+          </a>
+        </div>
         <h3 className='text-xl text-primary text-center my-4'>Technologies</h3>
         <div className='flex flex-row justify-between flex-wrap  sm:w-1/2 sm:flex-nowrap sm:text-left'>
           {renderTech(feTech, 'Frontend')}
