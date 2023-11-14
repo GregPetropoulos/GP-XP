@@ -5,10 +5,12 @@ import { Link } from 'react-router-dom';
 const Blog = () => {
   return (
     <>
-      <Meta
-        title='Greg Petropoulos react developer blogs page'
-        description='A list of blogs that are coding, programming, frontend developer related'
-      />
+      {window.location.pathname === '/blog' && (
+        <Meta
+          title='Greg Petropoulos react developer blogs page'
+          description='A list of blogs that are coding, programming, frontend developer related'
+        />
+      )}
       <section>
         <Link to='/blog' alt='Blog Link'>
           <p className='ml-3 mt-3 text-xl text-secondary-content sm:text-3xl'>&lt;blog&gt;</p>

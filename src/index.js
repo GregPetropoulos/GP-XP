@@ -18,7 +18,6 @@ const Projects = lazy(() => import('./pages/Projects'));
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Blog = lazy(() => import('./pages/Blog'));
-const MoreMe = lazy(() => import('./pages/MoreMe'));
 const ErrorSection = lazy(() => import('./pages/ErrorSection'));
 
 const router = createBrowserRouter(
@@ -29,7 +28,6 @@ const router = createBrowserRouter(
       <Route path='/about' element={<About />} />
       <Route path='/contact' element={<Contact />} />
       <Route path='/blog' element={<Blog />} />
-      <Route path='/more-me' element={<MoreMe />} />
       <Route path='/*' element={<ErrorSection />} />
     </Route>
   )

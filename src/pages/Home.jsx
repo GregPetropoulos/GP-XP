@@ -48,7 +48,6 @@ const TopProjects = () => {
                 target='_blank'
                 rel='noreferrer'
                 alt='github ecommerce app link'
-                // className='btn btn-primary btn-sm'
                 style={{ color: '#F4CBB2' }}
                 className=' m-2 hover:scale-125 transition ease-in-out text-center'
               >
@@ -60,7 +59,6 @@ const TopProjects = () => {
                 target='_blank'
                 rel='noreferrer'
                 alt='youtube live demo ecommerce app'
-                // className='btn btn-primary btn-sm'
                 style={{ color: '#FF0000' }}
                 className=' m-2 hover:scale-125 transition ease-in-out text-center '
               >

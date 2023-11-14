@@ -5,7 +5,9 @@ import Meta from '../components/Meta';
 const Contact = () => {
   return (
     <>
-      <Meta title='Greg Petropoulos react developer contact page' description='' />
+      {window.location.pathname === '/contact' && (
+        <Meta title='Greg Petropoulos react developer contact page' description='' />
+      )}
       <section>
         <Link to='/contact' alt='Contact Link'>
           <p className='ml-3 mt-3 text-xl text-secondary-content sm:text-3xl'>&lt;contact&gt;</p>
