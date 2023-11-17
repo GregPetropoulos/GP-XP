@@ -3,29 +3,25 @@ import projectData from '../assets/data/projectData';
 import Spinner from '../components/Spinner';
 import Meta from '../components/Meta';
 import { truncateString } from '../utils';
+import testImage from '../assets/images/desktop/desktop-profile.jpg';
+
+
 
 const Card = ({ item, handleLink }) => {
   return (
-    <button
-      onClick={() => handleLink(item.deployed)}
-      alt={'link to' + item.projectName}
-      className='flex flex-col items-center mx-4 mt-4 bg-white border border-gray-200 rounded-lg shadow sm:flex-row sm:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-secondary dark:hover:bg-gray-700'
-    >
-      <img
-        className='object-cover w-full rounded-t-lg h-48 sm:h-auto sm:w-28 sm:rounded-none sm:rounded-l-lg'
-        src={item.mobileImage}
-        alt={'image of' + item.projectName}
-      />
-      <div className='flex flex-col justify-between p-4  leading-normal'>
-        <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+    <div className='rounded-t-[8px] card bg-secondary shadow-xl m-4 border '>
+      <figure className='rounded-t-[6px]'>
+        <img  className='rounded-t-[6px] overflow-hidden' src={item.mobileImage} alt='project' />
+        {/* <img  className=' overflow-hidden' src='https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg' alt='project' /> */}
+      </figure>
+      <div className='card-body overflow-y-scroll max-h-64'>
+        <h2 className='card-title text-white tracking-tighter'>
           {item.projectName}
-        </h5>
-        <p className=' mb-3 font-normal text-gray-700 dark:text-gray-400'>
-          {truncateString(item.description, 220)}
-        </p>
-        <div className='flex flex-row flex-wrap'>
+        </h2>
+        <p>{truncateString(item.description, 220)}</p>
+        <div className='card-actions justify-center'>
           {item.tech.map((item, index) => (
-            <div key={index} className='flex flex-col m-1'>
+            <div key={index} className='flex flex-row m-1'>
               {item === 'React' || item === 'React Native' ? (
                 <div className='badge badge-info'>{item}</div>
               ) : (
@@ -34,11 +30,13 @@ const Card = ({ item, handleLink }) => {
             </div>
           ))}
         </div>
+        <div className='card-actions'>
+          <button  className="btn btn-primary btn-outline"  onClick={()=> handleLink(item.deployed)}>Go to</button>
+        </div>
       </div>
-    </button>
+    </div>
   );
 };
-
 const Projects = () => {
   const [loading, setLoading] = useState(false);
 
@@ -52,7 +50,8 @@ const Projects = () => {
   const handleLink = (externalUrl) => {
     if (
       externalUrl === 'https://www.sacornerstone.org/' ||
-      externalUrl === 'https://www.jhm.org/'
+      externalUrl === 'https://www.jhm.org/' ||
+      externalUrl === 'https://apps.apple.com/us/app/sa-cornerstone/id1664265654'
     ) {
       return window.open(externalUrl, '_blank', 'noreferrer');
     } else {
@@ -72,7 +71,9 @@ const Projects = () => {
         />
       )}
       <section>
+        <div className='w-full'>
         <p className='ml-3 text-xl text-secondary-content sm:text-3xl '>&lt;projects&gt;</p>
+        </div>
         <div className='flex flex-col items-center'>
           <h3 className=' text-center text-2xl '>
             Thanks for coming by, I have compiled a list of my current work, open source and
@@ -80,10 +81,10 @@ const Projects = () => {
           </h3>
         </div>
         <div className='w-full flex flex-row flex-wrap justify-center'>
-          <div className='flex flex-col w-full items-center'>
+          <div className='flex flex-col w-full  md:w-1/3 sm:w-1/2'>
             <h2 className='text-center text-white text-4xl mt-8'>Websites</h2>
             {projectData
-              .sort((a, b) => b.year - a.year)
+              .sort((a, b) => b.id - a.id)
               .map(
                 (item) =>
                   item.type === 'website' && (
@@ -91,7 +92,7 @@ const Projects = () => {
                   )
               )}
           </div>
-          <div className='flex flex-col w-full items-center'>
+          <div className='flex flex-col w-full md:w-1/3 sm:w-1/2'>
             <h2 className='text-center text-white text-4xl mt-8'>Mobile Apps</h2>
             {projectData.map(
               (item) =>
