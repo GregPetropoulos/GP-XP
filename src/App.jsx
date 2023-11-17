@@ -7,7 +7,6 @@ import Nav from './components/Nav';
 import Meta from './components/Meta';
 import MainFooter from './components/MainFooter';
 
-//TODO REFACTOR PROJECTS AND MORE ME
 const App = () => {
   useEffect(() => {
     ReactGa.initialize(

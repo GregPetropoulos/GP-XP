@@ -3,14 +3,12 @@ import projectData from '../assets/data/projectData';
 import Spinner from '../components/Spinner';
 import Meta from '../components/Meta';
 import { truncateString } from '../utils';
-import testImage from '../assets/images/desktop/desktop-profile.jpg';
 
 const Card = ({ item, handleLink }) => {
   return (
     <div className='rounded-t-[8px] card bg-secondary shadow-xl m-4 border '>
       <figure className='rounded-t-[6px]'>
         <img className='rounded-t-[6px] overflow-hidden' src={item.mobileImage} alt='project' />
-        {/* <img  className=' overflow-hidden' src='https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg' alt='project' /> */}
       </figure>
       <div className='card-body overflow-y-scroll max-h-64'>
         <h2 className='card-title text-white tracking-tighter'>{item.projectName}</h2>
