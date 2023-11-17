@@ -68,8 +68,8 @@ const AboutSection = () => {
             <a className='text-red-600' alt='fall-in' href='https://www.fallin.today/winners'>
               Fall-In
             </a>{' '}
-            Hackathon to help veterans with mental health and led a team to a first place win.
-            Click the watch button to see the post win podcast interview
+            Hackathon to help veterans with mental health and led a team to a first place win. Click
+            the watch button to see the post win podcast interview
           </p>
           <a
             href='https://zencastr.com/z/Z1iwPONn'

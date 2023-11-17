@@ -5,19 +5,15 @@ import Meta from '../components/Meta';
 import { truncateString } from '../utils';
 import testImage from '../assets/images/desktop/desktop-profile.jpg';
 
-
-
 const Card = ({ item, handleLink }) => {
   return (
     <div className='rounded-t-[8px] card bg-secondary shadow-xl m-4 border '>
       <figure className='rounded-t-[6px]'>
-        <img  className='rounded-t-[6px] overflow-hidden' src={item.mobileImage} alt='project' />
+        <img className='rounded-t-[6px] overflow-hidden' src={item.mobileImage} alt='project' />
         {/* <img  className=' overflow-hidden' src='https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg' alt='project' /> */}
       </figure>
       <div className='card-body overflow-y-scroll max-h-64'>
-        <h2 className='card-title text-white tracking-tighter'>
-          {item.projectName}
-        </h2>
+        <h2 className='card-title text-white tracking-tighter'>{item.projectName}</h2>
         <p>{truncateString(item.description, 220)}</p>
         <div className='card-actions justify-center'>
           {item.tech.map((item, index) => (
@@ -31,7 +27,9 @@ const Card = ({ item, handleLink }) => {
           ))}
         </div>
         <div className='card-actions'>
-          <button  className="btn btn-primary btn-outline"  onClick={()=> handleLink(item.deployed)}>Go to</button>
+          <button className='btn btn-primary btn-outline' onClick={() => handleLink(item.deployed)}>
+            Go to
+          </button>
         </div>
       </div>
     </div>
@@ -72,7 +70,7 @@ const Projects = () => {
       )}
       <section>
         <div className='w-full'>
-        <p className='ml-3 text-xl text-secondary-content sm:text-3xl '>&lt;projects&gt;</p>
+          <p className='ml-3 text-xl text-secondary-content sm:text-3xl '>&lt;projects&gt;</p>
         </div>
         <div className='flex flex-col items-center'>
           <h3 className=' text-center text-2xl '>
