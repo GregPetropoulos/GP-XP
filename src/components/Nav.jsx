@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import GregPetropoulosResume from '../assets/resume/GregPetropoulosReactResume-9-4-23.pdf';
+import { GREG_PETROPOULOS_RESUME } from '../constants';
 
 const Nav = () => {
   return (
@@ -59,11 +59,13 @@ const Nav = () => {
                 Contact
               </Link>
             </li>
-            <li>
-              <a href={GregPetropoulosResume} download>
-                Resume
-              </a>
-            </li>
+            {GREG_PETROPOULOS_RESUME !== null ? (
+              <li>
+                <a href={require(`../assets/resume/${GREG_PETROPOULOS_RESUME}`)} download>
+                  Resume
+                </a>
+              </li>
+            ) : null}
           </ul>
         </div>
 
@@ -106,11 +108,17 @@ const Nav = () => {
               Contact
             </Link>
           </li>
-          <li>
-            <a href={GregPetropoulosResume} download alt='Greg Petropoulos resume pdf download'>
-              Resume
-            </a>
-          </li>
+          {GREG_PETROPOULOS_RESUME !== null ? (
+            <li>
+              <a
+                href={require(`../assets/resume/${GREG_PETROPOULOS_RESUME}`)}
+                download
+                alt='Greg Petropoulos resume pdf download'
+              >
+                Resume
+              </a>
+            </li>
+          ) : null}
         </ul>
       </div>
     </nav>

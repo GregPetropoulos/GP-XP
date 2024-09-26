@@ -2,12 +2,13 @@
 
 // import {useNavigate} from "react-router-dom";
 import { useForm, ValidationError } from '@formspree/react';
-import GregPetropoulosResume from '../assets/resume/GregPetropoulosReactResume-9-4-23.pdf';
+import { GREG_PETROPOULOS_RESUME } from '../constants';
+
 
 const ContactForm = () => {
   // const navigate=useNavigate()
 
-  const [state, handleSubmit] = useForm('mvolrjgl');
+  const [state, handleSubmit] = useForm(process.env.REACT_APP_FORM_SPREE_KEY);
 
   if (state.succeeded) {
     // return navigate('/')
@@ -51,15 +52,17 @@ const ContactForm = () => {
           Submit
         </button>
       </form>
-      <div className='my-3 flex-row w-full text-center justify-center'>
-        <a
-          href={GregPetropoulosResume}
-          download='Greg-Petropoulos-React-Dev'
-          className='w-1/2 btn btn-outline btn-primary btn-xs text-xs sm:btn-lg '
-        >
-          RESUME
-        </a>
-      </div>
+      {GREG_PETROPOULOS_RESUME !== null ? (
+        <div className='my-3 flex-row w-full text-center justify-center'>
+          <a
+            href={require(`../assets/resume/${GREG_PETROPOULOS_RESUME}`)}
+            download='Greg-Petropoulos-React-Dev'
+            className='w-1/2 btn btn-outline btn-primary btn-xs text-xs sm:btn-lg '
+          >
+            RESUME
+          </a>
+        </div>
+      ) : null}
     </div>
   );
 };

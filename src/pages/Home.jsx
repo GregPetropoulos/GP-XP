@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faYoutube, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import Meta from '../components/Meta';
 import dressShopImage from '../assets/images/desktop/home-desktop.webp';
-import GregPetropoulosResume from '../assets/resume/GregPetropoulosReactResume-9-4-23.pdf';
+import { GREG_PETROPOULOS_RESUME } from '../constants';
 import gregImage from '../assets/images/mobile/mobile-profile-image.webp';
 import Spinner from '../components/Spinner';
 
@@ -107,11 +107,21 @@ const HomeSection = () => {
   return (
     <>
       <div className='avatar flex justify-center '>
-        <div className='w-32 mask mask-hexagon'>
-          <a href={GregPetropoulosResume} download alt='Resume download link'>
+        {GREG_PETROPOULOS_RESUME !== null ? (
+          <div className={'w-32 mask mask-hexagon'}>
+            <a
+              href={require(`../assets/resume/${GREG_PETROPOULOS_RESUME}`)}
+              download
+              alt='Resume download link'
+            >
+              <img src={gregImage} alt=' Greg Petropoulos' />
+            </a>
+          </div>
+        ) : (
+          <div className={'w-32 mask mask-hexagon'}>
             <img src={gregImage} alt=' Greg Petropoulos' />
-          </a>
-        </div>
+          </div>
+        )}
       </div>
       <div className='flex justify-center grow-0'>
         <h1 className='text-center  p-3 sm:text-2xl sm:w-1/2'>

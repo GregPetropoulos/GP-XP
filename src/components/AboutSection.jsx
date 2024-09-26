@@ -1,4 +1,4 @@
-import GregPetropoulosResume from '../assets/resume/GregPetropoulosReactResume-9-4-23.pdf';
+import { GREG_PETROPOULOS_RESUME } from '../constants';
 
 const AboutSection = () => {
   const feTech = [
@@ -56,10 +56,16 @@ const AboutSection = () => {
             I enjoy learning new things and see myself as a pragmatic person. I find it rewarding to
             utilize my strengths in frontend web development to reach a common goal. Let's bring
             ideas to life! Click the link to learn more...
-            <a href={GregPetropoulosResume} download='Greg-Petropoulos-React-Dev' className='ml-1'>
-              {' '}
-              <button className=' mt-1 btn btn-xs btn-outline btn-primary'>Resume</button>
-            </a>
+            {GREG_PETROPOULOS_RESUME !== null ? (
+              <a
+                href={require(`../assets/resume/${GREG_PETROPOULOS_RESUME}`)}
+                download='Greg-Petropoulos-React-Dev'
+                className='ml-1'
+              >
+                {' '}
+                <button className=' mt-1 btn btn-xs btn-outline btn-primary'>Resume</button>
+              </a>
+            ) : null}
           </p>
         </div>
         <div className='w-1/2 justify-center mb-2'>
