@@ -20,7 +20,7 @@ function BlogList() {
     setLoading(true);
     const controller = new AbortController();
     const signal = controller.signal;
-    console.log(process.env.REACT_APP_USER_NAME);
+
     try {
       const response = await fetch(
         `https://dev.to/api/articles/latest?username=${process.env.REACT_APP_USER_NAME}`,
