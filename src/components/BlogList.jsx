@@ -42,13 +42,11 @@ function BlogList() {
       controller.abort();
     };
   };
-
   if (loading) return <Spinner />;
-
+  
   return (
     <>
       {articles.map((article) => {
-        const isEncoded = article.social_image.includes('%');
         return (
           <div key={article.id} className='bg-secondary m-2 p-4 rounded-md'>
             <h2 className='text-center font-bold text-lg mb-3'>
@@ -56,15 +54,13 @@ function BlogList() {
                 {article.title}
               </a>
             </h2>
-            {isEncoded ? (
-              <></>
-            ) : (
+          
               <img
                 src={article.social_image}
                 alt={article.title}
                 className='object-contain rounded-t-lg drop-shadow-2xl'
               ></img>
-            )}
+          
             <p className='font-light mt-3 '>
               {article.description}
               <a href={article.url} className='link link-hover hover:text-accent-content'>
