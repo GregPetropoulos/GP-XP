@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router';
 import type { Articles } from '../models';
 import { fetchLatestBlogs } from '../services';
+import PageTitle from '../components/PageTitle';
 export const Route = createFileRoute('/blog')({
   loader: (abortController) => fetchLatestBlogs(abortController),
   errorComponent: ({ error }) => {
@@ -19,7 +20,7 @@ function BlogComponent() {
 
   return (
     <>
-      <h2 className='text-center text-2xl sm:text-4xl my-4'>Blog Articles</h2>
+      <PageTitle title='Blog Articles'/>
       <div className='block mt-6  text-sm sm:grid gap-1 grid-cols-3 grid-rows-3 '>
         {articles.map((article: Articles) => {
           return (
