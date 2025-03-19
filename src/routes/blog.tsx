@@ -1,9 +1,56 @@
-import { createFileRoute } from '@tanstack/react-router'
-
+import { createFileRoute } from '@tanstack/react-router';
+import type { Articles } from '../models';
+import { fetchLatestBlogs } from '../services';
 export const Route = createFileRoute('/blog')({
-  component: BlogComponent,
-})
+  loader: (abortController) => fetchLatestBlogs(abortController),
+  errorComponent: ({ error }) => {
+    // Render an error message
+    return (
+      <div className='flex justify-center m-10 align-middle'>
+        <h3 className='text-xl text-error m-9'>{error.message}</h3>
+      </div>
+    );
+  },
+  component: BlogComponent
+});
 
 function BlogComponent() {
-  return <div>Hello "/blog"!</div>
+  const articles: Articles[] = Route.useLoaderData<any>();
+
+  return (
+    <>
+      <h2 className='text-center text-2xl sm:text-4xl my-4'>Blog Articles</h2>
+      <div className='block mt-6  text-sm sm:grid gap-1 grid-cols-3 grid-rows-3 '>
+        {articles.map((article: Articles) => {
+          return (
+            <div key={article.id} className='bg-base-300 m-2 p-4 rounded-md'>
+              <h2 className='text-center font-bold text-lg mb-3'>
+                <a href={article.url}>{article.title}</a>
+              </h2>
+
+              <img
+                src={article.social_image}
+                alt={article.title}
+                className='object-contain rounded-t-lg drop-shadow-2xl'></img>
+
+              <p className='font-light mt-3 text-lg'>
+                {article.description.trim()}
+                <a
+                  href={article.url}
+                  className='link link-hover hover:text-accent'>
+                  Read More.
+                </a>
+              </p>
+              <p>
+                {article.readable_publish_date} | {article.tags}{' '}
+              </p>
+              <p className='text-accent'>
+                {article.public_reactions_count} reactions
+              </p>
+            </div>
+          );
+        })}
+      </div>
+    </>
+  );
 }
