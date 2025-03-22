@@ -1,1 +1,45 @@
-export const NAV_LINKS =['Home', 'About', 'Projects', 'Blog', 'Contact']
+export const NAV_LINKS: string[] = [
+  'Home',
+  'About',
+  'Projects',
+  'Blog',
+  'Contact'
+];
+export const CORE_SKILLS: string[] = [
+  'JavaScript',
+  'TypeScript',
+  'React Native',
+  'Expo',
+  'React',
+  'Redux/RTK',
+  'ContextAPI',
+  'React Native Elements',
+  'Git',
+  'Node',
+  'Android Studio',
+  'Xcode',
+  'REST API',
+  'HTML',
+  'Tanstack',
+  'Next.js',
+  'Gatsby',
+  'CSS',
+  'SCSS',
+  'Tailwind',
+  'MUI',
+  'React-Hook-Form',
+  'Bootstrap',
+  'React-Bootstrap',
+  'DaisyUI',
+  'MongoDB',
+];
+export const FAMILIAR_SKILLS: string[] = [
+  'Java',
+  'SQL',
+  'Express',
+  'Mongoose',
+  'Figma',
+  'CMS (Contentful, Strapi, Umbraco',
+  'Mantine'
+];
+export const TEST_SKILLS:string[] = ['Cypress', 'Storybook', 'Postman'];
