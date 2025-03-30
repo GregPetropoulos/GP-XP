@@ -2,7 +2,7 @@
 
 import  { type NavLinks } from "../models";
 
-
+export const EMPTY_STRING =''
 export const NAV_LINKS:NavLinks[]= [
   {to:'/',label:'Home'},
   {to:'/about',label:'About'},
@@ -19,6 +19,7 @@ export const CORE_SKILLS: string[] = [
   'Redux/RTK',
   'ContextAPI',
   'React Native Elements',
+  'EAS',
   'Git',
   'Node',
   'Android Studio',

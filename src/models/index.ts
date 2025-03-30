@@ -1,13 +1,18 @@
+export interface CollapsableProps {
+  title: string;
+  listOfItems?: string[];
+  singleItem?: string
+}
 
 interface GithubUser {
   github_username: string;
-name: string;
-profile_image: string;
-profile_image_90: string;
-twitter_username: string;
-user_id: number;
-username: string;
-website_url: string;
+  name: string;
+  profile_image: string;
+  profile_image_90: string;
+  twitter_username: string;
+  user_id: number;
+  username: string;
+  website_url: string;
 }
 export interface Articles {
   canonical_url: string;
@@ -36,5 +41,10 @@ export interface Articles {
   title: string;
   type_of: string;
   url: string;
-  user:GithubUser
+  user: GithubUser;
+}
+
+export interface NavLinks {
+  to: string;
+  label: string;
 }
