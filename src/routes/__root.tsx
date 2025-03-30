@@ -14,9 +14,11 @@ export const Route = createRootRoute({
       <NavBar />
       <ContentContainer>
         {NAV_LINKS.map((item: NavLinks) => {
-          const location = useLocation();
-          if (location.pathname === item.to) {
-            return <PageTitle title={item.label} />;
+          const pathname = useLocation({
+            select: (location) => location.pathname
+          });
+          if (pathname === item.to) {
+            return <PageTitle key={item.to} title={item.label} />;
           } else {
             return null;
           }
