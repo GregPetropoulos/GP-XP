@@ -7,7 +7,6 @@ import {
   faDiscord
 } from '@fortawesome/free-brands-svg-icons';
 
-//     "@fortawesome/react-fontawesome": "^0.1.19",
 const Icons = () => {
   return (
     <section>
