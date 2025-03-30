@@ -1,7 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router';
 import type { Articles } from '../models';
 import { fetchLatestBlogs } from '../services';
-import PageTitle from '../components/PageTitle';
 export const Route = createFileRoute('/blog')({
   loader: (abortController) => fetchLatestBlogs(abortController),
   errorComponent: ({ error }) => {
@@ -19,9 +18,8 @@ function BlogComponent() {
   const articles: Articles[] = Route.useLoaderData<any>();
 
   return (
-    <>
-      <PageTitle title='Blog Articles'/>
-      <div className='block mt-6  text-sm sm:grid gap-1 grid-cols-3 grid-rows-3 '>
+
+      <div className='block mt-6  text-sm sm:grid gap-1 grid-cols-3 grid-rows-3  w-full '>
         {articles.map((article: Articles) => {
           return (
             <div key={article.id} className='bg-base-300 m-2 p-4 rounded-md'>
@@ -52,6 +50,5 @@ function BlogComponent() {
           );
         })}
       </div>
-    </>
   );
 }
