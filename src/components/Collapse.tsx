@@ -2,9 +2,9 @@ import type { CollapsableProps } from '../models';
 const Collapse = ({ title, listOfItems, singleItem }: CollapsableProps) => {
   return (
     <div className=' w-full flex justify-center sm:justify-start   '>
-      <div className='collapse collapse-arrow bg-base-300  border my-4 w-4/5 sm:w-1/2 '>
+      <div className='collapse collapse-arrow bg-base-300  border my-4 w-4/5 sm:w-1/3 '>
         <input type='checkbox' />
-        <div className='collapse-title text-xl font-semibold'>
+        <div className='collapse-title text-lg font-semibold'>
           {title ?? ''}
         </div>
         <div className='collapse-content   border-t-2 border-primary'>
