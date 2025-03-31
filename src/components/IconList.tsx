@@ -219,7 +219,7 @@ const IconList = ({ isCore }: { isCore: boolean }) => {
   ];
 
   return (
-    <>
+    <div className='flex flex-wrap'>
       {isCore
         ? coreTechIcons.map((item, idx) => (
             <div key={idx} className='m-1 p-1.5 '>
@@ -243,7 +243,7 @@ const IconList = ({ isCore }: { isCore: boolean }) => {
               }
             </div>
           ))}
-    </>
+    </div>
   );
 };
 
