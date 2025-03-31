@@ -14,7 +14,6 @@ function ContactComponent() {
           Dead simple contact. no forms...
         </p>
         <button
-          // className='btn bg-white text-black border-[#e5e5e5]'
           className='btn btn-primary rounded-2xl'
           onClick={handleEmail}>
           <svg
