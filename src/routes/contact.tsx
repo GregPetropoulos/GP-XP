@@ -1,23 +1,21 @@
 import { createFileRoute } from '@tanstack/react-router';
-import PageTitle from '../components/PageTitle';
 
 export const Route = createFileRoute('/contact')({
   component: ContactComponent
 });
-
+const emailQueryParam ='subject=Portfolio Contact&body=Hi Greg, I found your portfolio and wanted to send a message...'
 function ContactComponent() {
   const handleEmail = () => {
-    window.location.href = `mailto:${import.meta.env.VITE_USER_EMAIL}?subject=Portfolio Contact&body=Hi Greg, I found your portfolio and wanted to send a message...`;
+    window.location.href = `mailto:${import.meta.env.VITE_USER_EMAIL}?${emailQueryParam}`;
   };
   return (
-    <>
-      <PageTitle title='Contact' />
-      <div className='justify-center h-screen text-center'>
-        <p className='w-full text-center m-3'>
+      <div className ='flex flex-col  min-h-screen items-center justify-center  flex-wrap '>
+        <p className=' text-center  w-full mb-8 '>
           Dead simple contact. no forms...
         </p>
         <button
-          className='btn bg-white text-black border-[#e5e5e5]'
+          // className='btn bg-white text-black border-[#e5e5e5]'
+          className='btn btn-primary rounded-2xl'
           onClick={handleEmail}>
           <svg
             aria-label='Email icon'
@@ -39,6 +37,5 @@ function ContactComponent() {
         </button>
         {/*TODO  ANIMATION HERE */}
       </div>
-    </>
   );
 }
