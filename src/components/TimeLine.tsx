@@ -1,0 +1,119 @@
+import marines from '../assets/marines.jpeg';
+import thermopylai from '../assets/thermopylai.jpeg';
+import fossil from '../assets/fossil.jpeg';
+import tech from '../assets/tech.jpeg';
+import drilling from '../assets/drilling.jpeg';
+
+const TimeLine = () => {
+  return (
+    <>
+      <h2 className='w-full text-center'>Adventure</h2>
+      <ul className='timeline  timeline-vertical'>
+        <li>
+          <div className='timeline-start timeline-box border-0 text-center shadow-none'>
+            <p className=' text-secondary my-3'>My Father And 300 Spartans</p>
+            <img
+              src={thermopylai}
+              className='object-cover max-h-30 w-30 md:max-h-60 md:w-60 rounded-xl border border-secondary m-1 shadow-3xl'
+            />
+          </div>
+          <div className='timeline-middle'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 20 20'
+              fill='currentColor'
+              className='h-5 w-5'>
+              <path
+                fillRule='evenodd'
+                d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z'
+                clipRule='evenodd'
+              />
+            </svg>
+          </div>
+          <hr />
+        </li>
+        <li>
+          <hr />
+          <div className='timeline-middle'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 20 20'
+              fill='currentColor'
+              className='h-5 w-5'>
+              <path
+                fillRule='evenodd'
+                d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z'
+                clipRule='evenodd'
+              />
+            </svg>
+          </div>
+          <div className='timeline-end timeline-box text-center border-0 shadow-none'>
+            <p className='text-primary my-3'>U.S. Marine Corps</p>
+            <img
+              src={marines}
+              className='object-cover max-h-30 w-30 md:max-h-65 md:w-60 rounded-xl border border-primary m-1 shadow-3xl'
+            />
+          </div>
+          <hr />
+        </li>
+        <li>
+          <hr />
+          <div className='timeline-start timeline-box border-0 text-center shadow-none'>
+            <p className='text-secondary my-3'>Oil & Gas</p>
+            <img
+              src={drilling}
+              className='object-cover max-h-30 w-30 md:max-h-60 md:w-60 rounded-xl border border-secondary m-1 shadow-3xl'
+            />
+            <p className=' text-secondary my-3'>Dino Vertabrae</p>
+            <img
+              src={fossil}
+              className='object-cover max-h-30 w-30 md:max-h-60 md:w-60 rounded-xl border border-secondary m-1 shadow-3xl'
+            />
+          </div>
+          <div className='timeline-middle'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 20 20'
+              fill='currentColor'
+              className='h-5 w-5'>
+              <path
+                fillRule='evenodd'
+                d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z'
+                clipRule='evenodd'
+              />
+            </svg>
+          </div>
+          <hr />
+        </li>
+        <li>
+          <hr />
+          <div className='timeline-middle'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 20 20'
+              fill='currentColor'
+              className='h-5 w-5'>
+              <path
+                fillRule='evenodd'
+                d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z'
+                clipRule='evenodd'
+              />
+            </svg>
+          </div>
+          <div className='timeline-end timeline-box text-center border-0 shadow-none'>
+            <p className=' text-primary my-3'>
+              Exciting Software Engineering Work
+            </p>
+            <img
+              src={tech}
+              className='object-cover max-h-30 w-30 md:max-h-60 md:w-60 rounded-xl border border-primary m-1 shadow-3xl'
+            />
+          </div>
+          <hr />
+        </li>
+      </ul>
+    </>
+  );
+};
+
+export default TimeLine;

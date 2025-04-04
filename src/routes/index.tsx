@@ -24,7 +24,7 @@ function HomeIndexComponent() {
           </div>
         </div>
       </div>
-      <Animation />
+      {/* <Animation /> */}
     
     </>
   );
