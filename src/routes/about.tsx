@@ -1,16 +1,15 @@
 import { createFileRoute } from '@tanstack/react-router';
 import Icons from '../components/Icons';
+import Stats from '../components/Stats';
 import IconList from '../components/IconList';
+import SectionContainer from '../components/SectionContainer';
 import TimeLine from '../components/TimeLine';
 import Collapse from '../components/Collapse';
 import gregImage from '../assets/profile-BW.jpg';
 import ContentContainer from '../components/ContentContainer';
 import { CORE_SKILLS, FAMILIAR_SKILLS } from '../constants/constants';
-import SectionContainer from '../components/SectionContainer';
 export const Route = createFileRoute('/about')({ component: AboutComponent });
-
 // todo Github presence
-
 
 function AboutComponent() {
   return (
@@ -27,18 +26,18 @@ function AboutComponent() {
       <SectionContainer>
         <Icons />
         <div className='sm:text-center'>
-        <p>
-          Hi, I am Greg Petropoulos and I want to share general info so you can
-          get to know me.
-        </p>
-        <p>
-          Over the last several years I have acquired a set of web and mobile
-          development skills in industry
-        </p>
-        <p>
-          I have experience developing software solutions for small to large
-          tech organizations
-        </p>
+          <p>
+            Hi, I am Greg Petropoulos and I want to share general info so you
+            can get to know me.
+          </p>
+          <p>
+            Over the last several years I have acquired a set of web and mobile
+            development skills in industry
+          </p>
+          <p>
+            I have experience developing software solutions for small to large
+            tech organizations
+          </p>
         </div>
       </SectionContainer>
       {/* Skills Section */}
@@ -52,19 +51,24 @@ function AboutComponent() {
         <p>Notable products include:</p>
         <ul className='list-disc ml-2 my-2'>
           <li className='ml-6 my-2'>
-            An IoT SaaS platform (web and mobile) serving 20,000 enterprise
-            customers at Samsara.
+            An IoT Driver/Fleet for web and mobile at Samsara.
           </li>
 
           <li className='ml-6 mb-2'>
-            A consumer web and mobile app supporting 20,000 users at
-            Cornerstone.
+            A consumer web and mobile app at Global Evangelism (Cornerstone
+            Church, Difference Media, Global Evangelism Television).
           </li>
           <li className='ml-6 mb-2'>
-            A government property and judicial tracking platform (web and
-            mobile) with over 40,000 users for DHS.
+            A government property and judicial tracking platform for web and
+            mobile (DHS) .
+          </li>
+          <li className='ml-6 mb-2'>
+            Credit Union Banking Saas Platform, supported developers with
+            documentation, jira, code review, security scans and third party
+            onboarding.
           </li>
         </ul>
+        <Stats />
         <p className='my-2'>
           I've led impactful initiatives, such as migrating a large-scale legacy
           Angular.js application to React v18 with Redux Toolkit, boosting
