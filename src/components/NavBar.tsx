@@ -42,8 +42,8 @@ const NavBar = () => {
           <ul
             tabIndex={0}
             className='menu menu-sm dropdown-content bg-base-300 rounded-box z-1 mt-3 w-52 p-2 shadow'>
-            {NAV_LINKS.map((item, idx) => (
-              <li key={idx}>
+            {NAV_LINKS.map((item) => (
+              <li key={item.to}>
                 <Link
                   to={item.to}
                   activeOptions={{ exact: true }}
@@ -63,8 +63,8 @@ const NavBar = () => {
       {/* DESKTOP */}
       <div className='navbar-center hidden lg:flex'>
         <ul className='menu menu-horizontal px-1'>
-          {NAV_LINKS.map((item, idx) => (
-            <li key={idx}>
+          {NAV_LINKS.map((item) => (
+            <li key={item.to}>
               <Link
                 to={item.to}
                 className='text-xl'
