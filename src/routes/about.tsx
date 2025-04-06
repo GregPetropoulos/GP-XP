@@ -51,16 +51,16 @@ function AboutComponent() {
         <p>Notable products include:</p>
         <ul className='list-disc ml-2 my-2'>
           <li className='ml-6 my-2'>
-            An IoT Driver/Fleet for web and mobile at Samsara.
+            An IoT Driver and Fleet app for web and mobile at Samsara.
           </li>
 
           <li className='ml-6 mb-2'>
-            A consumer web and mobile app at Global Evangelism (Cornerstone
-            Church, Difference Media, Global Evangelism Television).
+            An entertainment web, mobile and streaming app at Global Evangelism,
+            Inc.
           </li>
           <li className='ml-6 mb-2'>
-            A government property and judicial tracking platform for web and
-            mobile (DHS) .
+            A government seized property and judicial tracking platform for web
+            and mobile (DHS).
           </li>
           <li className='ml-6 mb-2'>
             Credit Union Banking Saas Platform, supported developers with
@@ -80,7 +80,7 @@ function AboutComponent() {
           single, robust codebase.
         </p>
         <p className='my-2'>
-          I also strengthened security by resolving 20,000 CVEs through
+          I also strengthened security by resolving 20,000 CVE's through
           strategic dependency management. Additionally, I've guided several
           hackathons, driving creativity and teamwork with React Native at the
           forefront.
