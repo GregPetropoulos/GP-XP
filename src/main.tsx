@@ -1,6 +1,6 @@
 import { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
-import { RouterProvider, createRouter } from '@tanstack/react-router';
+import { RouterProvider, createRouter, Link } from '@tanstack/react-router';
 import Spinner from './components/Spinner.tsx';
 // Import the generated route tree
 import { routeTree } from './routeTree.gen.ts';
@@ -17,7 +17,15 @@ const router = createRouter({
   defaultStructuralSharing: true,
   defaultPreloadStaleTime: 0,
   defaultPendingComponent: () => <Spinner />,
-  defaultPendingMs: 2000 // Set default threshold to 1 second
+  defaultPendingMs: 2000, // Set default threshold to 1 second
+  defaultNotFoundComponent: () => {
+    return (
+      <div className='flex justify-center items-center w-screen flex-wrap my-30'>
+        <h2 className=' text-center w-full'>Not found!</h2>
+        <Link className='btn btn-secondary my-6' to="/">Go home</Link>
+      </div>
+    )
+  },
 });
 
 // Register the router instance for type safety
