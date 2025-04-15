@@ -1,9 +1,9 @@
 @import 'tailwindcss';
+@tailwind utilities;
 @plugin "daisyui" {
   themes:
     dim --default,
     cyberpunk;
-    
 }
 @theme {
   --shadow-3xl: 0 35px 35px rgba(0, 0, 0, 0.25);
@@ -14,15 +14,58 @@
     https://github.com/tailwindlabs/tailwindcss/pull/5732
 */
 @layer utilities {
-    /* Chrome, Safari and Opera */
-    .no-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 
-    .no-scrollbar {
-      -ms-overflow-style: none; /* IE and Edge */
-      scrollbar-width: none; /* Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  /* Neon glow and flicker effect */
+  .neon-letter {
+    /* dim theme colors*/
+    text-shadow:
+      0 0 8px #93c5fd,
+      0 0 12px #93c5fd;
+
+    /* animation: neon-flicker 2s infinite ease-in-out; */
+    animation: neon-flicker 1s 6 ease-in-out;
+  }
+
+  /* Flicker animation with off-and-on effect */
+  @keyframes neon-flicker {
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    39%,
+    54%,
+    56%,
+    74%,
+    94%,
+    100% {
+      text-shadow: 
+    /* Theme colors */
+    /* 0 0 8px #93c5fd,
+    0 0 12px #93c5fd,
+    0 0 16px #93c5fd; */
+    /* Non theme colors */
+        0 0 8px #7150f6,
+        0 0 12px #7150f6,
+        0 0 16px #7150f6;
+
+      opacity: 1;
     }
+    20%,
+    24%,
+    55% {
+      text-shadow: none;
+      opacity: 0.3;
+    }
+  }
 }
 @layer base {
   h1 {
@@ -43,7 +86,8 @@
   h6 {
     @apply uppercase text-sm sm:text-base;
   }
-  p, li{
+  p,
+  li {
     @apply text-sm sm:text-base;
   }
 }
