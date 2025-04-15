@@ -2,7 +2,7 @@ import { createFileRoute } from '@tanstack/react-router';
 import type { Articles } from '../models';
 import ContentContainer from '../components/ContentContainer';
 import { fetchLatestBlogs } from '../services';
-import SectionContainer from '../components/SectionContainer';
+
 export const Route = createFileRoute('/blog')({
   loader: (abortController) => fetchLatestBlogs(abortController),
   errorComponent: ({ error }) => {
