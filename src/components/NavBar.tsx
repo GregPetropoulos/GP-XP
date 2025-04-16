@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from '@tanstack/react-router';
 import { NAV_LINKS } from '../constants/constants';
+import PageTitle from './PageTitle';
+import { useLocation } from '@tanstack/react-router';
+import type { NavLinks } from '../models';
+
+
 
 const NavBar = () => {
   const [theme, setTheme] = useState(localStorage?.getItem('theme') ?? 'dim');
@@ -17,13 +22,16 @@ const NavBar = () => {
       setTheme('dim');
     }
   };
+  const pathname = useLocation({
+    select: (location) => location.pathname
+  });
 
   return (
     <div className='navbar bg-base-100 shadow-sm'>
       {/* MOBILE */}
       <div className='navbar-start'>
         <div className='dropdown'>
-          <div tabIndex={0} role='button' className='btn btn-ghost lg:hidden'>
+          <div tabIndex={0} role='button' className='btn btn-ghost sm:hidden'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               className='h-5 w-5'
@@ -50,20 +58,27 @@ const NavBar = () => {
                   activeProps={{
                     className: 'font-bold text-primary'
                   }}>
-                  {item.label}
+                  <h5>{item.label}</h5>
                 </Link>
               </li>
             ))}
           </ul>
         </div>
-        <Link to='/' className='btn btn-ghost text-xl'>
+       
+        <Link to='/' className='hidden md:btn md:btn-ghost md:text-xl'>
           Greg Petropoulos
         </Link>
       </div>
+      {/* <div className='navbar-center sm:hidden w-full border-purple-700 border-2'>
+      <div className='border '>
+        {NAV_LINKS.map(item=> pathname === item.to?<PageTitle key={item.to} title={item.label} />:null)}
+        </div>
+
+      </div> */}
       {/* DESKTOP */}
-      <div className='navbar-center hidden lg:flex'>
-        <ul className='menu menu-horizontal px-1'>
-          {NAV_LINKS.map((item) => (
+      <div className='navbar-center  hidden sm:flex '>
+        <ul className='menu menu-horizontal px-1 '>
+          {NAV_LINKS.map((item:NavLinks) => (
             <li key={item.to}>
               <Link
                 to={item.to}

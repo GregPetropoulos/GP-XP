@@ -3,19 +3,19 @@ import { createFileRoute } from '@tanstack/react-router';
 export const Route = createFileRoute('/contact')({
   component: ContactComponent
 });
-const emailQueryParam ='subject=Portfolio Contact&body=Hi Greg, I found your portfolio and wanted to send a message...'
+const emailQueryParam =
+  'subject=Portfolio Contact&body=Hi Greg, I found your portfolio and wanted to send a message...';
 function ContactComponent() {
   const handleEmail = () => {
     window.location.href = `mailto:${import.meta.env.VITE_USER_EMAIL}?${emailQueryParam}`;
   };
   return (
-      <div className ='flex flex-col  min-h-screen items-center justify-center  flex-wrap '>
+    <div className='flex flex-col  min-h-screen items-center justify-center  flex-wrap '>
+      <div className='w-full flex-wrap flex justify-center h-2/3'>
         <p className=' text-center  w-full mb-8 '>
-          Dead simple contact. no forms...
+          Plain simple contact. no forms...
         </p>
-        <button
-          className='btn btn-primary rounded-2xl'
-          onClick={handleEmail}>
+        <button className='btn btn-primary rounded-2xl' onClick={handleEmail}>
           <svg
             aria-label='Email icon'
             width='16'
@@ -34,7 +34,7 @@ function ContactComponent() {
           </svg>
           Send an Email
         </button>
-        {/*TODO  ANIMATION HERE */}
       </div>
+    </div>
   );
 }

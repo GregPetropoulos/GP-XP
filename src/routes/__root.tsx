@@ -1,27 +1,13 @@
 import { Outlet, createRootRoute } from '@tanstack/react-router';
-import { useLocation } from '@tanstack/react-router';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
-import PageTitle from '../components/PageTitle';
-import { NAV_LINKS } from '../constants/constants';
-import type { NavLinks } from '../models';
 
 export const Route = createRootRoute({
   component: () => (
     <>
       <NavBar />
-        {NAV_LINKS.map((item: NavLinks) => {
-          const pathname = useLocation({
-            select: (location) => location.pathname
-          });
-          if (pathname === item.to) {
-            return <PageTitle key={item.to} title={item.label} />;
-          } else {
-            return null;
-          }
-        })}
 
-        <Outlet />
+      <Outlet />
       {/* <TanStackRouterDevtools /> */}
       <Footer />
     </>
