@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from '@tanstack/react-router';
 import { NAV_LINKS } from '../constants/constants';
-import PageTitle from './PageTitle';
-import { useLocation } from '@tanstack/react-router';
 import type { NavLinks } from '../models';
+// import PageTitle from './PageTitle';
+// import { useLocation } from '@tanstack/react-router';
 
 
 
@@ -22,9 +22,9 @@ const NavBar = () => {
       setTheme('dim');
     }
   };
-  const pathname = useLocation({
-    select: (location) => location.pathname
-  });
+  // const pathname = useLocation({
+  //   select: (location) => location.pathname
+  // });
 
   return (
     <div className='navbar bg-base-100 shadow-sm'>
