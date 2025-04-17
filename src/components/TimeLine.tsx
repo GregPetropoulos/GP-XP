@@ -11,10 +11,10 @@ const TimeLine = () => {
       <ul className='timeline  timeline-vertical'>
         <li>
           <div className='timeline-start timeline-box border-0 text-center shadow-none'>
-            <p className=' text-secondary my-3'>My Father And 300 Spartans</p>
+            <p className=' text-primary my-3'>My Father And 300 Spartans</p>
             <img
               src={thermopylai}
-              className='object-cover max-h-30 w-30 md:max-h-60 md:w-60 rounded-xl border border-secondary m-1 shadow-3xl'
+              className='object-cover max-h-30 w-30 md:max-h-60 md:w-60 rounded-xl border border-base-300 m-1 shadow-3xl'
             />
           </div>
           <div className='timeline-middle'>
@@ -51,7 +51,7 @@ const TimeLine = () => {
             <p className='text-primary my-3'>U.S. Marine Corps</p>
             <img
               src={marines}
-              className='object-cover max-h-30 w-30 md:max-h-65 md:w-60 rounded-xl border border-primary m-1 shadow-3xl'
+              className='object-cover max-h-30 w-30 md:max-h-65 md:w-60 rounded-xl border border-base-300 m-1 shadow-3xl'
             />
           </div>
           <hr />
@@ -59,15 +59,15 @@ const TimeLine = () => {
         <li>
           <hr />
           <div className='timeline-start timeline-box border-0 text-center shadow-none'>
-            <p className='text-secondary my-3'>Oil & Gas</p>
+            <p className='text-primary my-3'>Oil & Gas</p>
             <img
               src={drilling}
-              className='object-cover max-h-30 w-30 md:max-h-60 md:w-60 rounded-xl border border-secondary m-1 shadow-3xl'
+              className='object-cover max-h-30 w-30 md:max-h-60 md:w-60 rounded-xl border border-base-300 m-1 shadow-3xl'
             />
-            <p className=' text-secondary my-3'>Dino Vertabrae</p>
+            <p className=' text-primary my-3'>Dino Vertabrae</p>
             <img
               src={fossil}
-              className='object-cover max-h-30 w-30 md:max-h-60 md:w-60 rounded-xl border border-secondary m-1 shadow-3xl'
+              className='object-cover max-h-30 w-30 md:max-h-60 md:w-60 rounded-xl border border-base-300 m-1 shadow-3xl'
             />
           </div>
           <div className='timeline-middle'>
@@ -106,7 +106,7 @@ const TimeLine = () => {
             </p>
             <img
               src={tech}
-              className='object-cover max-h-30 w-30 md:max-h-60 md:w-60 rounded-xl border border-primary m-1 shadow-3xl'
+              className='object-cover max-h-30 w-30 md:max-h-60 md:w-60 rounded-xl border border-base-300 m-1 shadow-3xl'
             />
           </div>
           <hr />

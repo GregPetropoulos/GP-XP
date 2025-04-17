@@ -27,18 +27,12 @@ function HomeIndexComponent() {
         <Icons />
         <div className='sm:text-center'>
           <p>
-            Hi, I am Greg Petropoulos and I want to share general info so you
-            can get to know me.
+            Hi, I'm Greg Petropoulos! I'm excited to share a bit about myself so
+            you can get to know me better.
           </p>
           <p>
-            Over the last several years I have acquired a set of web and mobile
-            development skills in industry and have experience developing
-            software solutions for small to large tech organizations .
+          Over the past few years, I've honed a dynamic set of web and mobile development skills, crafting innovative software solutions for tech companies of all sizes, from startups to industry leaders.
           </p>
-          {/* <p>
-            I have experience developing software solutions for small to large
-            tech organizations.
-          </p> */}
         </div>
       </SectionContainer>
       {/* Skills Section */}
@@ -46,10 +40,10 @@ function HomeIndexComponent() {
         <h2 className=' my-4 w-full text-center'>Tech Highlights</h2>
         <p>
           I excel in crafting production-grade React applications, with a strong
-          emphasis on <span className='font-bold'>React Native</span> as a
+          emphasis on <span className='font-bold text-primary'>React Native</span> as a
           foundation of my expertise.
         </p>
-        <p>Notable products include:</p>
+        <p className='font-bold mt-2'>Notable products I have worked on include:</p>
         <ul className='list-disc ml-2 my-2'>
           <li className='ml-6 my-2'>
             An IoT Driver and Fleet app for web and mobile at Samsara.

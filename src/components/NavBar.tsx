@@ -27,7 +27,8 @@ const NavBar = () => {
   // });
 
   return (
-    <div className='navbar bg-base-100 shadow-sm mb-10'>
+
+    <div className='navbar  mb-10 shadow-sm sticky top-0 z-20  bg-white/10 backdrop-blur-md'>
       {/* MOBILE */}
       <div className='navbar-start'>
         <div className='dropdown'>
@@ -138,6 +139,7 @@ const NavBar = () => {
         </label>
       </div>
     </div>
+
   );
 };
 
