@@ -3,6 +3,10 @@ import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
 export const Route = createFileRoute('/sides')({ component: SidesComponent });
+// const fetchData = () => {
+//   return fetch(`https://api.github.com/users/${githubUser}`)
+//     .then((response) => response.json())
+//     .then((data) => setGithubData(data));
 
 function SidesComponent() {
   const name = 'Greg Petropoulos'.split('');
@@ -57,6 +61,7 @@ function SidesComponent() {
             ))}
           </h1>
           <h4 className='text-center mt-8'>Coming Soon...</h4>
+          {/* MAKE A FETCH CALL FOR GITHUB OPEN SOURCE CONTRINUTIONS */}
         </div>
       </div>
     </div>

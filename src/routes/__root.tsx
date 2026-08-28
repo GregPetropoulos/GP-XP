@@ -12,7 +12,7 @@ export const Route = createRootRoute({
         // Google
         name: 'description',
         content:
-          'Greg Petropoulos Portfolio website. Greg is a react native developer and senior frontend software engineer proficient in developing cross platform mobile apps and websites'
+          'Greg Petropoulos Portfolio website. Greg is a react native senioer mobile developer proficient in developing cross platform mobile apps and websites'
       },
       {
         name: 'author',
@@ -20,8 +20,7 @@ export const Route = createRootRoute({
       },
       {
         name: 'keywords',
-        content:
-          'GregPetropoulos, gregpetropoulos, gregorios petropoulos, petropoulos, greg, @GregoriosPetro1,gregpetropoulos.dev, www.linkedin.com/in/greg-petropoulos, https://github.com/GregPetropoulos, Greg Petropoulos, React, React Native, frontend, senior software engineer, frontend developer, react developer, react.js, MERN,Express,Node.js,Gatsby,SASS,SCSS,CSS,HTML,CS3,HTML5,JavaScript JavaScript, UI,UX,web developer, mobile developer, mobile app, Software Developer, code,coder, programming,React, React Native, JavaScript, CSS3, HTM5L,Git,TypeScript, Bootstrap, Materialize, TailwindUI, Node.js, Express.js, MongoDB, Mongoose, AWS CloudWatch, Azure, GraphQL, Umbraco, Contentful, Strapi, Gatsby, React-Query, Cypress, Playwright,Github,NoSQL, MUI, yup, react-hook-form, jest,Expo, EAS, Tanstack, Android Studio, Xcode, appstore, playstore, firebase, mongodb, SQL, git, jira, agile, android, apple, mobile, responsive'
+        content:'GregPetropoulos, greg petropoulos, petropoulos'
       },
 
       {
@@ -43,7 +42,7 @@ export const Route = createRootRoute({
         property: 'og:description',
         key: 'og:description',
         content:
-          'Greg Petropoulos Portfolio website. Greg is a react native developer and senior frontend software engineer proficient in developing cross platform mobile apps and websites'
+          'Greg Petropoulos Portfolio website. Greg is a software engineer, mobile developer proficient in developing cross platform mobile apps and websites'
       },
       {
         property: 'og:image',
