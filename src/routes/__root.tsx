@@ -12,7 +12,7 @@ export const Route = createRootRoute({
         // Google
         name: 'description',
         content:
-          'Greg Petropoulos Portfolio website. Greg is a react native senioer mobile developer proficient in developing cross platform mobile apps and websites'
+          'Greg Petropoulos Portfolio website. Greg is a senior React Native mobile developer proficient in developing cross platform mobile apps and websites'
       },
       {
         name: 'author',

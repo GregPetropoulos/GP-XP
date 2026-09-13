@@ -1,36 +1,21 @@
 import {
-  SiMui,
   SiExpo,
   SiTypescript,
   SiRedux,
-  SiGatsby,
-  SiDaisyui,
-  SiTailwindcss,
-  SiMongodb,
-  SiExpress,
-  SiPostgresql,
-  SiMongoose,
   SiFigma,
-  SiContentful,
-  SiUmbraco,
-  SiStrapi,
-  SiMantine,
-  SiSass,
   SiJavascript,
   SiReact,
   SiAppstore,
   SiApple,
   SiNodedotjs,
-  SiHtml5,
-  SiCss3,
   SiAndroid,
   SiAndroidstudio,
   SiGit,
   SiGitlab,
-  SiBootstrap
+  SiJest
 } from 'react-icons/si';
-import { VscVscode } from 'react-icons/vsc';
-import { RiJavaFill, RiNextjsFill } from 'react-icons/ri';
+import { RiJavaFill } from 'react-icons/ri';
+import { DiSqllite } from 'react-icons/di';
 
 const IconList = ({ isCore }: { isCore: boolean }) => {
   type ReactIcons = {
@@ -40,13 +25,12 @@ const IconList = ({ isCore }: { isCore: boolean }) => {
     size?: number;
   };
 
-  // TODO CREATE CONSTANTS FOR THESE COLORS
   const coreTechIcons: ReactIcons[] = [
     {
       iconCmp: SiReact,
       size: 32,
       style: { color: '#61DBFB' },
-      title: 'React icon'
+      title: 'React Native icon'
     },
     { iconCmp: SiExpo, size: 32, title: 'Expo Icon' },
     {
@@ -62,23 +46,32 @@ const IconList = ({ isCore }: { isCore: boolean }) => {
       title: 'TypeScript icon'
     },
     {
-      iconCmp: SiRedux,
+      iconCmp: SiApple,
       size: 32,
-      style: { color: '#fff', backgroundColor: '#593d88' },
-      title: 'Redux Toolkit UI Icon'
+      title: 'iOS icon'
     },
-    {
-      iconCmp: SiAppstore,
-      size: 32,
-      style: { color: '#2072f3', backgroundColor: '#fff' },
-      title: 'App Store icon'
-    },
-    { iconCmp: SiApple, size: 32, title: 'Apple icon' },
     {
       iconCmp: SiAndroid,
       size: 32,
       style: { color: '#3DDC84' },
       title: 'Android icon'
+    },
+    {
+      iconCmp: SiRedux,
+      size: 32,
+      style: { color: '#fff', backgroundColor: '#593d88' },
+      title: 'Redux icon'
+    },
+    {
+      iconCmp: DiSqllite,
+      size: 32,
+      title: 'SQLite icon'
+    },
+    {
+      iconCmp: SiJest,
+      size: 32,
+      style: { color: '#C21325' },
+      title: 'Jest icon'
     },
     {
       iconCmp: SiAndroidstudio,
@@ -87,29 +80,30 @@ const IconList = ({ isCore }: { isCore: boolean }) => {
       title: 'Android Studio icon'
     },
     {
+      iconCmp: SiAppstore,
+      size: 32,
+      style: { color: '#2072f3', backgroundColor: '#fff' },
+      title: 'App Store icon'
+    },
+    {
       iconCmp: SiGit,
       size: 32,
       style: { color: '#264de4' },
       title: 'Git icon'
     },
-    { iconCmp: RiNextjsFill, size: 32, title: 'Nextjs Icon' },
     {
-      iconCmp: SiHtml5,
+      iconCmp: SiGitlab,
       size: 32,
-      style: { color: '#F06529', backgroundColor: '#fff' },
-      title: 'HTML5 icon'
-    },
+      style: { color: '#e24329' },
+      title: 'GitLab icon'
+    }
+  ];
+  const familiarTechIcons: ReactIcons[] = [
     {
-      iconCmp: SiCss3,
+      iconCmp: SiReact,
       size: 32,
-      style: { color: '#264de4', backgroundColor: '#fff' },
-      title: 'CSS3 icon'
-    },
-    {
-      iconCmp: SiMongodb,
-      size: 32,
-      style: { color: '#4DB33D', backgroundColor: '#3F3E42' },
-      title: 'MongoDB UI Icon'
+      style: { color: '#61DBFB' },
+      title: 'React icon'
     },
     {
       iconCmp: SiNodedotjs,
@@ -118,103 +112,16 @@ const IconList = ({ isCore }: { isCore: boolean }) => {
       title: 'Node.js icon'
     },
     {
-      iconCmp: SiSass,
-      size: 32,
-      style: { color: '#CF649A' },
-      title: 'Sass icon'
-    },
-    {
-      iconCmp: SiMui,
-      size: 32,
-      style: { color: '#66b3ff' },
-      title: 'Material UI Icon'
-    },
-    {
-      iconCmp: SiTailwindcss,
-      size: 32,
-      style: { color: '#06b6d4' },
-      title: 'Tailwind UI icon'
-    },
-    {
-      iconCmp: SiDaisyui,
-      size: 32,
-      style: { color: '#1AD1A5' },
-      title: 'DaisyUI icon'
-    },
-    {
-      iconCmp: SiBootstrap,
-      size: 32,
-      style: { color: '#8312FA', backgroundColor: '#fff' },
-      title: 'Bootstrap icon'
-    },
-    {
-      iconCmp: SiGatsby,
-      size: 32,
-      style: { color: '#663399' },
-      title: 'Gatsby icon'
-    },
-    {
-      iconCmp: SiGitlab,
-      size: 32,
-      style: { color: '#e24329' },
-      title: 'GitLab icon'
-    },
-    {
-      iconCmp: VscVscode,
-      size: 32,
-      style: { color: '#0078d7' },
-      title: 'VS Code icon'
-    }
-  ];
-  const familiarTechIcons: ReactIcons[] = [
-    { iconCmp: SiExpress, size: 32, title: 'Express icon' },
-    {
-      iconCmp: RiJavaFill,
-      size: 32,
-      style: { color: '#5382a1' },
-      title: 'Java icon'
-    },
-    {
-      iconCmp: SiMongoose,
-      size: 32,
-      style: { color: '#880000', backgroundColor: '#fff' },
-      title: 'Mongoose icon'
-    },
-    {
       iconCmp: SiFigma,
       size: 32,
       style: { color: '#ff7262' },
       title: 'Figma icon'
     },
     {
-      iconCmp: SiPostgresql,
+      iconCmp: RiJavaFill,
       size: 32,
-      style: { color: '#fff', backgroundColor: '#0064a5' },
-      title: 'Postgresql icon'
-    },
-    {
-      iconCmp: SiContentful,
-      size: 32,
-      style: { color: '#ffd75e' },
-      title: 'Contentful icon'
-    },
-    {
-      iconCmp: SiUmbraco,
-      size: 32,
-      style: { color: '	#214BAF', backgroundColor: '#fff' },
-      title: 'Umbraco icon'
-    },
-    {
-      iconCmp: SiStrapi,
-      size: 32,
-      style: { color: '#4945ff', backgroundColor: '#fff' },
-      title: 'Strapi icon'
-    },
-    {
-      iconCmp: SiMantine,
-      size: 32,
-      style: { color: '#339af0', backgroundColor: '#fff' },
-      title: 'Mantine icon'
+      style: { color: '#5382a1' },
+      title: 'Java icon'
     }
   ];
 

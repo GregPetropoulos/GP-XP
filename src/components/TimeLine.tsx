@@ -8,6 +8,10 @@ const TimeLine = () => {
   return (
     <>
       <h2 className='w-full text-center'>Adventure</h2>
+      <p className='text-center my-3'>
+        Self-proclaimed treasure hunter. Happiest outdoors with a map, a loupe,
+        and a rock hammer.
+      </p>
       <ul className='timeline  timeline-vertical'>
         <li>
           <div className='timeline-start timeline-box border-0 text-center shadow-none'>
@@ -64,7 +68,7 @@ const TimeLine = () => {
               src={drilling}
               className='object-cover max-h-30 w-30 md:max-h-60 md:w-60 rounded-xl border border-base-300 m-1 shadow-3xl'
             />
-            <p className=' text-primary my-3'>Dino Vertabrae</p>
+            <p className=' text-primary my-3'>Dino Vertebrae</p>
             <img
               src={fossil}
               className='object-cover max-h-30 w-30 md:max-h-60 md:w-60 rounded-xl border border-base-300 m-1 shadow-3xl'
