@@ -1,13 +1,10 @@
 import { createFileRoute } from '@tanstack/react-router';
 import Icons from '../components/Icons';
 import Stats from '../components/Stats';
-import IconList from '../components/IconList';
 import SectionContainer from '../components/SectionContainer';
 import TimeLine from '../components/TimeLine';
-import Collapse from '../components/Collapse';
 import gregImage from '../assets/profile-BW.jpg';
 import ContentContainer from '../components/ContentContainer';
-import { CORE_SKILLS, FAMILIAR_SKILLS } from '../constants/constants';
 export const Route = createFileRoute('/')({ component: HomeIndexComponent });
 
 function HomeIndexComponent() {
@@ -116,15 +113,6 @@ function HomeIndexComponent() {
           for a large-scale legacy Angular.js application to React 18 with Redux
           Toolkit, boosting efficiency and modernizing the codebase.
         </p>
-      </SectionContainer>
-      <SectionContainer>
-        <h2 className=' w-full text-center '>Tech Skills</h2>
-        <h6 className=' w-full mb-2 mt-8'>Core Technologies</h6>
-        <IconList isCore={true} />
-        <Collapse title={'Skill List'} listOfItems={CORE_SKILLS} />
-        <h6 className='w-full mb-2 mt-8'>Familiar Technologies</h6>
-        <IconList isCore={false} />
-        <Collapse title={'Skill List'} listOfItems={FAMILIAR_SKILLS} />
       </SectionContainer>
 
       {/* TIMELINE */}

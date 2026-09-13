@@ -1,4 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router';
+import { CONTACT_EMAIL } from '../constants/constants';
 
 export const Route = createFileRoute('/contact')({
   component: ContactComponent
@@ -7,7 +8,7 @@ const emailQueryParam =
   'subject=Portfolio Contact&body=Hi Greg, I found your portfolio and wanted to send a message...';
 function ContactComponent() {
   const handleEmail = () => {
-    window.location.href = `mailto:${import.meta.env.VITE_USER_EMAIL}?${emailQueryParam}`;
+    window.location.href = `mailto:${CONTACT_EMAIL}?${emailQueryParam}`;
   };
   return (
     <div className='flex flex-col  min-h-screen items-center justify-center  flex-wrap '>

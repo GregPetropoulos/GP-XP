@@ -1,9 +1,3 @@
-export interface CollapsableProps {
-  title: string;
-  listOfItems?: string[];
-  singleItem?: string
-}
-
 interface GithubUser {
   github_username: string;
   name: string;

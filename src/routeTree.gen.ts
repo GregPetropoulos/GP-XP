@@ -11,18 +11,11 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as SidesImport } from './routes/sides'
 import { Route as ContactImport } from './routes/contact'
 import { Route as BlogImport } from './routes/blog'
 import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
-
-const SidesRoute = SidesImport.update({
-  id: '/sides',
-  path: '/sides',
-  getParentRoute: () => rootRoute,
-} as any)
 
 const ContactRoute = ContactImport.update({
   id: '/contact',
@@ -67,13 +60,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactImport
       parentRoute: typeof rootRoute
     }
-    '/sides': {
-      id: '/sides'
-      path: '/sides'
-      fullPath: '/sides'
-      preLoaderRoute: typeof SidesImport
-      parentRoute: typeof rootRoute
-    }
   }
 }
 
@@ -83,14 +69,12 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
-  '/sides': typeof SidesRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
-  '/sides': typeof SidesRoute
 }
 
 export interface FileRoutesById {
@@ -98,15 +82,14 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
-  '/sides': typeof SidesRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/blog' | '/contact' | '/sides'
+  fullPaths: '/' | '/blog' | '/contact'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/blog' | '/contact' | '/sides'
-  id: '__root__' | '/' | '/blog' | '/contact' | '/sides'
+  to: '/' | '/blog' | '/contact'
+  id: '__root__' | '/' | '/blog' | '/contact'
   fileRoutesById: FileRoutesById
 }
 
@@ -114,14 +97,12 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BlogRoute: typeof BlogRoute
   ContactRoute: typeof ContactRoute
-  SidesRoute: typeof SidesRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BlogRoute: BlogRoute,
   ContactRoute: ContactRoute,
-  SidesRoute: SidesRoute,
 }
 
 export const routeTree = rootRoute
@@ -136,8 +117,7 @@ export const routeTree = rootRoute
       "children": [
         "/",
         "/blog",
-        "/contact",
-        "/sides"
+        "/contact"
       ]
     },
     "/": {
@@ -148,9 +128,6 @@ export const routeTree = rootRoute
     },
     "/contact": {
       "filePath": "contact.tsx"
-    },
-    "/sides": {
-      "filePath": "sides.tsx"
     }
   }
 }
